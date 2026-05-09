@@ -10,27 +10,29 @@
 
 <header>
   <div class="container">
+
     <h1>Western Branch Middle School Orchestra</h1>
 
-  <button class="menu-toggle" onclick="toggleMenu()">
-  ☰ Menu
-</button>
-    
-  <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="calendar.html">Calendar</a></li>
-    <li><a href="concerts.html">Concerts</a></li>
-    <li><a href="students.html">Students</a></li>
-    <li><a href="parents.html">Parents</a></li>
-    <li><a href="join.html">Join</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="boosters.html">Boosters</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+    <button class="menu-toggle" onclick="toggleMenu()">
+      ☰ Menu
+    </button>
+
+    <nav id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li><a href="concerts.html">Concerts</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="parents.html">Parents</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="boosters.html">Boosters</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
   </div>
 </header>
 
@@ -83,16 +85,16 @@
     <div class="card">
       <h3>Send a Message</h3>
 
-      <form>
+      <form action="https://formspree.io/f/yourformid" method="POST">
 
         <label for="name">Name</label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" required>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" required>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6"></textarea>
+        <textarea id="message" name="message" rows="6" required></textarea>
 
         <button type="submit">Send Message</button>
 
@@ -109,6 +111,8 @@
     </p>
   </div>
 </footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
