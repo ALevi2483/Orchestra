@@ -21,11 +21,15 @@ header {
   background-color: #1d3557;
   color: white;
   padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
   text-align: center;
   margin-bottom: 15px;
+  font-size: 32px;
 }
 
 nav ul {
@@ -40,21 +44,33 @@ nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: rgba(255,255,255,0.15);
 }
 
 .hero {
-  background-color: #457b9d;
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.55)
+    ),
+    url("../images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+
   color: white;
-  padding: 80px 20px;
+  padding: 120px 20px;
   text-align: center;
 }
 
 .hero h2 {
-  font-size: 40px;
+  font-size: 46px;
   margin-bottom: 20px;
 }
 
@@ -62,7 +78,7 @@ nav a:hover {
   max-width: 700px;
   margin: auto;
   margin-bottom: 25px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .button {
@@ -73,21 +89,22 @@ nav a:hover {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+  transition: 0.3s;
 }
 
 .button:hover {
-  background-color: #f1f1f1;
+  background-color: #e5e5e5;
 }
 
 .page-banner {
   background-color: #457b9d;
   color: white;
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .page-banner h2 {
-  font-size: 36px;
+  font-size: 38px;
 }
 
 .content {
@@ -102,8 +119,8 @@ nav a:hover {
   background-color: white;
   padding: 25px;
   margin-bottom: 25px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .card h3 {
@@ -132,13 +149,14 @@ nav a:hover {
   text-decoration: none;
   padding: 30px;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
   transition: 0.3s;
 }
 
 .quick-box:hover {
   background-color: #457b9d;
+  transform: translateY(-3px);
 }
 
 .calendar-table {
@@ -176,9 +194,14 @@ nav a:hover {
 
 .gallery-item {
   background-color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
 }
 
 .gallery-item img {
@@ -208,6 +231,7 @@ form textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 form button {
@@ -219,6 +243,7 @@ form button {
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 form button:hover {
@@ -233,19 +258,94 @@ footer {
   margin-top: 40px;
 }
 
+.menu-toggle {
+  display: none;
+  background-color: white;
+  color: #1d3557;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
 @media (max-width: 768px) {
 
+  header {
+    padding: 15px 0;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.show {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 10px;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+
+  nav a {
+    display: block;
+    padding: 12px;
+  }
+
+  .hero {
+    padding: 80px 20px;
+  }
+
   .hero h2 {
-    font-size: 30px;
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 17px;
   }
 
   .page-banner h2 {
     font-size: 28px;
   }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+  .content {
+    padding: 35px 0;
   }
 
+  .card {
+    padding: 20px;
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .calendar-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .gallery-item img {
+    height: 180px;
+  }
 }
