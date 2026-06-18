@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,26 +10,23 @@
 <body>
 
 <header>
-  <div class="container">
+  <div class="container header-container">
 
-    <h1>Western Branch Middle School Orchestra</h1>
+    <a class="site-title" href="index.html">
+      Western Branch Middle School Orchestra
+    </a>
 
-    <button class="menu-toggle" onclick="toggleMenu()">
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu">
       ☰ Menu
     </button>
 
     <nav id="mainNav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="concerts.html">Concerts</a></li>
-        <li><a href="students.html">Students</a></li>
+        <li><a class="active" href="students.html">Students</a></li>
         <li><a href="parents.html">Parents</a></li>
         <li><a href="join.html">Join</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="boosters.html">Boosters</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -38,100 +36,238 @@
 
 <section class="page-banner">
   <div class="container">
-    <h2>Student Resources</h2>
+    <h1>Student Resources</h1>
+    <p>Practice help, audition information, instrument care, and class expectations.</p>
   </div>
 </section>
 
-<section class="content">
-  <div class="container">
+<main>
 
-    <div class="card">
-      <h3>Practice Expectations</h3>
+  <section class="content">
+    <div class="container">
 
-      <p>
-        Students are encouraged to practice regularly at home
-        to improve performance skills and preparation for concerts.
-      </p>
+      <div class="section-heading">
+        <h2>Start Here</h2>
+        <p>Use these links when you need music, practice materials, or audition information.</p>
+      </div>
 
-      <ul>
-        <li>Beginner Students: 15 to 20 minutes daily</li>
-        <li>Intermediate Students: 20 to 30 minutes daily</li>
-        <li>Advanced Students: 30+ minutes daily</li>
-      </ul>
+      <div class="quick-links">
+
+        <a href="#practice" class="quick-box">
+          <span>Practice</span>
+          <small>Daily goals and tips</small>
+        </a>
+
+        <a href="#resources" class="quick-box">
+          <span>Music Resources</span>
+          <small>PDFs, tracks, scales, and guides</small>
+        </a>
+
+        <a href="#auditions" class="quick-box">
+          <span>Auditions</span>
+          <small>Honor Orchestra and seating info</small>
+        </a>
+
+        <a href="#instrument-care" class="quick-box">
+          <span>Instrument Care</span>
+          <small>Keep your instrument ready</small>
+        </a>
+
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Helpful Resources</h3>
+  <section id="practice" class="content alt-bg">
+    <div class="container split-section">
 
-      <ul>
-        <li>
-          <a href="#">Download Concert Music PDFs</a>
-        </li>
+      <div>
+        <h2>Practice Expectations</h2>
 
-        <li>
-          <a href="#">Practice Tracks</a>
-        </li>
+        <p>
+          Short, focused practice works better than rushing right before a concert.
+          Students should practice at home several times each week.
+        </p>
 
-        <li>
-          <a href="#">Tuning Guide</a>
-        </li>
+        <div class="cards">
 
-        <li>
-          <a href="#">Fingering Charts</a>
-        </li>
+          <div class="card">
+            <h3>Beginner</h3>
+            <p>15 to 20 minutes per day</p>
+          </div>
 
-        <li>
-          <a href="#">Scale Sheets</a>
-        </li>
-      </ul>
+          <div class="card">
+            <h3>Intermediate</h3>
+            <p>20 to 30 minutes per day</p>
+          </div>
+
+          <div class="card">
+            <h3>Advanced</h3>
+            <p>30 or more minutes per day</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h3>Practice Checklist</h3>
+        <ul>
+          <li>Tune first.</li>
+          <li>Use a pencil.</li>
+          <li>Start slowly.</li>
+          <li>Work small sections.</li>
+          <li>End with something you can play well.</li>
+        </ul>
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Instrument Care Tips</h3>
+  <section id="resources" class="content">
+    <div class="container">
 
-      <ul>
-        <li>Always loosen your bow after playing.</li>
-        <li>Store instruments in their cases when not in use.</li>
-        <li>Do not leave instruments in hot vehicles.</li>
-        <li>Bring rosin and music to every class.</li>
-        <li>Report damaged strings or equipment quickly.</li>
-      </ul>
+      <div class="section-heading">
+        <h2>Helpful Resources</h2>
+        <p>Replace the placeholder links below with your actual files or Google Drive links.</p>
+      </div>
+
+      <div class="cards">
+
+        <article class="card">
+          <h3>Concert Music</h3>
+          <p>Download current concert music and assigned parts.</p>
+          <a href="#">Download Music PDFs</a>
+        </article>
+
+        <article class="card">
+          <h3>Practice Tracks</h3>
+          <p>Use practice tracks to improve rhythm, notes, and confidence.</p>
+          <a href="#">Open Practice Tracks</a>
+        </article>
+
+        <article class="card">
+          <h3>Scales</h3>
+          <p>Review assigned scales and warmups.</p>
+          <a href="#">View Scale Sheets</a>
+        </article>
+
+        <article class="card">
+          <h3>Tuning and Fingerings</h3>
+          <p>Use tuning guides and fingering charts for extra help.</p>
+          <a href="#">Open Guides</a>
+        </article>
+
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Audition Information</h3>
+  <section id="auditions" class="content alt-bg">
+    <div class="container split-section">
 
-      <p>
-        Honor Orchestra and seating audition information
-        will be posted here throughout the school year.
-      </p>
+      <div>
+        <h2>Audition Information</h2>
 
-      <p>
-        Students should check this page regularly for updates,
-        audition materials, and deadlines.
-      </p>
+        <p>
+          Honor Orchestra, seating auditions, and other audition details will be posted
+          here during the school year.
+        </p>
+
+        <p>
+          Students should check this section for audition packets, deadlines,
+          required music, scales, and practice instructions.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <h3>Audition Reminder</h3>
+        <p>
+          Do not wait until the week of the audition. Start early, practice slowly,
+          and ask for help before the deadline.
+        </p>
+        <a class="button" href="calendar.html">Check Dates</a>
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Classroom Expectations</h3>
+  <section id="instrument-care" class="content">
+    <div class="container">
 
-      <ul>
-        <li>Arrive on time and prepared.</li>
-        <li>Respect instruments and equipment.</li>
-        <li>Participate during rehearsals.</li>
-        <li>Show respect to fellow musicians.</li>
-        <li>Practice responsibility and teamwork.</li>
-      </ul>
+      <div class="section-heading">
+        <h2>Instrument Care</h2>
+        <p>Take care of your instrument so it is ready for class and performances.</p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Every Day</h3>
+          <ul>
+            <li>Bring your instrument, music, and pencil.</li>
+            <li>Keep your instrument in its case when not playing.</li>
+            <li>Loosen your bow after playing.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Avoid Damage</h3>
+          <ul>
+            <li>Do not leave instruments in hot or cold vehicles.</li>
+            <li>Do not touch the bow hair.</li>
+            <li>Do not force pegs, strings, or fine tuners.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Get Help</h3>
+          <ul>
+            <li>Report broken strings quickly.</li>
+            <li>Tell the director about damage right away.</li>
+            <li>Ask before trying to fix something yourself.</li>
+          </ul>
+        </div>
+
+      </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="content alt-bg">
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Classroom Expectations</h2>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Be Prepared</h3>
+          <p>Arrive on time with your instrument, music, pencil, and supplies.</p>
+        </div>
+
+        <div class="card">
+          <h3>Be Respectful</h3>
+          <p>Respect classmates, instruments, equipment, and rehearsal time.</p>
+        </div>
+
+        <div class="card">
+          <h3>Be Engaged</h3>
+          <p>Participate, listen, ask questions, and work to improve each rehearsal.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
 
 <footer>
-  <div class="container">
-    <p>
-      © 2026 Western Branch Middle School Orchestra
-    </p>
+  <div class="container footer-container">
+    <p>© 2026 Western Branch Middle School Orchestra</p>
+    <p><a href="contact.html">Contact</a></p>
   </div>
 </footer>
 
@@ -139,3 +275,4 @@
 
 </body>
 </html>
+```
