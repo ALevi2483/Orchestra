@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,26 +10,23 @@
 <body>
 
 <header>
-  <div class="container">
+  <div class="container header-container">
 
-    <h1>Western Branch Middle School Orchestra</h1>
+    <a class="site-title" href="index.html">
+      Western Branch Middle School Orchestra
+    </a>
 
-    <button class="menu-toggle" onclick="toggleMenu()">
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu">
       ☰ Menu
     </button>
 
     <nav id="mainNav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="concerts.html">Concerts</a></li>
         <li><a href="students.html">Students</a></li>
         <li><a href="parents.html">Parents</a></li>
         <li><a href="join.html">Join</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="boosters.html">Boosters</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -38,60 +36,88 @@
 
 <section class="page-banner">
   <div class="container">
-    <h2>Photo Gallery</h2>
+    <h1>Photo Gallery</h1>
+    <p>Concerts, rehearsals, events, and orchestra memories.</p>
   </div>
 </section>
 
-<section class="content">
-  <div class="container">
+<main>
 
-    <p>
-      Photos from concerts, rehearsals, school events,
-      and orchestra activities.
-    </p>
+  <section class="content">
+    <div class="container">
 
-    <div class="gallery-grid">
-
-      <div class="gallery-item">
-        <img src="images/photo1.jpg" alt="Orchestra Performance">
-        <p>Spring Concert</p>
+      <div class="section-heading">
+        <h2>Orchestra in Action</h2>
+        <p>
+          Add photos from concerts, rehearsals, school events, and student activities.
+        </p>
       </div>
 
-      <div class="gallery-item">
-        <img src="images/photo2.jpg" alt="Students Rehearsing">
-        <p>After School Rehearsal</p>
-      </div>
+      <div class="gallery-grid">
 
-      <div class="gallery-item">
-        <img src="images/photo3.jpg" alt="Orchestra Group Photo">
-        <p>Honor Orchestra Students</p>
-      </div>
+        <figure class="gallery-item">
+          <img src="images/photo1.jpg" alt="Students performing at the spring concert">
+          <figcaption>Spring Concert</figcaption>
+        </figure>
 
-      <div class="gallery-item">
-        <img src="images/photo4.jpg" alt="Performance Event">
-        <p>Community Performance</p>
-      </div>
+        <figure class="gallery-item">
+          <img src="images/photo2.jpg" alt="Students rehearsing after school">
+          <figcaption>After School Rehearsal</figcaption>
+        </figure>
 
-      <div class="gallery-item">
-        <img src="images/photo5.jpg" alt="Students Playing Instruments">
-        <p>Classroom Practice</p>
-      </div>
+        <figure class="gallery-item">
+          <img src="images/photo3.jpg" alt="Honor orchestra students group photo">
+          <figcaption>Honor Orchestra</figcaption>
+        </figure>
 
-      <div class="gallery-item">
-        <img src="images/photo6.jpg" alt="Concert Stage">
-        <p>Winter Concert</p>
+        <figure class="gallery-item">
+          <img src="images/photo4.jpg" alt="Students performing at a community event">
+          <figcaption>Community Performance</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="images/photo5.jpg" alt="Students practicing string instruments in class">
+          <figcaption>Classroom Practice</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="images/photo6.jpg" alt="Orchestra performing at the winter concert">
+          <figcaption>Winter Concert</figcaption>
+        </figure>
+
       </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="content alt-bg">
+    <div class="container split-section">
+
+      <div>
+        <h2>Photo Submissions</h2>
+        <p>
+          Families may submit photos from orchestra events for possible use on this page.
+          Please only send photos that are appropriate for school use.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <h3>Submit a Photo</h3>
+        <p>
+          Contact the director before sending photos for the website.
+        </p>
+        <a class="button" href="contact.html">Contact the Director</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
 
 <footer>
-  <div class="container">
-    <p>
-      © 2026 Western Branch Middle School Orchestra
-    </p>
+  <div class="container footer-container">
+    <p>© 2026 Western Branch Middle School Orchestra</p>
+    <p><a href="contact.html">Contact</a></p>
   </div>
 </footer>
 
@@ -99,3 +125,4 @@
 
 </body>
 </html>
+```
