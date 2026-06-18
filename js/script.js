@@ -1,4 +1,3 @@
-```javascript
 function toggleMenu() {
   const nav = document.getElementById("mainNav");
 
@@ -49,4 +48,3 @@ document.addEventListener("keydown", function (event) {
   }
 
 });
-```
