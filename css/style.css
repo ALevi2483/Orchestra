@@ -136,12 +136,25 @@ nav a.active {
   margin-bottom: 20px;
 }
 
-.hero-subtitle,
-.hero p {
+.hero-subtitle {
   max-width: 720px;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.94);
   margin-bottom: 26px;
+}
+
+.hero-card p {
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.hero-card .event-date {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.hero-card .small-text {
+  color: var(--muted);
 }
 
 .hero-buttons {
@@ -556,9 +569,8 @@ footer a {
     font-size: 40px;
   }
 
-  .hero-subtitle,
-  .hero p {
-    font-size: 18px;
+  .hero-subtitle {
+  font-size: 18px;
   }
 
   .button {
