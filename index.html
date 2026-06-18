@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,26 +10,23 @@
 <body>
 
 <header>
-  <div class="container">
+  <div class="container header-container">
 
-    <h1>Western Branch Middle School Orchestra</h1>
+    <a class="site-title" href="index.html">
+      Western Branch Middle School Orchestra
+    </a>
 
-    <button class="menu-toggle" onclick="toggleMenu()">
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu">
       ☰ Menu
     </button>
 
     <nav id="mainNav">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
         <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="concerts.html">Concerts</a></li>
         <li><a href="students.html">Students</a></li>
         <li><a href="parents.html">Parents</a></li>
         <li><a href="join.html">Join</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="boosters.html">Boosters</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -36,107 +34,152 @@
   </div>
 </header>
 
-<section class="hero">
-  <div class="container">
+<main>
 
-    <h2>Welcome to the Orchestra Program</h2>
+  <section class="hero">
+    <div class="container hero-grid">
 
-    <p>
-      Supporting student musicians through performance,
-      teamwork, and music education.
-    </p>
+      <div class="hero-text">
+        <p class="eyebrow">Western Branch Middle School</p>
 
-    <a class="button" href="calendar.html">
-      View Calendar
-    </a>
+        <h1>Orchestra starts here.</h1>
 
-  </div>
-</section>
+        <p class="hero-subtitle">
+          A place for students to learn music, build confidence, perform together,
+          and be part of something bigger than themselves.
+        </p>
 
-<section class="content">
-  <div class="container">
+        <div class="hero-buttons">
+          <a class="button" href="calendar.html">View Calendar</a>
+          <a class="button secondary" href="join.html">Join Orchestra</a>
+        </div>
+      </div>
 
-    <h2>Announcements</h2>
-
-    <div class="card">
-      <h3>Spring Concert</h3>
-
-      <p>
-        The Spring Orchestra Concert will be held on
-        May 18 at 6:30 PM in the school auditorium.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>After School Practice</h3>
-
-      <p>
-        Rehearsals are every Thursday from 3:00 PM to 4:30 PM.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>All-District Auditions</h3>
-
-      <p>
-        Audition packets are available in the student resources section.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section class="content alt-bg">
-  <div class="container">
-
-    <h2>About Our Program</h2>
-
-    <p>
-      The Western Branch Middle School Orchestra program gives students
-      opportunities to grow as musicians and performers while developing
-      confidence, discipline, and teamwork.
-    </p>
-
-    <p>
-      Students participate in concerts, special performances,
-      honor ensembles, and community events throughout the school year.
-    </p>
-
-  </div>
-</section>
-
-<section class="content">
-  <div class="container">
-
-    <h2>Quick Links</h2>
-
-    <div class="quick-links">
-
-      <a href="students.html" class="quick-box">
-        Student Resources
-      </a>
-
-      <a href="parents.html" class="quick-box">
-        Parent Information
-      </a>
-
-      <a href="concerts.html" class="quick-box">
-        Concert Schedule
-      </a>
-
-      <a href="gallery.html" class="quick-box">
-        Photo Gallery
-      </a>
+      <div class="hero-card">
+        <h2>Next Event</h2>
+        <p class="event-date">May 18 • 6:30 PM</p>
+        <p>Spring Orchestra Concert</p>
+        <p class="small-text">School Auditorium</p>
+      </div>
 
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="content">
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Quick Links</h2>
+        <p>Most families come here for these items first.</p>
+      </div>
+
+      <div class="quick-links">
+
+        <a href="calendar.html" class="quick-box">
+          <span>Calendar</span>
+          <small>Practices, concerts, and events</small>
+        </a>
+
+        <a href="students.html" class="quick-box">
+          <span>Student Resources</span>
+          <small>Music, auditions, and practice help</small>
+        </a>
+
+        <a href="parents.html" class="quick-box">
+          <span>Parent Information</span>
+          <small>What families need to know</small>
+        </a>
+
+        <a href="contact.html" class="quick-box">
+          <span>Contact</span>
+          <small>Questions or help</small>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="content alt-bg">
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Announcements</h2>
+        <p>Current reminders for students and families.</p>
+      </div>
+
+      <div class="cards">
+
+        <article class="card">
+          <p class="card-label">Concert</p>
+          <h3>Spring Concert</h3>
+          <p>
+            The Spring Orchestra Concert will be held May 18 at 6:30 PM
+            in the school auditorium.
+          </p>
+          <a href="concerts.html">Concert details</a>
+        </article>
+
+        <article class="card">
+          <p class="card-label">Practice</p>
+          <h3>After School Practice</h3>
+          <p>
+            Rehearsals are every Thursday from 3:00 PM to 4:30 PM.
+          </p>
+          <a href="calendar.html">View calendar</a>
+        </article>
+
+        <article class="card">
+          <p class="card-label">Students</p>
+          <h3>All-District Auditions</h3>
+          <p>
+            Audition packets and student materials are available in the
+            student resources section.
+          </p>
+          <a href="students.html">Student resources</a>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="container split-section">
+
+      <div>
+        <h2>About the Program</h2>
+        <p>
+          The Western Branch Middle School Orchestra helps students grow as
+          musicians, performers, and teammates. Students learn proper technique,
+          music reading, rehearsal skills, and concert preparation.
+        </p>
+        <p>
+          Orchestra students perform throughout the school year and have
+          opportunities to participate in auditions, honor ensembles, and
+          community events.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <h3>For New Families</h3>
+        <p>
+          New to orchestra? Start with the Join page. It explains who can join,
+          what students need, and how to get started.
+        </p>
+        <a class="button" href="join.html">Start Here</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
 
 <footer>
-  <div class="container">
+  <div class="container footer-container">
+    <p>© 2026 Western Branch Middle School Orchestra</p>
     <p>
-      © 2026 Western Branch Middle School Orchestra
+      <a href="contact.html">Contact</a>
     </p>
   </div>
 </footer>
@@ -145,3 +188,4 @@
 
 </body>
 </html>
+```
