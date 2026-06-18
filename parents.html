@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,26 +10,23 @@
 <body>
 
 <header>
-  <div class="container">
+  <div class="container header-container">
 
-    <h1>Western Branch Middle School Orchestra</h1>
+    <a class="site-title" href="index.html">
+      Western Branch Middle School Orchestra
+    </a>
 
-    <button class="menu-toggle" onclick="toggleMenu()">
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation menu">
       ☰ Menu
     </button>
 
     <nav id="mainNav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="concerts.html">Concerts</a></li>
         <li><a href="students.html">Students</a></li>
-        <li><a href="parents.html">Parents</a></li>
+        <li><a class="active" href="parents.html">Parents</a></li>
         <li><a href="join.html">Join</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="boosters.html">Boosters</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -38,98 +36,232 @@
 
 <section class="page-banner">
   <div class="container">
-    <h2>Parent Information</h2>
+    <h1>Parent Information</h1>
+    <p>Everything families need to support their orchestra student.</p>
   </div>
 </section>
 
-<section class="content">
-  <div class="container">
+<main>
 
-    <div class="card">
-      <h3>How Parents Can Help</h3>
+  <section class="content">
+    <div class="container">
 
-      <p>
-        Parent support plays a major role in student success
-        within the orchestra program.
-      </p>
+      <div class="section-heading">
+        <h2>Parent Quick Links</h2>
+        <p>Start here for the most common parent needs.</p>
+      </div>
 
-      <ul>
-        <li>Encourage regular practice at home</li>
-        <li>Ensure students arrive prepared for rehearsals</li>
-        <li>Attend concerts and performances</li>
-        <li>Support fundraising efforts</li>
-        <li>Volunteer when opportunities are available</li>
-      </ul>
+      <div class="quick-links">
+
+        <a href="calendar.html" class="quick-box">
+          <span>Calendar</span>
+          <small>Concerts, rehearsals, and deadlines</small>
+        </a>
+
+        <a href="#concerts" class="quick-box">
+          <span>Concert Expectations</span>
+          <small>Arrival, attire, and audience reminders</small>
+        </a>
+
+        <a href="#supplies" class="quick-box">
+          <span>Student Supplies</span>
+          <small>What students need for class</small>
+        </a>
+
+        <a href="#volunteer" class="quick-box">
+          <span>Volunteer</span>
+          <small>Ways to help the program</small>
+        </a>
+
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Concert Expectations</h3>
+  <section class="content alt-bg">
+    <div class="container split-section">
 
-      <ul>
-        <li>Students should arrive early for performances.</li>
-        <li>Concert attire is required.</li>
-        <li>Please remain seated during performances.</li>
-        <li>Silence phones during concerts.</li>
-        <li>Encourage students to stay for the entire event.</li>
-      </ul>
+      <div>
+        <h2>How Parents Can Help</h2>
+
+        <p>
+          Parent support makes a real difference. Students do better when families
+          help them stay organized, encourage practice, and attend performances.
+        </p>
+
+        <ul>
+          <li>Encourage regular practice at home.</li>
+          <li>Help students remember instruments, music, and supplies.</li>
+          <li>Check the orchestra calendar for updates.</li>
+          <li>Attend concerts and school performances.</li>
+          <li>Volunteer when help is needed.</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h3>Best Parent Habit</h3>
+        <p>
+          Check the calendar weekly. Most confusion comes from missed dates,
+          changed rehearsal times, or concert reminders.
+        </p>
+        <a class="button" href="calendar.html">View Calendar</a>
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Supplies Students May Need</h3>
+  <section id="concerts" class="content">
+    <div class="container">
 
-      <ul>
-        <li>Instrument and case</li>
-        <li>Rosin</li>
-        <li>Shoulder rest if applicable</li>
-        <li>Extra strings</li>
-        <li>Music folder</li>
-        <li>Pencil for rehearsal markings</li>
-      </ul>
+      <div class="section-heading">
+        <h2>Concert Expectations</h2>
+        <p>Help students arrive prepared and ready to perform.</p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Student Arrival</h3>
+          <p>
+            Students should arrive 30 minutes before the concert start time
+            unless a different report time is announced.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Concert Attire</h3>
+          <p>
+            Students must wear required concert attire for performances.
+            Attire details will be shared before each concert.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Audience Etiquette</h3>
+          <p>
+            Please silence phones, remain seated during performances,
+            and stay for the full event when possible.
+          </p>
+        </div>
+
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Volunteer Opportunities</h3>
+  <section id="supplies" class="content alt-bg">
+    <div class="container">
 
-      <p>
-        Parents are welcome to assist with:
-      </p>
+      <div class="section-heading">
+        <h2>Student Supplies</h2>
+        <p>Students should bring required materials to class and rehearsals.</p>
+      </div>
 
-      <ul>
-        <li>Concert setup and cleanup</li>
-        <li>Fundraisers</li>
-        <li>Chaperoning events</li>
-        <li>Uniform organization</li>
-        <li>Photography during events</li>
-      </ul>
+      <div class="cards">
+
+        <div class="card">
+          <h3>Required</h3>
+          <ul>
+            <li>Instrument and case</li>
+            <li>Music folder</li>
+            <li>Pencil</li>
+            <li>Assigned music</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Instrument Supplies</h3>
+          <ul>
+            <li>Rosin</li>
+            <li>Shoulder rest, if needed</li>
+            <li>Cleaning cloth</li>
+            <li>Extra strings, if recommended</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Good Habits</h3>
+          <ul>
+            <li>Label cases and supplies.</li>
+            <li>Keep music organized.</li>
+            <li>Report damage quickly.</li>
+            <li>Do not leave instruments in vehicles.</li>
+          </ul>
+        </div>
+
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Communication</h3>
+  <section id="volunteer" class="content">
+    <div class="container split-section">
 
-      <p>
-        Important updates may be shared through:
-      </p>
+      <div>
+        <h2>Volunteer and Booster Support</h2>
 
-      <ul>
-        <li>Email</li>
-        <li>School announcements</li>
-        <li>Google Classroom</li>
-        <li>The orchestra website calendar</li>
-      </ul>
+        <p>
+          Families may be asked to help with concerts, events, fundraising,
+          communication, setup, cleanup, or other program needs.
+        </p>
 
-      <p>
-        Please check regularly for schedule changes and announcements.
-      </p>
+        <ul>
+          <li>Concert setup and cleanup</li>
+          <li>Fundraisers</li>
+          <li>Event support</li>
+          <li>Uniform or concert attire organization</li>
+          <li>Photography or program support</li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h3>Want to Help?</h3>
+        <p>
+          Use the contact page to ask about current volunteer needs
+          or booster opportunities.
+        </p>
+        <a class="button" href="contact.html">Contact Us</a>
+      </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="content alt-bg">
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Communication</h2>
+        <p>Check these places for updates during the school year.</p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>Email</h3>
+          <p>Important reminders and updates may be sent by email.</p>
+        </div>
+
+        <div class="card">
+          <h3>School Platforms</h3>
+          <p>Students may receive updates through school announcements or class platforms.</p>
+        </div>
+
+        <div class="card">
+          <h3>Website Calendar</h3>
+          <p>The calendar page should be used for events, rehearsals, and major dates.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
 
 <footer>
-  <div class="container">
-    <p>
-      © 2026 Western Branch Middle School Orchestra
-    </p>
+  <div class="container footer-container">
+    <p>© 2026 Western Branch Middle School Orchestra</p>
+    <p><a href="contact.html">Contact</a></p>
   </div>
 </footer>
 
@@ -137,3 +269,4 @@
 
 </body>
 </html>
+```
