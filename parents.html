@@ -13,11 +13,45 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    /* MEETING MINUTES */
+
+    .minutes-list {
+      margin-top: 20px;
+    }
+
+    .minutes-link {
+      display: block;
+      padding: 16px 18px;
+      margin-top: 12px;
+      background: #f4f6f8;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .minutes-link:hover {
+      background: #e8edf2;
+    }
+
+    .minutes-link span {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.85rem;
+      font-weight: 400;
+    }
+
+  </style>
+
 </head>
 
 <body>
 
+
 <header>
+
   <div class="container header-container">
 
     <a class="site-title" href="index.html">
@@ -33,6 +67,7 @@
     </button>
 
     <nav id="mainNav">
+
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">Orchestras</a></li>
@@ -43,13 +78,16 @@
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+
     </nav>
 
   </div>
+
 </header>
 
 
 <section class="page-banner">
+
   <div class="container">
 
     <p class="eyebrow">
@@ -64,49 +102,87 @@
     </p>
 
   </div>
+
 </section>
 
 
 <main>
 
+
   <!-- QUICK LINKS -->
 
   <section class="content">
+
     <div class="container">
 
       <div class="quick-links">
 
+
         <a href="#about" class="quick-box">
-          <span>About WBOPA</span>
-          <small>Who we are</small>
+
+          <span>
+            About WBOPA
+          </span>
+
+          <small>
+            Who we are and what we do
+          </small>
+
         </a>
+
 
         <a href="#meetings" class="quick-box">
-          <span>Meetings &amp; Minutes</span>
-          <small>Schedule and meeting records</small>
+
+          <span>
+            Meetings &amp; Minutes
+          </span>
+
+          <small>
+            Meeting schedule and records
+          </small>
+
         </a>
+
 
         <a href="#leadership" class="quick-box">
-          <span>Leadership</span>
-          <small>WBOPA officers and coordinators</small>
+
+          <span>
+            Leadership
+          </span>
+
+          <small>
+            WBOPA officers and coordinators
+          </small>
+
         </a>
 
+
         <a href="#volunteer" class="quick-box">
-          <span>Volunteer</span>
-          <small>Help support our students</small>
+
+          <span>
+            Volunteer
+          </span>
+
+          <small>
+            Help support our students
+          </small>
+
         </a>
+
 
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- ABOUT -->
+  <!-- ABOUT WBOPA -->
 
   <section id="about" class="content alt-bg">
 
     <div class="container split-section">
+
 
       <div>
 
@@ -129,6 +205,11 @@
           enhance the orchestra experience for our students.
         </p>
 
+        <p>
+          Parents, families, and community members are encouraged
+          to participate and help support our orchestra programs.
+        </p>
+
       </div>
 
 
@@ -145,12 +226,13 @@
 
       </div>
 
+
     </div>
 
   </section>
 
 
-  <!-- MEETINGS -->
+  <!-- MEETINGS & MINUTES -->
 
   <section id="meetings" class="content">
 
@@ -158,7 +240,9 @@
 
       <div class="section-heading">
 
-        <p class="card-label">Stay Involved</p>
+        <p class="card-label">
+          Stay Involved
+        </p>
 
         <h2>Meetings &amp; Minutes</h2>
 
@@ -172,22 +256,36 @@
 
       <div class="cards">
 
+
         <!-- MONTHLY MEETINGS -->
 
         <article class="card">
 
-          <p class="card-label">Monthly Meetings</p>
+          <p class="card-label">
+            Monthly Meetings
+          </p>
 
           <h3>Second Thursday of Each Month</h3>
 
           <p>
-            <strong>7:30 PM to 8:00 PM</strong>
+            <strong>
+              7:30 PM to 8:00 PM
+            </strong>
           </p>
 
           <p>
-            Meetings are currently held by Zoom.
-            Contact WBOPA for current meeting information.
+            Meetings are currently held by Zoom during the
+            school year.
           </p>
+
+          <p>
+            Contact WBOPA for current meeting information
+            and the Zoom meeting link.
+          </p>
+
+          <a href="contact.html">
+            Contact WBOPA
+          </a>
 
         </article>
 
@@ -196,7 +294,9 @@
 
         <article class="card" id="minutes">
 
-          <p class="card-label">Association Records</p>
+          <p class="card-label">
+            Association Records
+          </p>
 
           <h3>Meeting Minutes</h3>
 
@@ -206,20 +306,55 @@
           </p>
 
           <p>
-            <strong>2026-2027 School Year</strong>
+            <strong>
+              2026-2027 School Year
+            </strong>
           </p>
 
-          <p>
+
+          <div class="minutes-list">
+
             <a
+              class="minutes-link"
               href="Minutes/WBOPA%20Board%20Meeting%20Minutes%2008-13-26.pdf"
               target="_blank"
               rel="noopener"
             >
               August 13, 2026 Board Meeting Minutes
+
+              <span>
+                View PDF
+              </span>
+
             </a>
-          </p>
+
+          </div>
+
+
+          <!--
+
+          ADD FUTURE MINUTES BELOW THE AUGUST LINK.
+
+          COPY THIS:
+
+          <a
+            class="minutes-link"
+            href="Minutes/FILE-NAME.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            September 10, 2026 Board Meeting Minutes
+
+            <span>
+              View PDF
+            </span>
+
+          </a>
+
+          -->
 
         </article>
+
 
       </div>
 
@@ -236,7 +371,9 @@
 
       <div class="section-heading">
 
-        <p class="card-label">Our Team</p>
+        <p class="card-label">
+          Our Team
+        </p>
 
         <h2>WBOPA Leadership</h2>
 
@@ -252,35 +389,60 @@
 
         <div class="leadership-list">
 
+
           <p>
-            <strong>President</strong><br>
+            <strong>
+              President
+            </strong>
+            <br>
             Caroline Piland
           </p>
 
+
           <p>
-            <strong>Vice President</strong><br>
+            <strong>
+              Vice President
+            </strong>
+            <br>
             Sharona Stimpson
           </p>
 
+
           <p>
-            <strong>Treasurer</strong><br>
+            <strong>
+              Treasurer
+            </strong>
+            <br>
             Dave West
           </p>
 
+
           <p>
-            <strong>Secretary / Flower Chair</strong><br>
+            <strong>
+              Secretary / Flower Chair
+            </strong>
+            <br>
             Kim Hudson
           </p>
 
+
           <p>
-            <strong>Social Media Coordinator</strong><br>
+            <strong>
+              Social Media Coordinator
+            </strong>
+            <br>
             Betsy Beaman
           </p>
 
+
           <p>
-            <strong>Website Administrator</strong><br>
+            <strong>
+              Website Administrator
+            </strong>
+            <br>
             Adam Levine
           </p>
+
 
         </div>
 
@@ -297,9 +459,12 @@
 
     <div class="container split-section">
 
+
       <div>
 
-        <p class="card-label">Get Involved</p>
+        <p class="card-label">
+          Get Involved
+        </p>
 
         <h2>Volunteer With WBOPA</h2>
 
@@ -311,7 +476,11 @@
         <p>
           You can help with concerts, fundraisers, student activities,
           events, communications, setup, or other orchestra needs.
-          Even helping with one event makes a difference.
+        </p>
+
+        <p>
+          Whether you can help throughout the year or with a single
+          event, your time helps support our student musicians.
         </p>
 
       </div>
@@ -326,15 +495,68 @@
           to support our orchestra students.
         </p>
 
-        <a class="button" href="contact.html">
+        <a
+          class="button"
+          href="contact.html"
+        >
           Contact WBOPA
         </a>
 
       </div>
 
+
     </div>
 
   </section>
+
+
+  <!-- SUPPORT -->
+
+  <section class="content alt-bg">
+
+    <div class="container split-section">
+
+
+      <div>
+
+        <p class="card-label">
+          Support Our Orchestras
+        </p>
+
+        <h2>Help Support Our Students</h2>
+
+        <p>
+          Fundraising helps WBOPA provide resources and support
+          for orchestra students, directors, performances,
+          activities, and other opportunities.
+        </p>
+
+      </div>
+
+
+      <div class="info-box">
+
+        <h3>Fundraising</h3>
+
+        <p>
+          Learn about current fundraisers and other ways
+          you can support Western Branch orchestra students.
+        </p>
+
+        <a
+          class="button"
+          href="fundraising.html"
+        >
+          View Fundraising
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
 
 </main>
 
@@ -352,7 +574,9 @@
     </p>
 
     <p>
-      <a href="contact.html">Contact Us</a>
+      <a href="contact.html">
+        Contact Us
+      </a>
     </p>
 
   </div>
