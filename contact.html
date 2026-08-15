@@ -13,11 +13,18 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
+
+<!-- ========================================
+     HEADER
+======================================== -->
+
 <header>
+
   <div class="container header-container">
 
     <a class="site-title" href="index.html">
@@ -28,11 +35,14 @@
       class="menu-toggle"
       onclick="toggleMenu()"
       aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="mainNav"
     >
       ☰ Menu
     </button>
 
     <nav id="mainNav">
+
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">Orchestras</a></li>
@@ -43,13 +53,17 @@
         <li><a href="gallery.html">Gallery</a></li>
         <li><a class="active" href="contact.html">Contact</a></li>
       </ul>
+
     </nav>
 
   </div>
+
 </header>
 
 
-<!-- PAGE BANNER -->
+<!-- ========================================
+     PAGE BANNER
+======================================== -->
 
 <section class="page-banner">
 
@@ -74,284 +88,337 @@
 <main>
 
 
-  <!-- QUICK LINKS -->
+<!-- ========================================
+     QUICK LINKS
+======================================== -->
 
-  <section class="content">
+<section class="content">
 
-    <div class="container">
+  <div class="container">
 
-      <div class="quick-links">
-
-        <a href="#wbhs-contact" class="quick-box">
-          <span>Western Branch High School</span>
-          <small>High school orchestra questions</small>
-        </a>
-
-        <a href="#jolliff-contact" class="quick-box">
-          <span>Jolliff Middle School</span>
-          <small>Middle school orchestra questions</small>
-        </a>
-
-        <a href="#wbopa-contact" class="quick-box">
-          <span>WBOPA</span>
-          <small>Parents Association questions</small>
-        </a>
-
-        <a href="#website-contact" class="quick-box">
-          <span>Website</span>
-          <small>Corrections and website updates</small>
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
+    <div class="quick-links">
 
 
-  <!-- CONTACTS -->
+      <a href="#wbhs-contact" class="quick-box">
 
-  <section class="content alt-bg">
+        <span>
+          Western Branch High School
+        </span>
 
-    <div class="container">
+        <small>
+          High school orchestra questions
+        </small>
 
-      <div class="section-heading">
-
-        <p class="card-label">
-          Get in Touch
-        </p>
-
-        <h2>Orchestra &amp; WBOPA Contacts</h2>
-
-        <p>
-          Choose the contact that best matches your question.
-          Questions about individual students, classes, rehearsals,
-          or performances should be directed to the appropriate
-          orchestra director.
-        </p>
-
-      </div>
+      </a>
 
 
-      <div class="cards">
+      <a href="#jolliff-contact" class="quick-box">
+
+        <span>
+          Jolliff Middle School
+        </span>
+
+        <small>
+          Middle school orchestra questions
+        </small>
+
+      </a>
 
 
-        <!-- WESTERN BRANCH HIGH SCHOOL -->
+      <a href="#wbopa-contact" class="quick-box">
 
-        <article class="card" id="wbhs-contact">
+        <span>
+          WBOPA
+        </span>
 
-          <p class="card-label">
-            High School
-          </p>
+        <small>
+          Parents Association questions
+        </small>
 
-          <h3>Western Branch High School Orchestra</h3>
-
-          <p>
-            Contact the Western Branch High School orchestra program
-            for questions about classes, ensembles, auditions,
-            performances, rehearsals, and student requirements.
-          </p>
-
-          <p>
-            <strong>Bradley Blair</strong><br>
-            Orchestra Coordinator
-          </p>
-
-          <p>
-            <strong>Western Branch High School</strong><br>
-            1968 Bruin Place<br>
-            Chesapeake, VA 23321
-          </p>
-
-          <p>
-            <strong>Main Office:</strong><br>
-            <a href="tel:7576387900">
-              757-638-7900
-            </a>
-          </p>
-
-        </article>
+      </a>
 
 
-        <!-- JOLLIFF MIDDLE SCHOOL -->
+      <a href="#website-contact" class="quick-box">
 
-        <article class="card" id="jolliff-contact">
-
-          <p class="card-label">
-            Middle School
-          </p>
-
-          <h3>Jolliff Middle School Orchestra</h3>
-
-          <p>
-            Contact the Jolliff Middle School orchestra program
-            for questions about classes, instruments, rehearsals,
-            performances, and student requirements.
-          </p>
-
-          <p>
-            <strong>Leah Rosenberg</strong><br>
-            Orchestra Director
-          </p>
-
-          <p>
-            <strong>Email:</strong><br>
-            <a href="mailto:Leah.Rosenberg@cpschools.com">
-              Leah.Rosenberg@cpschools.com
-            </a>
-          </p>
-
-          <p>
-            <strong>Jolliff Middle School</strong><br>
-            1021 Jolliff Road<br>
-            Chesapeake, VA 23321
-          </p>
-
-          <p>
-            <strong>Main Office:</strong><br>
-            <a href="tel:7574655246">
-              757-465-5246
-            </a>
-          </p>
-
-          <a
-            class="button"
-            href="mailto:Leah.Rosenberg@cpschools.com?subject=Jolliff%20Middle%20School%20Orchestra"
-          >
-            Email Orchestra Director
-          </a>
-
-        </article>
-
-
-        <!-- WBOPA -->
-
-        <article class="card" id="wbopa-contact">
-
-          <p class="card-label">
-            Parents Association
-          </p>
-
-          <h3>WBOPA</h3>
-
-          <p>
-            Contact the Western Branch Orchestras Parents Association
-            for questions about meetings, volunteering, fundraising,
-            events, donations, or supporting our orchestra programs.
-          </p>
-
-          <p>
-            <strong>General Contact:</strong><br>
-            <a href="mailto:ALevi2483@gmail.com">
-              ALevi2483@gmail.com
-            </a>
-          </p>
-
-          <a
-            class="button"
-            href="mailto:ALevi2483@gmail.com?subject=WBOPA%20Question"
-          >
-            Email WBOPA
-          </a>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- WEBSITE UPDATES -->
-
-  <section id="website-contact" class="content">
-
-    <div class="container split-section">
-
-      <div>
-
-        <p class="card-label">
+        <span>
           Website
+        </span>
+
+        <small>
+          Corrections and website updates
+        </small>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================
+     CONTACTS
+======================================== -->
+
+<section class="content alt-bg">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <p class="card-label">
+        Get in Touch
+      </p>
+
+      <h2>Orchestra &amp; WBOPA Contacts</h2>
+
+      <p>
+        Choose the contact that best matches your question.
+        Questions about individual students, classes, rehearsals,
+        or performances should be directed to the appropriate
+        orchestra director.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+      <!-- WESTERN BRANCH HIGH SCHOOL -->
+
+      <article class="card" id="wbhs-contact">
+
+        <p class="card-label">
+          High School
         </p>
 
-        <h2>Website Questions or Updates</h2>
+        <h3>Western Branch High School Orchestra</h3>
 
         <p>
-          Found outdated information, an incorrect date,
-          a broken link, or something that should be added?
+          Contact the Western Branch High School orchestra program
+          for questions about classes, ensembles, auditions,
+          performances, rehearsals, and student requirements.
         </p>
 
         <p>
-          Send the page name and the correct information
-          so the website can be updated.
-        </p>
-
-      </div>
-
-
-      <div class="info-box">
-
-        <h3>Contact the Website Administrator</h3>
-
-        <p>
-          <strong>Adam Levine</strong><br>
-          Website Administrator
+          <strong>Bradley Blair</strong><br>
+          Orchestra Coordinator
         </p>
 
         <p>
-          Please include the page or section that needs to
-          be changed and the updated information.
+          <strong>Western Branch High School</strong><br>
+          1968 Bruin Place<br>
+          Chesapeake, VA 23321
+        </p>
+
+        <p>
+          <strong>Main Office:</strong><br>
+
+          <a href="tel:7576387900">
+            757-638-7900
+          </a>
+
+        </p>
+
+      </article>
+
+
+      <!-- JOLLIFF MIDDLE SCHOOL -->
+
+      <article class="card" id="jolliff-contact">
+
+        <p class="card-label">
+          Middle School
+        </p>
+
+        <h3>Jolliff Middle School Orchestra</h3>
+
+        <p>
+          Contact the Jolliff Middle School orchestra program
+          for questions about classes, instruments, rehearsals,
+          performances, and student requirements.
+        </p>
+
+        <p>
+          <strong>Leah Rosenberg</strong><br>
+          Orchestra Director
+        </p>
+
+        <p>
+          <strong>Email:</strong><br>
+
+          <a href="mailto:Leah.Rosenberg@cpschools.com">
+            Leah.Rosenberg@cpschools.com
+          </a>
+
+        </p>
+
+        <p>
+          <strong>Jolliff Middle School</strong><br>
+          1021 Jolliff Road<br>
+          Chesapeake, VA 23321
+        </p>
+
+        <p>
+          <strong>Main Office:</strong><br>
+
+          <a href="tel:7574655246">
+            757-465-5246
+          </a>
+
         </p>
 
         <a
           class="button"
-          href="mailto:ALevi2483@gmail.com?subject=Western%20Branch%20Orchestra%20Website%20Update"
+          href="mailto:Leah.Rosenberg@cpschools.com?subject=Jolliff%20Middle%20School%20Orchestra"
         >
-          Submit Website Update
+          Email Orchestra Director
         </a>
 
-      </div>
-
-    </div>
-
-  </section>
+      </article>
 
 
-  <!-- CONTACT GUIDANCE -->
+      <!-- WBOPA -->
 
-  <section class="content alt-bg">
+      <article class="card" id="wbopa-contact">
 
-    <div class="container">
+        <p class="card-label">
+          Parents Association
+        </p>
 
-      <div class="info-box">
-
-        <h3>Not Sure Who to Contact?</h3>
+        <h3>WBOPA</h3>
 
         <p>
-          Questions about students, classes, rehearsals, auditions,
-          instruments, or performances should go to the appropriate
-          orchestra director.
+          Contact the Western Branch Orchestras Parents Association
+          for questions about meetings, volunteering, fundraising,
+          events, donations, or supporting our orchestra programs.
         </p>
 
         <p>
-          Questions about fundraising, volunteering, meetings,
-          events, donations, or the Parents Association should
-          go to WBOPA.
+          <strong>General Contact:</strong><br>
+
+          <a href="mailto:ALevi2483@gmail.com">
+            ALevi2483@gmail.com
+          </a>
+
         </p>
 
-      </div>
+        <a
+          class="button"
+          href="mailto:ALevi2483@gmail.com?subject=WBOPA%20Question"
+        >
+          Email WBOPA
+        </a>
+
+      </article>
+
 
     </div>
 
-  </section>
+  </div>
+
+</section>
+
+
+<!-- ========================================
+     WEBSITE UPDATES
+======================================== -->
+
+<section id="website-contact" class="content">
+
+  <div class="container split-section">
+
+
+    <div>
+
+      <p class="card-label">
+        Website
+      </p>
+
+      <h2>Website Questions or Updates</h2>
+
+      <p>
+        Found outdated information, an incorrect date,
+        a broken link, or something that should be added?
+      </p>
+
+      <p>
+        Send the page name and the correct information
+        so the website can be updated.
+      </p>
+
+    </div>
+
+
+    <div class="info-box">
+
+      <h3>Contact the Website Administrator</h3>
+
+      <p>
+        <strong>Adam Levine</strong><br>
+        Website Administrator
+      </p>
+
+      <p>
+        Please include the page or section that needs to
+        be changed and the updated information.
+      </p>
+
+      <a
+        class="button"
+        href="mailto:ALevi2483@gmail.com?subject=Western%20Branch%20Orchestra%20Website%20Update"
+      >
+        Submit Website Update
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ========================================
+     CONTACT GUIDANCE
+======================================== -->
+
+<section class="content alt-bg">
+
+  <div class="container">
+
+    <div class="info-box">
+
+      <h3>Not Sure Who to Contact?</h3>
+
+      <p>
+        Questions about students, classes, rehearsals, auditions,
+        instruments, or performances should go to the appropriate
+        orchestra director.
+      </p>
+
+      <p>
+        Questions about fundraising, volunteering, meetings,
+        events, donations, or the Parents Association should
+        go to WBOPA.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
 
 </main>
 
 
-<!-- FOOTER -->
+<!-- ========================================
+     FOOTER
+======================================== -->
 
 <footer>
 
@@ -362,7 +429,8 @@
     </p>
 
     <p>
-      Supporting Western Branch High School and Jolliff Middle School Orchestras
+      Supporting Western Branch High School and
+      Jolliff Middle School Orchestras
     </p>
 
     <p>
