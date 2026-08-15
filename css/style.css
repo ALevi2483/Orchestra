@@ -11,6 +11,10 @@
   --radius: 16px;
 }
 
+/* ========================================
+   GLOBAL
+======================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -37,13 +41,25 @@ a {
   color: var(--blue);
 }
 
+p {
+  margin-bottom: 12px;
+}
+
 .container {
   width: 92%;
   max-width: 1150px;
   margin: 0 auto;
 }
 
-/* Header */
+/* Helps anchor links clear the sticky header */
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
 
 header {
   background: var(--navy);
@@ -68,6 +84,7 @@ header {
   font-size: 22px;
   font-weight: 800;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 nav ul {
@@ -81,9 +98,10 @@ nav a {
   color: var(--white);
   text-decoration: none;
   font-weight: 700;
-  padding: 9px 9px;
+  padding: 9px;
   border-radius: 999px;
   transition: 0.2s;
+  white-space: nowrap;
 }
 
 nav a:hover,
@@ -102,7 +120,10 @@ nav a.active {
   cursor: pointer;
 }
 
-/* Hero */
+
+/* ========================================
+   HERO
+======================================== */
 
 .hero {
   background-image:
@@ -142,20 +163,6 @@ nav a.active {
   margin-bottom: 26px;
 }
 
-.hero-card p {
-  color: var(--text);
-  margin-bottom: 12px;
-}
-
-.hero-card .event-date {
-  color: var(--blue);
-  font-weight: 800;
-}
-
-.hero-card .small-text {
-  color: var(--muted);
-}
-
 .hero-buttons {
   display: flex;
   gap: 12px;
@@ -177,6 +184,20 @@ nav a.active {
   margin-bottom: 10px;
 }
 
+.hero-card p {
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.hero-card .event-date {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.hero-card .small-text {
+  color: var(--muted);
+}
+
 .event-date {
   color: var(--blue);
   font-weight: 800;
@@ -188,7 +209,10 @@ nav a.active {
   font-size: 15px;
 }
 
-/* Buttons */
+
+/* ========================================
+   BUTTONS
+======================================== */
 
 .button,
 form button {
@@ -215,11 +239,13 @@ form button:hover {
   color: var(--navy);
 }
 
-/* Page Banner */
+
+/* ========================================
+   PAGE BANNERS
+======================================== */
 
 .page-banner {
-  background:
-    linear-gradient(135deg, var(--navy), var(--blue));
+  background: linear-gradient(135deg, var(--navy), var(--blue));
   color: var(--white);
   padding: 60px 0;
   text-align: center;
@@ -235,9 +261,19 @@ form button:hover {
 .page-banner p {
   font-size: 18px;
   color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 0;
 }
 
-/* Sections */
+.page-banner .eyebrow {
+  color: var(--gold);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+
+/* ========================================
+   CONTENT SECTIONS
+======================================== */
 
 .content {
   padding: 60px 0;
@@ -272,7 +308,15 @@ form button:hover {
   align-items: start;
 }
 
-/* Cards */
+.content ul {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
 
 .cards {
   display: grid;
@@ -301,12 +345,17 @@ form button:hover {
   margin-bottom: 12px;
 }
 
+.card a:not(.button) {
+  font-weight: 700;
+}
+
 .card-label {
   color: var(--blue);
   font-weight: 800;
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 0.8px;
+  margin-bottom: 7px;
 }
 
 .card ul,
@@ -323,7 +372,10 @@ form button:hover {
   border-top: 6px solid var(--gold);
 }
 
-/* Quick Links */
+
+/* ========================================
+   QUICK LINKS
+======================================== */
 
 .quick-links {
   display: grid;
@@ -358,9 +410,13 @@ form button:hover {
   display: block;
   color: var(--muted);
   font-weight: 600;
+  line-height: 1.4;
 }
 
-/* Calendar */
+
+/* ========================================
+   CALENDAR
+======================================== */
 
 .event-list {
   display: grid;
@@ -409,6 +465,10 @@ form button:hover {
   margin-bottom: 8px;
 }
 
+.event-details p {
+  margin-bottom: 7px;
+}
+
 .calendar-placeholder {
   background: var(--white);
   border: 2px dashed var(--border);
@@ -418,7 +478,10 @@ form button:hover {
   color: var(--muted);
 }
 
-/* Gallery */
+
+/* ========================================
+   GALLERY
+======================================== */
 
 .gallery-grid {
   display: grid;
@@ -446,15 +509,34 @@ form button:hover {
   background: #d9e2ec;
 }
 
+/* Used until real orchestra photos are added */
+
+.gallery-placeholder {
+  width: 100%;
+  height: 230px;
+  background: #d9e2ec;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 800;
+  padding: 20px;
+}
+
 .gallery-item figcaption,
-.gallery-item p {
+.gallery-item > p {
   padding: 16px;
   text-align: center;
   font-weight: 800;
   color: var(--navy);
+  margin-bottom: 0;
 }
 
-/* Forms */
+
+/* ========================================
+   FORMS
+======================================== */
 
 form {
   display: flex;
@@ -469,18 +551,27 @@ form label {
 }
 
 form input,
-form textarea {
+form textarea,
+form select {
+  width: 100%;
   padding: 13px;
   border: 1px solid var(--border);
   border-radius: 10px;
   font-size: 16px;
   font-family: inherit;
+  background: var(--white);
 }
 
 form input:focus,
-form textarea:focus {
+form textarea:focus,
+form select:focus {
   outline: 3px solid rgba(47, 111, 159, 0.2);
   border-color: var(--blue);
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 150px;
 }
 
 form button {
@@ -489,12 +580,15 @@ form button {
   align-self: flex-start;
 }
 
-/* Footer */
+
+/* ========================================
+   FOOTER
+======================================== */
 
 footer {
   background: var(--navy);
   color: var(--white);
-  padding: 24px 0;
+  padding: 28px 0;
 }
 
 .footer-container {
@@ -505,12 +599,19 @@ footer {
   align-items: center;
 }
 
+.footer-container p {
+  margin-bottom: 0;
+}
+
 footer a {
   color: var(--white);
   font-weight: 800;
 }
 
-/* Mobile */
+
+/* ========================================
+   TABLET / MOBILE
+======================================== */
 
 @media (max-width: 850px) {
 
@@ -521,6 +622,7 @@ footer a {
   .site-title {
     font-size: 18px;
     max-width: 70%;
+    white-space: normal;
   }
 
   .menu-toggle {
@@ -552,6 +654,7 @@ footer a {
     display: block;
     padding: 13px 0;
     border-radius: 0;
+    white-space: normal;
   }
 
   .hero {
@@ -563,12 +666,12 @@ footer a {
     grid-template-columns: 1fr;
   }
 
-.hero h1 {
-  font-size: 40px;
-}
+  .hero h1 {
+    font-size: 40px;
+  }
 
   .hero-subtitle {
-  font-size: 18px;
+    font-size: 18px;
   }
 
   .button {
@@ -604,18 +707,32 @@ footer a {
 
 }
 
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
 @media (max-width: 480px) {
 
   .container {
     width: 94%;
   }
 
-.hero h1 {
-  font-size: 34px;
-}
+  .hero {
+    padding: 55px 0;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
 
   .page-banner {
     padding: 45px 0;
+  }
+
+  .page-banner h1,
+  .page-banner h2 {
+    font-size: 34px;
   }
 
   .card,
@@ -625,8 +742,13 @@ footer a {
     padding: 20px;
   }
 
-  .gallery-item img {
+  .gallery-item img,
+  .gallery-placeholder {
     height: 190px;
+  }
+
+  .event-details h3 {
+    font-size: 21px;
   }
 
 }
