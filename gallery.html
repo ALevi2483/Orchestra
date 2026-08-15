@@ -20,7 +20,7 @@
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       margin-top: 30px;
     }
@@ -36,8 +36,9 @@
     .gallery-item img {
       display: block;
       width: 100%;
-      height: 240px;
+      height: 300px;
       object-fit: cover;
+      object-position: center;
     }
 
     .gallery-item figcaption {
@@ -45,41 +46,17 @@
       font-weight: 600;
     }
 
-    .gallery-placeholder {
-      height: 240px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      text-align: center;
-      background: #eef2f6;
-      color: #555;
-      font-weight: 600;
-    }
-
-    @media (max-width: 900px) {
-
-      .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-    }
-
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
 
       .gallery-grid {
         grid-template-columns: 1fr;
-      }
-
-      .gallery-item img,
-      .gallery-placeholder {
-        height: auto;
-        min-height: 200px;
+        gap: 20px;
       }
 
       .gallery-item img {
+        height: auto;
+        max-height: none;
         object-fit: contain;
-        background: #ffffff;
       }
 
     }
@@ -89,6 +66,7 @@
 </head>
 
 <body>
+
 
 <header>
 
@@ -174,12 +152,12 @@
       <div class="gallery-grid">
 
 
-        <!-- PHOTO 1 -->
+        <!-- ORCHESTRA PHOTO -->
 
         <figure class="gallery-item">
 
           <img
-            src="images/Cover%201.jpeg"
+            src="images/cover-orchestra.jpg"
             alt="Western Branch orchestra students performing on stage"
             loading="lazy"
           >
@@ -191,33 +169,18 @@
         </figure>
 
 
-        <!-- PHOTO 2 -->
+        <!-- STUDENT PHOTO -->
 
         <figure class="gallery-item">
 
           <img
-            src="images/Cover%202.jpeg"
-            alt="Western Branch orchestra community"
+            src="images/cover-students.jpg"
+            alt="Western Branch orchestra students"
             loading="lazy"
           >
 
           <figcaption>
-            Orchestra Memories
-          </figcaption>
-
-        </figure>
-
-
-        <!-- JOLLIFF PLACEHOLDER -->
-
-        <figure class="gallery-item">
-
-          <div class="gallery-placeholder">
-            Jolliff Middle School photos coming soon
-          </div>
-
-          <figcaption>
-            Jolliff Middle School
+            Orchestra Students &amp; Memories
           </figcaption>
 
         </figure>
@@ -255,6 +218,8 @@
       <div class="cards">
 
 
+        <!-- CARNEGIE HALL -->
+
         <article class="card">
 
           <p class="card-label">
@@ -271,6 +236,8 @@
         </article>
 
 
+        <!-- HERITAGE FESTIVAL -->
+
         <article class="card">
 
           <p class="card-label">
@@ -286,6 +253,8 @@
 
         </article>
 
+
+        <!-- TRIPS -->
 
         <article class="card">
 
