@@ -16,52 +16,93 @@
 
   <style>
 
-    /* ORCHESTRA DIRECTOR SECTIONS */
+    /* ========================================
+       ORCHESTRAS PAGE
+    ======================================== */
+
+    #wbhs,
+    #jolliff {
+      scroll-margin-top: 90px;
+    }
+
+
+    /* DIRECTOR SECTION */
 
     .director-section {
       display: grid;
       grid-template-columns: 180px 1fr;
       gap: 30px;
       align-items: center;
-      margin-bottom: 35px;
+      margin-bottom: 40px;
     }
 
     .director-photo {
+      display: block;
       width: 180px;
       height: 220px;
       object-fit: cover;
+      object-position: center;
       border-radius: 14px;
-      display: block;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
     }
 
-    .director-info h3 {
+    .director-info h2 {
       margin-top: 5px;
       margin-bottom: 8px;
     }
 
     .director-info p {
-      margin-top: 5px;
-      margin-bottom: 5px;
+      margin-top: 6px;
+      margin-bottom: 8px;
     }
+
+    .director-title {
+      font-weight: 700;
+    }
+
+
+    /* PROGRAM INTRO */
+
+    .program-intro {
+      max-width: 850px;
+      margin-bottom: 30px;
+    }
+
+    .program-intro h2 {
+      margin-bottom: 12px;
+    }
+
+
+    /* SECTION ACTION */
+
+    .section-action {
+      margin-top: 30px;
+    }
+
+
+    /* MOBILE */
 
     @media (max-width: 650px) {
 
+      #wbhs,
+      #jolliff {
+        scroll-margin-top: 75px;
+      }
+
       .director-section {
-        grid-template-columns: 110px 1fr;
+        grid-template-columns: 1fr;
         gap: 18px;
-        align-items: center;
-        margin-bottom: 28px;
+        align-items: start;
+        margin-bottom: 30px;
       }
 
       .director-photo {
-        width: 110px;
-        height: 140px;
-        border-radius: 10px;
+        width: 150px;
+        height: 185px;
       }
 
-      .director-info h3 {
-        font-size: 1.25rem;
+      .director-info h2 {
+        font-size: 1.6rem;
       }
 
     }
@@ -70,8 +111,13 @@
 
 </head>
 
+
 <body>
 
+
+<!-- ========================================
+     HEADER
+======================================== -->
 
 <header>
 
@@ -85,6 +131,7 @@
       class="menu-toggle"
       onclick="toggleMenu()"
       aria-label="Toggle navigation menu"
+      aria-controls="mainNav"
     >
       ☰ Menu
     </button>
@@ -109,6 +156,10 @@
 </header>
 
 
+<!-- ========================================
+     PAGE BANNER
+======================================== -->
+
 <section class="page-banner">
 
   <div class="container">
@@ -120,7 +171,8 @@
     <h1>Our Orchestras</h1>
 
     <p>
-      Supporting orchestra students from middle school through high school.
+      Supporting orchestra students from middle school
+      through high school.
     </p>
 
   </div>
@@ -131,7 +183,9 @@
 <main>
 
 
-  <!-- PROGRAM SELECTION -->
+  <!-- ========================================
+       PROGRAM SELECTION
+  ======================================== -->
 
   <section class="content">
 
@@ -139,7 +193,11 @@
 
       <div class="section-heading">
 
-        <h2>Western Branch Orchestra Programs</h2>
+        <p class="card-label">
+          Western Branch Orchestras
+        </p>
+
+        <h2>Orchestra Programs</h2>
 
         <p>
           Students develop musicianship, performance skills,
@@ -184,14 +242,16 @@
   </section>
 
 
-  <!-- WESTERN BRANCH HIGH SCHOOL -->
+  <!-- ========================================
+       WESTERN BRANCH HIGH SCHOOL
+  ======================================== -->
 
   <section id="wbhs" class="content alt-bg">
 
     <div class="container">
 
 
-      <!-- BRADLEY BLAIR -->
+      <!-- DIRECTOR -->
 
       <div class="director-section">
 
@@ -199,6 +259,7 @@
           class="director-photo"
           src="images/bradley-blair.jpg"
           alt="Bradley Blair, Western Branch High School Orchestra Coordinator"
+          loading="lazy"
         >
 
         <div class="director-info">
@@ -207,10 +268,15 @@
             Western Branch High School
           </p>
 
-          <h3>Bradley Blair</h3>
+          <h2>Bradley Blair</h2>
+
+          <p class="director-title">
+            Orchestra Coordinator
+          </p>
 
           <p>
-            <strong>Orchestra Coordinator</strong>
+            Mr. Blair leads the Western Branch High School
+            orchestra program and its student ensembles.
           </p>
 
         </div>
@@ -218,7 +284,9 @@
       </div>
 
 
-      <div class="section-heading">
+      <!-- PROGRAM DESCRIPTION -->
+
+      <div class="program-intro">
 
         <h2>Western Branch High School Orchestra</h2>
 
@@ -228,38 +296,59 @@
           ensemble skills, and performance experience.
         </p>
 
+        <p>
+          Students participate in orchestra ensembles designed
+          to strengthen technique, musicianship, collaboration,
+          and performance skills.
+        </p>
+
       </div>
 
+
+      <!-- ENSEMBLES -->
 
       <div class="cards">
 
 
         <article class="card">
 
+          <p class="card-label">
+            Ensemble
+          </p>
+
           <h3>Blue &amp; Gold Orchestra</h3>
 
           <p>
             Students continue developing string technique,
-            musicianship, ensemble skills, and performance experience.
+            musicianship, ensemble skills, and performance
+            experience.
           </p>
 
         </article>
 
 
         <article class="card">
+
+          <p class="card-label">
+            Ensemble
+          </p>
 
           <h3>Concert Orchestra</h3>
 
           <p>
-            Students build on previous orchestra experience through
-            continued instruction, ensemble musicianship, and
-            concert repertoire.
+            Students build on previous orchestra experience
+            through continued instruction, ensemble musicianship,
+            and concert repertoire.
           </p>
 
         </article>
 
 
         <article class="card">
+
+          <p class="card-label">
+            Ensemble
+          </p>
 
           <h3>Chamber Orchestra</h3>
 
@@ -274,19 +363,31 @@
 
       </div>
 
+
+      <div class="section-action">
+
+        <a class="button" href="students.html">
+          Student Resources
+        </a>
+
+      </div>
+
+
     </div>
 
   </section>
 
 
-  <!-- JOLLIFF MIDDLE SCHOOL -->
+  <!-- ========================================
+       JOLLIFF MIDDLE SCHOOL
+  ======================================== -->
 
   <section id="jolliff" class="content">
 
     <div class="container">
 
 
-      <!-- LEAH ROSENBERG -->
+      <!-- DIRECTOR -->
 
       <div class="director-section">
 
@@ -294,6 +395,7 @@
           class="director-photo"
           src="images/leah-rosenberg.jpg"
           alt="Leah Rosenberg, Jolliff Middle School Orchestra Director"
+          loading="lazy"
         >
 
         <div class="director-info">
@@ -302,10 +404,16 @@
             Jolliff Middle School
           </p>
 
-          <h3>Leah Rosenberg</h3>
+          <h2>Leah Rosenberg</h2>
+
+          <p class="director-title">
+            Orchestra Director
+          </p>
 
           <p>
-            <strong>Orchestra Director</strong>
+            Mrs. Rosenberg leads the Jolliff Middle School
+            orchestra program and helps students develop the
+            skills needed for continued participation in orchestra.
           </p>
 
         </div>
@@ -313,7 +421,9 @@
       </div>
 
 
-      <div class="section-heading">
+      <!-- PROGRAM DESCRIPTION -->
+
+      <div class="program-intro">
 
         <h2>Jolliff Middle School Orchestra</h2>
 
@@ -323,37 +433,58 @@
           and ensemble playing.
         </p>
 
+        <p>
+          Students develop the skills and experience needed
+          to grow as musicians and continue participating in
+          orchestra throughout middle school and into high school.
+        </p>
+
       </div>
 
+
+      <!-- PROGRAM AREAS -->
 
       <div class="cards">
 
 
         <article class="card">
 
+          <p class="card-label">
+            Fundamentals
+          </p>
+
           <h3>Learn</h3>
 
           <p>
             Students develop fundamental string technique,
-            music reading, and proper instrument care.
+            music reading skills, rehearsal habits, and proper
+            instrument care.
           </p>
 
         </article>
 
 
         <article class="card">
+
+          <p class="card-label">
+            Performance
+          </p>
 
           <h3>Perform</h3>
 
           <p>
             Students develop ensemble skills and gain experience
-            preparing and performing orchestra music.
+            preparing and performing orchestra music together.
           </p>
 
         </article>
 
 
         <article class="card">
+
+          <p class="card-label">
+            Development
+          </p>
 
           <h3>Grow</h3>
 
@@ -368,6 +499,16 @@
 
       </div>
 
+
+      <div class="section-action">
+
+        <a class="button" href="students.html">
+          Student Resources
+        </a>
+
+      </div>
+
+
     </div>
 
   </section>
@@ -375,6 +516,10 @@
 
 </main>
 
+
+<!-- ========================================
+     FOOTER
+======================================== -->
 
 <footer>
 
@@ -385,7 +530,8 @@
     </p>
 
     <p>
-      Supporting Western Branch High School and Jolliff Middle School Orchestras
+      Supporting Western Branch High School and
+      Jolliff Middle School Orchestras
     </p>
 
     <p>
@@ -400,6 +546,7 @@
 
 
 <script src="js/script.js"></script>
+
 
 </body>
 
