@@ -13,6 +13,55 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .director-profile {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin: 25px 0 30px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #d9e1e8;
+    }
+
+    .director-photo {
+      width: 130px;
+      height: 160px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    .director-info {
+      flex: 1;
+    }
+
+    .director-info h3 {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+
+    .director-title {
+      margin-top: 0;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .director-profile {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .director-photo {
+        width: 150px;
+        height: 185px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -128,9 +177,32 @@
           ensemble skills, and performance experience.
         </p>
 
-        <p>
-          <strong>Orchestra Coordinator:</strong> Bradley Blair
-        </p>
+      </div>
+
+
+      <!-- BRADLEY BLAIR -->
+
+      <div class="director-profile">
+
+        <img
+          class="director-photo"
+          src="images/Director,%20Western%20Branch%20High%20School%20Orchestras%20Bradley%20Blair.jpg"
+          alt="Bradley Blair, Western Branch High School Orchestra Coordinator"
+        >
+
+        <div class="director-info">
+
+          <p class="card-label">
+            Orchestra Coordinator
+          </p>
+
+          <h3>Bradley Blair</h3>
+
+          <p>
+            Western Branch High School Orchestras
+          </p>
+
+        </div>
 
       </div>
 
@@ -201,9 +273,32 @@
           and ensemble playing.
         </p>
 
-        <p>
-          <strong>Orchestra Director:</strong> Leah Rosenberg
-        </p>
+      </div>
+
+
+      <!-- LEAH ROSENBERG -->
+
+      <div class="director-profile">
+
+        <img
+          class="director-photo"
+          src="images/Director,%20Jolliff%20Middle%20School%20Leah%20Katz%20Rosenberg.jpg"
+          alt="Leah Rosenberg, Jolliff Middle School Orchestra Director"
+        >
+
+        <div class="director-info">
+
+          <p class="card-label">
+            Orchestra Director
+          </p>
+
+          <h3>Leah Rosenberg</h3>
+
+          <p>
+            Jolliff Middle School Orchestra
+          </p>
+
+        </div>
 
       </div>
 
