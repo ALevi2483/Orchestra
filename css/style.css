@@ -81,7 +81,7 @@ nav a {
   color: var(--white);
   text-decoration: none;
   font-weight: 700;
-  padding: 9px 12px;
+  padding: 9px 9px;
   border-radius: 999px;
   transition: 0.2s;
 }
@@ -129,8 +129,7 @@ nav a.active {
   margin-bottom: 10px;
 }
 
-.hero h1,
-.hero h2 {
+.hero h1 {
   font-size: clamp(40px, 6vw, 68px);
   line-height: 1.05;
   margin-bottom: 20px;
@@ -564,10 +563,9 @@ footer a {
     grid-template-columns: 1fr;
   }
 
-  .hero h1,
-  .hero h2 {
-    font-size: 40px;
-  }
+.hero h1 {
+  font-size: 40px;
+}
 
   .hero-subtitle {
   font-size: 18px;
@@ -612,10 +610,9 @@ footer a {
     width: 94%;
   }
 
-  .hero h1,
-  .hero h2 {
-    font-size: 34px;
-  }
+.hero h1 {
+  font-size: 34px;
+}
 
   .page-banner {
     padding: 45px 0;
