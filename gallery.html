@@ -13,10 +13,15 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
+
+<!-- ========================================
+     HEADER
+======================================== -->
 
 <header>
 
@@ -30,6 +35,8 @@
       class="menu-toggle"
       onclick="toggleMenu()"
       aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="mainNav"
     >
       ☰ Menu
     </button>
@@ -54,7 +61,9 @@
 </header>
 
 
-<!-- PAGE BANNER -->
+<!-- ========================================
+     PAGE BANNER
+======================================== -->
 
 <section class="page-banner">
 
@@ -79,292 +88,336 @@
 <main>
 
 
-  <!-- QUICK LINKS -->
+<!-- ========================================
+     QUICK LINKS
+======================================== -->
 
-  <section class="content">
+<section class="content">
 
-    <div class="container">
+  <div class="container">
 
-      <div class="quick-links">
+    <div class="quick-links">
 
-        <a href="#photos" class="quick-box">
-          <span>Photos &amp; Memories</span>
-          <small>Students, performances, and activities</small>
-        </a>
 
-        <a href="#videos" class="quick-box">
-          <span>Videos</span>
-          <small>Watch orchestra performances on YouTube</small>
-        </a>
+      <a href="#photos" class="quick-box">
 
-        <a href="#highlights" class="quick-box">
-          <span>Orchestra History</span>
-          <small>Past performances and achievements</small>
-        </a>
+        <span>
+          Photos &amp; Memories
+        </span>
 
-      </div>
+        <small>
+          Students, performances, and activities
+        </small>
+
+      </a>
+
+
+      <a href="#videos" class="quick-box">
+
+        <span>
+          Videos
+        </span>
+
+        <small>
+          Watch orchestra performances on YouTube
+        </small>
+
+      </a>
+
+
+      <a href="#highlights" class="quick-box">
+
+        <span>
+          Orchestra History
+        </span>
+
+        <small>
+          Past performances and achievements
+        </small>
+
+      </a>
+
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- PHOTO GALLERY -->
+<!-- ========================================
+     PHOTO GALLERY
+======================================== -->
 
-  <section id="photos" class="content alt-bg">
+<section id="photos" class="content alt-bg">
 
-    <div class="container">
+  <div class="container">
 
-      <div class="section-heading">
+    <div class="section-heading">
 
-        <p class="card-label">
-          Western Branch Orchestras
-        </p>
+      <p class="card-label">
+        Western Branch Orchestras
+      </p>
 
-        <h2>Photos &amp; Memories</h2>
+      <h2>Photos &amp; Memories</h2>
 
-        <p>
-          A look at our students, performances, activities,
-          and orchestra community.
-        </p>
-
-      </div>
-
-
-      <div class="gallery-grid">
-
-
-        <!-- ORCHESTRA PHOTO -->
-
-        <figure class="gallery-item">
-
-          <img
-            src="images/cover-orchestra.jpg"
-            alt="Western Branch orchestra students performing on stage"
-            loading="lazy"
-          >
-
-          <figcaption>
-            Western Branch Orchestra
-          </figcaption>
-
-        </figure>
-
-
-        <!-- STUDENT PHOTO -->
-
-        <figure class="gallery-item">
-
-          <img
-            src="images/cover-students.jpg"
-            alt="Western Branch orchestra students"
-            loading="lazy"
-          >
-
-          <figcaption>
-            Orchestra Students &amp; Memories
-          </figcaption>
-
-        </figure>
-
-
-      </div>
+      <p>
+        A look at our students, performances, activities,
+        and orchestra community.
+      </p>
 
     </div>
 
-  </section>
+
+    <div class="gallery-grid">
 
 
-  <!-- VIDEOS -->
+      <!-- ORCHESTRA PHOTO -->
 
-  <section id="videos" class="content">
+      <figure class="gallery-item">
 
-    <div class="container split-section">
-
-      <div>
-
-        <p class="card-label">
-          Watch Our Orchestras
-        </p>
-
-        <h2>Videos &amp; Performances</h2>
-
-        <p>
-          Watch performances and other videos from
-          Western Branch Orchestras on our YouTube channel.
-        </p>
-
-        <p>
-          The channel includes orchestra performances and
-          other videos highlighting our student musicians.
-        </p>
-
-      </div>
-
-
-      <div class="info-box">
-
-        <h3>Western Branch Orchestras on YouTube</h3>
-
-        <p>
-          Visit our YouTube channel to watch orchestra
-          performances and videos.
-        </p>
-
-        <a
-          class="button"
-          href="https://www.youtube.com/channel/UCi9Ajo5eVVjI8yzLPbAjykg"
-          target="_blank"
-          rel="noopener noreferrer"
+        <img
+          src="images/cover-orchestra.jpg"
+          alt="Western Branch orchestra students performing on stage"
+          loading="lazy"
         >
-          Watch on YouTube
-        </a>
 
-      </div>
+        <figcaption>
+          Western Branch Orchestra
+        </figcaption>
+
+      </figure>
+
+
+      <!-- STUDENT PHOTO -->
+
+      <figure class="gallery-item">
+
+        <img
+          src="images/cover-students.jpg"
+          alt="Western Branch orchestra students"
+          loading="lazy"
+        >
+
+        <figcaption>
+          Orchestra Students &amp; Memories
+        </figcaption>
+
+      </figure>
+
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- HISTORICAL HIGHLIGHTS -->
+<!-- ========================================
+     VIDEOS
+======================================== -->
 
-  <section id="highlights" class="content alt-bg">
+<section id="videos" class="content">
 
-    <div class="container">
+  <div class="container split-section">
 
-      <div class="section-heading">
+
+    <div>
+
+      <p class="card-label">
+        Watch Our Orchestras
+      </p>
+
+      <h2>Videos &amp; Performances</h2>
+
+      <p>
+        Watch performances and other videos from
+        Western Branch Orchestras on our YouTube channel.
+      </p>
+
+      <p>
+        The channel includes orchestra performances and
+        other videos highlighting our student musicians.
+      </p>
+
+    </div>
+
+
+    <div class="info-box">
+
+      <h3>Western Branch Orchestras on YouTube</h3>
+
+      <p>
+        Visit our YouTube channel to watch orchestra
+        performances and videos.
+      </p>
+
+      <a
+        class="button"
+        href="https://www.youtube.com/channel/UCi9Ajo5eVVjI8yzLPbAjykg"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Watch on YouTube
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- ========================================
+     HISTORICAL HIGHLIGHTS
+======================================== -->
+
+<section id="highlights" class="content alt-bg">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <p class="card-label">
+        Looking Back
+      </p>
+
+      <h2>Highlights From Our History</h2>
+
+      <p>
+        Looking back at memorable performances, achievements,
+        and experiences from Western Branch orchestra students.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+      <!-- CARNEGIE HALL -->
+
+      <article class="card">
 
         <p class="card-label">
-          Looking Back
+          Performance
         </p>
 
-        <h2>Highlights From Our History</h2>
+        <h3>Carnegie Hall</h3>
 
         <p>
-          Looking back at memorable performances, achievements,
-          and experiences from Western Branch orchestra students.
+          Western Branch orchestra students have had the opportunity
+          to perform at Carnegie Hall in New York City.
         </p>
 
-      </div>
+      </article>
 
 
-      <div class="cards">
+      <!-- HERITAGE FESTIVAL -->
 
-
-        <!-- CARNEGIE HALL -->
-
-        <article class="card">
-
-          <p class="card-label">
-            Performance
-          </p>
-
-          <h3>Carnegie Hall</h3>
-
-          <p>
-            Western Branch orchestra students have had the opportunity
-            to perform at Carnegie Hall in New York City.
-          </p>
-
-        </article>
-
-
-        <!-- HERITAGE FESTIVAL -->
-
-        <article class="card">
-
-          <p class="card-label">
-            Achievement
-          </p>
-
-          <h3>2017 Heritage Festival</h3>
-
-          <p>
-            The Western Branch Blue &amp; Gold Orchestra earned
-            Gold recognition at the 2017 Heritage Festival.
-          </p>
-
-        </article>
-
-
-        <!-- ORCHESTRA TRIPS -->
-
-        <article class="card">
-
-          <p class="card-label">
-            Experiences
-          </p>
-
-          <h3>Orchestra Trips</h3>
-
-          <p>
-            Orchestra trips provide students with opportunities
-            to perform, learn, travel, and build memories together.
-          </p>
-
-        </article>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SHARE PHOTOS -->
-
-  <section class="content">
-
-    <div class="container split-section">
-
-      <div>
+      <article class="card">
 
         <p class="card-label">
-          Help Build Our Gallery
+          Achievement
         </p>
 
-        <h2>Share Orchestra Photos</h2>
+        <h3>2017 Heritage Festival</h3>
 
         <p>
-          Have photos from a concert, trip, performance, or other
-          orchestra activity? WBOPA may feature approved photos
-          on the website.
+          The Western Branch Blue &amp; Gold Orchestra earned
+          Gold recognition at the 2017 Heritage Festival.
         </p>
+
+      </article>
+
+
+      <!-- ORCHESTRA TRIPS -->
+
+      <article class="card">
+
+        <p class="card-label">
+          Experiences
+        </p>
+
+        <h3>Orchestra Trips</h3>
 
         <p>
-          Photos from both Western Branch High School and
-          Jolliff Middle School orchestra activities are welcome.
+          Orchestra trips provide students with opportunities
+          to perform, learn, travel, and build memories together.
         </p>
 
-      </div>
+      </article>
 
-
-      <div class="info-box">
-
-        <h3>Have Photos to Share?</h3>
-
-        <p>
-          Contact WBOPA about submitting photos that are appropriate
-          and approved for public website use.
-        </p>
-
-        <a class="button" href="contact.html">
-          Contact WBOPA
-        </a>
-
-      </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
+
+
+<!-- ========================================
+     SHARE PHOTOS
+======================================== -->
+
+<section class="content">
+
+  <div class="container split-section">
+
+
+    <div>
+
+      <p class="card-label">
+        Help Build Our Gallery
+      </p>
+
+      <h2>Share Orchestra Photos</h2>
+
+      <p>
+        Have photos from a concert, trip, performance, or other
+        orchestra activity? WBOPA may feature approved photos
+        on the website.
+      </p>
+
+      <p>
+        Photos from both Western Branch High School and
+        Jolliff Middle School orchestra activities are welcome.
+      </p>
+
+    </div>
+
+
+    <div class="info-box">
+
+      <h3>Have Photos to Share?</h3>
+
+      <p>
+        Contact WBOPA about submitting photos that are appropriate
+        and approved for public website use.
+      </p>
+
+      <a
+        class="button"
+        href="contact.html"
+      >
+        Contact WBOPA
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
 
 
 </main>
 
 
-<!-- FOOTER -->
+<!-- ========================================
+     FOOTER
+======================================== -->
 
 <footer>
 
@@ -375,7 +428,8 @@
     </p>
 
     <p>
-      Supporting Western Branch High School and Jolliff Middle School Orchestras
+      Supporting Western Branch High School and
+      Jolliff Middle School Orchestras
     </p>
 
     <p>
