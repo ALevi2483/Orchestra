@@ -697,6 +697,56 @@ form button {
 
 
 /* ========================================
+   ORCHESTRAS PAGE
+======================================== */
+
+.director-section {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.director-photo {
+  display: block;
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.director-info h2 {
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+
+.director-info p {
+  margin-top: 6px;
+  margin-bottom: 8px;
+}
+
+.director-title {
+  font-weight: 700;
+}
+
+.program-intro {
+  max-width: 850px;
+  margin-bottom: 30px;
+}
+
+.program-intro h2 {
+  margin-bottom: 12px;
+}
+
+.section-action {
+  margin-top: 30px;
+}
+
+
+/* ========================================
    FOOTER
 ======================================== */
 
@@ -726,7 +776,7 @@ footer a {
 
 
 /* ========================================
-   TABLET
+   TABLET / MOBILE NAVIGATION
 ======================================== */
 
 @media (max-width: 1200px) {
@@ -814,6 +864,36 @@ footer a {
 
   .leadership-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* ========================================
+   ORCHESTRAS PAGE MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+  #wbhs,
+  #jolliff {
+    scroll-margin-top: 75px;
+  }
+
+  .director-section {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    align-items: start;
+    margin-bottom: 30px;
+  }
+
+  .director-photo {
+    width: 150px;
+    height: 185px;
+  }
+
+  .director-info h2 {
+    font-size: 1.6rem;
   }
 
 }
@@ -1145,96 +1225,6 @@ footer a {
 
   .event-date-box .day {
     font-size: 24px;
-  }
-
-}
-/* ========================================
-   ORCHESTRAS PAGE
-======================================== */
-
-#wbhs,
-#jolliff {
-  scroll-margin-top: 90px;
-}
-
-
-/* DIRECTOR SECTION */
-
-.director-section {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 30px;
-  align-items: center;
-  margin-bottom: 40px;
-}
-
-.director-photo {
-  display: block;
-  width: 180px;
-  height: 220px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
-.director-info h2 {
-  margin-top: 5px;
-  margin-bottom: 8px;
-}
-
-.director-info p {
-  margin-top: 6px;
-  margin-bottom: 8px;
-}
-
-.director-title {
-  font-weight: 700;
-}
-
-
-/* PROGRAM INTRO */
-
-.program-intro {
-  max-width: 850px;
-  margin-bottom: 30px;
-}
-
-.program-intro h2 {
-  margin-bottom: 12px;
-}
-
-
-/* SECTION ACTION */
-
-.section-action {
-  margin-top: 30px;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 650px) {
-
-  #wbhs,
-  #jolliff {
-    scroll-margin-top: 75px;
-  }
-
-  .director-section {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    align-items: start;
-    margin-bottom: 30px;
-  }
-
-  .director-photo {
-    width: 150px;
-    height: 185px;
-  }
-
-  .director-info h2 {
-    font-size: 1.6rem;
   }
 
 }
