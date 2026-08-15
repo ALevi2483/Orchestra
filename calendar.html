@@ -13,11 +13,93 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    /* =========================================
+       CALENDAR PAGE
+    ========================================= */
+
+    .calendar-school-section {
+      margin-bottom: 60px;
+    }
+
+    .calendar-school-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .calendar-section-header {
+      margin-bottom: 25px;
+    }
+
+    .calendar-section-header h2 {
+      margin-bottom: 8px;
+    }
+
+    .calendar-section-header p {
+      margin-top: 0;
+      max-width: 800px;
+    }
+
+    .calendar-divider {
+      width: 70px;
+      height: 4px;
+      background: #f5b942;
+      border-radius: 10px;
+      margin: 12px 0 18px;
+    }
+
+    .event-school {
+      display: inline-block;
+      margin-bottom: 5px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .coming-soon-box {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .coming-soon-box h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .coming-soon-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 700px) {
+
+      .calendar-school-section {
+        margin-bottom: 45px;
+      }
+
+      .coming-soon-box {
+        padding: 22px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
 <header>
+
   <div class="container header-container">
 
     <a class="site-title" href="index.html">
@@ -33,6 +115,7 @@
     </button>
 
     <nav id="mainNav">
+
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">Orchestras</a></li>
@@ -43,11 +126,17 @@
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+
     </nav>
 
   </div>
+
 </header>
 
+
+<!-- =========================================
+     PAGE BANNER
+========================================= -->
 
 <section class="page-banner">
 
@@ -60,7 +149,9 @@
     <h1>Orchestra Calendar</h1>
 
     <p>
-      Concerts, activities, trips, meetings, and important dates.
+      Concerts, activities, trips, meetings, and important dates
+      for Western Branch High School, Jolliff Middle School,
+      and WBOPA.
     </p>
 
   </div>
@@ -70,19 +161,35 @@
 
 <main>
 
-  <!-- UPCOMING EVENTS -->
 
-  <section class="content">
+<!-- =========================================
+     CALENDAR
+========================================= -->
 
-    <div class="container">
+<section class="content">
 
-      <div class="section-heading">
+  <div class="container">
 
-        <h2>Upcoming Events</h2>
+
+    <!-- =====================================
+         WESTERN BRANCH HIGH SCHOOL
+    ====================================== -->
+
+    <div class="calendar-school-section">
+
+      <div class="calendar-section-header">
+
+        <p class="card-label">
+          WBHS
+        </p>
+
+        <h2>Western Branch High School</h2>
+
+        <div class="calendar-divider"></div>
 
         <p>
-          Important dates for Western Branch High School,
-          Jolliff Middle School, and WBOPA.
+          Concerts, trips, performances, and other important dates
+          for Western Branch High School orchestra students and families.
         </p>
 
       </div>
@@ -96,20 +203,36 @@
         <article class="event-card">
 
           <div class="event-date-box">
-            <span class="month">Oct</span>
-            <span class="day">27</span>
+
+            <span class="month">
+              Oct
+            </span>
+
+            <span class="day">
+              27
+            </span>
+
           </div>
 
+
           <div class="event-details">
+
+            <span class="event-school">
+              Western Branch High School
+            </span>
 
             <p class="card-label">
               Concert
             </p>
 
-            <h3>Halloween Concert</h3>
+            <h3>
+              Halloween Concert
+            </h3>
 
             <p>
-              <strong>Tuesday, October 27, 2026</strong>
+              <strong>
+                Tuesday, October 27, 2026
+              </strong>
             </p>
 
             <p>
@@ -126,20 +249,36 @@
         <article class="event-card">
 
           <div class="event-date-box">
-            <span class="month">Dec</span>
-            <span class="day">15</span>
+
+            <span class="month">
+              Dec
+            </span>
+
+            <span class="day">
+              15
+            </span>
+
           </div>
 
+
           <div class="event-details">
+
+            <span class="event-school">
+              Western Branch High School
+            </span>
 
             <p class="card-label">
               Concert
             </p>
 
-            <h3>Winter Concert</h3>
+            <h3>
+              Winter Concert
+            </h3>
 
             <p>
-              <strong>Tuesday, December 15, 2026</strong>
+              <strong>
+                Tuesday, December 15, 2026
+              </strong>
             </p>
 
             <p>
@@ -156,20 +295,36 @@
         <article class="event-card">
 
           <div class="event-date-box">
-            <span class="month">Mar</span>
-            <span class="day">25</span>
+
+            <span class="month">
+              Mar
+            </span>
+
+            <span class="day">
+              25
+            </span>
+
           </div>
 
+
           <div class="event-details">
+
+            <span class="event-school">
+              Western Branch High School
+            </span>
 
             <p class="card-label">
               Trip
             </p>
 
-            <h3>Disney Trip</h3>
+            <h3>
+              Disney Trip
+            </h3>
 
             <p>
-              <strong>March 25-29, 2027</strong>
+              <strong>
+                March 25-29, 2027
+              </strong>
             </p>
 
             <p>
@@ -187,20 +342,36 @@
         <article class="event-card">
 
           <div class="event-date-box">
-            <span class="month">Jun</span>
-            <span class="day">1</span>
+
+            <span class="month">
+              Jun
+            </span>
+
+            <span class="day">
+              1
+            </span>
+
           </div>
 
+
           <div class="event-details">
+
+            <span class="event-school">
+              Western Branch High School
+            </span>
 
             <p class="card-label">
               Concert
             </p>
 
-            <h3>Spring Concert</h3>
+            <h3>
+              Spring Concert
+            </h3>
 
             <p>
-              <strong>Tuesday, June 1, 2027</strong>
+              <strong>
+                Tuesday, June 1, 2027
+              </strong>
             </p>
 
             <p>
@@ -216,39 +387,182 @@
 
     </div>
 
-  </section>
 
+    <!-- =====================================
+         JOLLIFF MIDDLE SCHOOL
+    ====================================== -->
 
-  <!-- CALENDAR NOTE -->
+    <div class="calendar-school-section">
 
-  <section class="content alt-bg">
+      <div class="calendar-section-header">
 
-    <div class="container">
+        <p class="card-label">
+          JMS
+        </p>
 
-      <div class="info-box">
+        <h2>Jolliff Middle School</h2>
 
-        <h3>More Dates Will Be Added</h3>
+        <div class="calendar-divider"></div>
 
         <p>
-          Rehearsals, auditions, WBOPA meetings, fundraisers,
-          performances, and other orchestra activities will be
-          added throughout the school year.
+          Concerts, performances, assessments, and other important
+          dates for Jolliff Middle School orchestra students and families.
+        </p>
+
+      </div>
+
+
+      <div class="coming-soon-box">
+
+        <p class="card-label">
+          2026-2027 School Year
+        </p>
+
+        <h3>
+          Jolliff Orchestra Dates Coming Soon
+        </h3>
+
+        <p>
+          Jolliff Middle School orchestra concert and event dates
+          will be added as they become available.
         </p>
 
         <p>
-          Dates, times, and locations may change. Students and
-          families should also follow information provided directly
-          by their orchestra director.
+          Students and families should continue to follow information
+          provided directly by the orchestra director.
         </p>
 
       </div>
 
     </div>
 
-  </section>
+
+    <!-- =====================================
+         WBOPA
+    ====================================== -->
+
+    <div class="calendar-school-section">
+
+      <div class="calendar-section-header">
+
+        <p class="card-label">
+          Parents Association
+        </p>
+
+        <h2>WBOPA Events &amp; Meetings</h2>
+
+        <div class="calendar-divider"></div>
+
+        <p>
+          Meetings, fundraisers, and other activities organized by the
+          Western Branch Orchestras Parents Association.
+        </p>
+
+      </div>
+
+
+      <div class="event-list">
+
+
+        <!-- MONTHLY WBOPA MEETING -->
+
+        <article class="event-card">
+
+          <div class="event-date-box">
+
+            <span class="month">
+              Monthly
+            </span>
+
+            <span class="day">
+              2nd
+            </span>
+
+          </div>
+
+
+          <div class="event-details">
+
+            <span class="event-school">
+              WBOPA
+            </span>
+
+            <p class="card-label">
+              Meeting
+            </p>
+
+            <h3>
+              Monthly WBOPA Meeting
+            </h3>
+
+            <p>
+              <strong>
+                Second Thursday of each month
+              </strong>
+            </p>
+
+            <p>
+              7:30 PM to 8:00 PM
+            </p>
+
+            <p>
+              Meetings are held virtually by Zoom.
+            </p>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     CALENDAR INFORMATION
+========================================= -->
+
+<section class="content alt-bg">
+
+  <div class="container">
+
+    <div class="info-box">
+
+      <h3>
+        More Dates Will Be Added
+      </h3>
+
+      <p>
+        Rehearsals, auditions, assessments, WBOPA meetings,
+        fundraisers, performances, trips, and other orchestra
+        activities will be added throughout the school year.
+      </p>
+
+      <p>
+        Dates, times, and locations may change. Students and
+        families should also follow information provided directly
+        by their orchestra director.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
 
 </main>
 
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
 
@@ -263,7 +577,9 @@
     </p>
 
     <p>
-      <a href="contact.html">Contact Us</a>
+      <a href="contact.html">
+        Contact Us
+      </a>
     </p>
 
   </div>
