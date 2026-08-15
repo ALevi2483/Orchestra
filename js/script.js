@@ -2,6 +2,8 @@
 // MOBILE NAVIGATION
 // ========================================
 
+const MOBILE_BREAKPOINT = 1200;
+
 function toggleMenu() {
   const nav = document.getElementById("mainNav");
   const menuButton = document.querySelector(".menu-toggle");
@@ -52,12 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  // Close mobile menu after selecting a page
+  // Close mobile menu after selecting a navigation link
   navLinks.forEach(function (link) {
 
     link.addEventListener("click", function () {
 
-      if (window.innerWidth <= 850) {
+      if (window.innerWidth <= MOBILE_BREAKPOINT) {
         closeMenu();
       }
 
@@ -73,11 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // ========================================
 
 // Close the mobile menu when switching
-// from mobile layout to desktop layout.
+// from mobile/tablet layout to desktop layout.
 
 window.addEventListener("resize", function () {
 
-  if (window.innerWidth > 850) {
+  if (window.innerWidth > MOBILE_BREAKPOINT) {
     closeMenu();
   }
 
