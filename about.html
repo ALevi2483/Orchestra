@@ -15,58 +15,66 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    .director-profile {
-      display: flex;
+
+    /* ORCHESTRA DIRECTOR SECTIONS */
+
+    .director-section {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 30px;
       align-items: center;
-      gap: 24px;
-      margin: 25px 0 30px;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 12px;
-      border: 1px solid #d9e1e8;
+      margin-bottom: 35px;
     }
 
     .director-photo {
-      width: 130px;
-      height: 160px;
+      width: 180px;
+      height: 220px;
       object-fit: cover;
-      object-position: center;
-      border-radius: 10px;
-      flex-shrink: 0;
-    }
-
-    .director-info {
-      flex: 1;
+      border-radius: 14px;
+      display: block;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
     }
 
     .director-info h3 {
-      margin-top: 0;
+      margin-top: 5px;
+      margin-bottom: 8px;
+    }
+
+    .director-info p {
+      margin-top: 5px;
       margin-bottom: 5px;
     }
 
-    .director-title {
-      margin-top: 0;
-      font-weight: 600;
-    }
+    @media (max-width: 650px) {
 
-    @media (max-width: 600px) {
-      .director-profile {
-        flex-direction: column;
-        text-align: center;
+      .director-section {
+        grid-template-columns: 110px 1fr;
+        gap: 18px;
+        align-items: center;
+        margin-bottom: 28px;
       }
 
       .director-photo {
-        width: 150px;
-        height: 185px;
+        width: 110px;
+        height: 140px;
+        border-radius: 10px;
       }
+
+      .director-info h3 {
+        font-size: 1.25rem;
+      }
+
     }
+
   </style>
 
 </head>
 
 <body>
 
+
 <header>
+
   <div class="container header-container">
 
     <a class="site-title" href="index.html">
@@ -82,6 +90,7 @@
     </button>
 
     <nav id="mainNav">
+
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a class="active" href="about.html">Orchestras</a></li>
@@ -92,9 +101,11 @@
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+
     </nav>
 
   </div>
+
 </header>
 
 
@@ -119,6 +130,7 @@
 
 <main>
 
+
   <!-- PROGRAM SELECTION -->
 
   <section class="content">
@@ -141,13 +153,28 @@
       <div class="quick-links">
 
         <a href="#wbhs" class="quick-box">
-          <span>Western Branch High School</span>
-          <small>High school orchestras and ensembles</small>
+
+          <span>
+            Western Branch High School
+          </span>
+
+          <small>
+            High school orchestras and ensembles
+          </small>
+
         </a>
 
+
         <a href="#jolliff" class="quick-box">
-          <span>Jolliff Middle School</span>
-          <small>Middle school orchestra program</small>
+
+          <span>
+            Jolliff Middle School
+          </span>
+
+          <small>
+            Middle school orchestra program
+          </small>
+
         </a>
 
       </div>
@@ -163,11 +190,35 @@
 
     <div class="container">
 
-      <div class="section-heading">
 
-        <p class="card-label">
-          High School
-        </p>
+      <!-- BRADLEY BLAIR -->
+
+      <div class="director-section">
+
+        <img
+          class="director-photo"
+          src="images/bradley-blair.jpg"
+          alt="Bradley Blair, Western Branch High School Orchestra Coordinator"
+        >
+
+        <div class="director-info">
+
+          <p class="card-label">
+            Western Branch High School
+          </p>
+
+          <h3>Bradley Blair</h3>
+
+          <p>
+            <strong>Orchestra Coordinator</strong>
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="section-heading">
 
         <h2>Western Branch High School Orchestra</h2>
 
@@ -180,34 +231,8 @@
       </div>
 
 
-      <!-- BRADLEY BLAIR -->
-
-      <div class="director-profile">
-
-        <img
-          class="director-photo"
-          src="images/Director,%20Western%20Branch%20High%20School%20Orchestras%20Bradley%20Blair.jpg"
-          alt="Bradley Blair, Western Branch High School Orchestra Coordinator"
-        >
-
-        <div class="director-info">
-
-          <p class="card-label">
-            Orchestra Coordinator
-          </p>
-
-          <h3>Bradley Blair</h3>
-
-          <p>
-            Western Branch High School Orchestras
-          </p>
-
-        </div>
-
-      </div>
-
-
       <div class="cards">
+
 
         <article class="card">
 
@@ -246,6 +271,7 @@
 
         </article>
 
+
       </div>
 
     </div>
@@ -259,11 +285,35 @@
 
     <div class="container">
 
-      <div class="section-heading">
 
-        <p class="card-label">
-          Middle School
-        </p>
+      <!-- LEAH ROSENBERG -->
+
+      <div class="director-section">
+
+        <img
+          class="director-photo"
+          src="images/leah-rosenberg.jpg"
+          alt="Leah Rosenberg, Jolliff Middle School Orchestra Director"
+        >
+
+        <div class="director-info">
+
+          <p class="card-label">
+            Jolliff Middle School
+          </p>
+
+          <h3>Leah Rosenberg</h3>
+
+          <p>
+            <strong>Orchestra Director</strong>
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="section-heading">
 
         <h2>Jolliff Middle School Orchestra</h2>
 
@@ -276,34 +326,8 @@
       </div>
 
 
-      <!-- LEAH ROSENBERG -->
-
-      <div class="director-profile">
-
-        <img
-          class="director-photo"
-          src="images/Director,%20Jolliff%20Middle%20School%20Leah%20Katz%20Rosenberg.jpg"
-          alt="Leah Rosenberg, Jolliff Middle School Orchestra Director"
-        >
-
-        <div class="director-info">
-
-          <p class="card-label">
-            Orchestra Director
-          </p>
-
-          <h3>Leah Rosenberg</h3>
-
-          <p>
-            Jolliff Middle School Orchestra
-          </p>
-
-        </div>
-
-      </div>
-
-
       <div class="cards">
+
 
         <article class="card">
 
@@ -341,11 +365,13 @@
 
         </article>
 
+
       </div>
 
     </div>
 
   </section>
+
 
 </main>
 
@@ -363,7 +389,9 @@
     </p>
 
     <p>
-      <a href="contact.html">Contact Us</a>
+      <a href="contact.html">
+        Contact Us
+      </a>
     </p>
 
   </div>
