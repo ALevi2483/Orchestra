@@ -13,11 +13,49 @@
   >
 
   <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    /* HOME PAGE HERO PHOTO */
+
+    .home-hero-photo {
+      overflow: hidden;
+      border-radius: 14px;
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .home-hero-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @media (max-width: 768px) {
+
+      .home-hero-photo {
+        margin-top: 10px;
+      }
+
+      .home-hero-photo img {
+        min-height: 0;
+        height: auto;
+        object-fit: contain;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 <body>
 
 <header>
+
   <div class="container header-container">
 
     <a class="site-title" href="index.html">
@@ -33,28 +71,61 @@
     </button>
 
     <nav id="mainNav">
+
       <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="about.html">Orchestras</a></li>
-        <li><a href="calendar.html">Calendar</a></li>
-        <li><a href="students.html">Students</a></li>
-        <li><a href="parents.html">Parents</a></li>
-        <li><a href="fundraising.html">Fundraising</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
+
+        <li>
+          <a class="active" href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="about.html">Orchestras</a>
+        </li>
+
+        <li>
+          <a href="calendar.html">Calendar</a>
+        </li>
+
+        <li>
+          <a href="students.html">Students</a>
+        </li>
+
+        <li>
+          <a href="parents.html">Parents</a>
+        </li>
+
+        <li>
+          <a href="fundraising.html">Fundraising</a>
+        </li>
+
+        <li>
+          <a href="gallery.html">Gallery</a>
+        </li>
+
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+
       </ul>
+
     </nav>
 
   </div>
+
 </header>
 
 
 <main>
 
+
   <!-- HERO -->
 
   <section class="hero">
+
     <div class="container hero-grid">
+
+
+      <!-- HERO TEXT -->
 
       <div class="hero-text">
 
@@ -62,7 +133,9 @@
           Western Branch High School • Jolliff Middle School
         </p>
 
-        <h1>Supporting Our Student Musicians</h1>
+        <h1>
+          Supporting Our Student Musicians
+        </h1>
 
         <p class="hero-subtitle">
           The Western Branch Orchestras Parents Association supports
@@ -70,13 +143,20 @@
           and opportunities throughout the Western Branch community.
         </p>
 
+
         <div class="hero-buttons">
 
-          <a class="button" href="calendar.html">
+          <a
+            class="button"
+            href="calendar.html"
+          >
             View Calendar
           </a>
 
-          <a class="button secondary" href="students.html">
+          <a
+            class="button secondary"
+            href="students.html"
+          >
             Student Resources
           </a>
 
@@ -85,36 +165,34 @@
       </div>
 
 
-      <div class="hero-card">
+      <!-- HERO PHOTO -->
 
-        <p class="card-label">WBOPA</p>
+      <div class="home-hero-photo">
 
-        <h2>Western Branch Orchestras Parents Association</h2>
-
-        <p>
-          Parents, families, and community members working together
-          to support orchestra students at Western Branch High School
-          and Jolliff Middle School.
-        </p>
-
-        <a href="parents.html">
-          Learn About WBOPA
-        </a>
+        <img
+          src="images/Cover%201.jpeg"
+          alt="Western Branch orchestra students performing together"
+        >
 
       </div>
 
+
     </div>
+
   </section>
 
 
   <!-- QUICK LINKS -->
 
   <section class="content">
+
     <div class="container">
 
       <div class="section-heading">
 
-        <h2>Quick Links</h2>
+        <h2>
+          Quick Links
+        </h2>
 
         <p>
           Find the information students and families use most.
@@ -125,43 +203,89 @@
 
       <div class="quick-links">
 
-        <a href="calendar.html" class="quick-box">
-          <span>Calendar</span>
-          <small>Concerts, meetings, trips, and events</small>
+
+        <a
+          href="calendar.html"
+          class="quick-box"
+        >
+
+          <span>
+            Calendar
+          </span>
+
+          <small>
+            Concerts, meetings, trips, and events
+          </small>
+
         </a>
 
 
-        <a href="students.html" class="quick-box">
-          <span>Students</span>
-          <small>Forms, resources, and student information</small>
+        <a
+          href="students.html"
+          class="quick-box"
+        >
+
+          <span>
+            Students
+          </span>
+
+          <small>
+            Forms, resources, and student information
+          </small>
+
         </a>
 
 
-        <a href="parents.html" class="quick-box">
-          <span>Parents &amp; WBOPA</span>
-          <small>Meetings, minutes, leadership, and volunteering</small>
+        <a
+          href="parents.html"
+          class="quick-box"
+        >
+
+          <span>
+            Parents &amp; WBOPA
+          </span>
+
+          <small>
+            Meetings, minutes, leadership, and volunteering
+          </small>
+
         </a>
 
 
-        <a href="fundraising.html" class="quick-box">
-          <span>Fundraising</span>
-          <small>Fundraisers, spirit wear, and ways to help</small>
+        <a
+          href="fundraising.html"
+          class="quick-box"
+        >
+
+          <span>
+            Fundraising
+          </span>
+
+          <small>
+            Fundraisers, spirit wear, and ways to help
+          </small>
+
         </a>
+
 
       </div>
 
     </div>
+
   </section>
 
 
   <!-- OUR ORCHESTRAS -->
 
   <section class="content alt-bg">
+
     <div class="container">
 
       <div class="section-heading">
 
-        <h2>Our Orchestras</h2>
+        <h2>
+          Our Orchestras
+        </h2>
 
         <p>
           Supporting orchestra education throughout the
@@ -173,11 +297,18 @@
 
       <div class="cards">
 
+
+        <!-- WBHS -->
+
         <article class="card">
 
-          <p class="card-label">High School</p>
+          <p class="card-label">
+            High School
+          </p>
 
-          <h3>Western Branch High School</h3>
+          <h3>
+            Western Branch High School
+          </h3>
 
           <p>
             Learn about the WBHS orchestra program, ensembles,
@@ -191,11 +322,17 @@
         </article>
 
 
+        <!-- JOLLIFF -->
+
         <article class="card">
 
-          <p class="card-label">Middle School</p>
+          <p class="card-label">
+            Middle School
+          </p>
 
-          <h3>Jolliff Middle School</h3>
+          <h3>
+            Jolliff Middle School
+          </h3>
 
           <p>
             Learn about the Jolliff orchestra program, performances,
@@ -208,20 +345,25 @@
 
         </article>
 
+
       </div>
 
     </div>
+
   </section>
 
 
   <!-- LATEST & UPCOMING -->
 
   <section class="content">
+
     <div class="container">
 
       <div class="section-heading">
 
-        <h2>Latest &amp; Upcoming</h2>
+        <h2>
+          Latest &amp; Upcoming
+        </h2>
 
         <p>
           Important information for Western Branch orchestra
@@ -233,45 +375,76 @@
 
       <div class="cards">
 
+
+        <!-- HALLOWEEN CONCERT -->
+
         <article class="card">
 
-          <p class="card-label">Next Concert</p>
+          <p class="card-label">
+            Next Concert
+          </p>
 
-          <h3>Halloween Concert</h3>
+          <h3>
+            Halloween Concert
+          </h3>
 
           <p>
-            <strong>Tuesday, October 27, 2026</strong>
+            <strong>
+              Tuesday, October 27, 2026
+            </strong>
           </p>
 
           <p>
             Additional concert details will be posted when available.
           </p>
 
+          <a href="calendar.html">
+            View Calendar
+          </a>
+
         </article>
 
 
+        <!-- WBOPA -->
+
         <article class="card">
 
-          <p class="card-label">WBOPA</p>
+          <p class="card-label">
+            WBOPA
+          </p>
 
-          <h3>Monthly Meetings</h3>
+          <h3>
+            Monthly Meetings
+          </h3>
 
           <p>
             WBOPA meetings are held by Zoom on the second Thursday
             of each month from 7:30 PM to 8:00 PM.
           </p>
 
+          <a href="parents.html#meetings">
+            Meeting Information
+          </a>
+
         </article>
 
 
+        <!-- DISNEY -->
+
         <article class="card">
 
-          <p class="card-label">2026-2027</p>
+          <p class="card-label">
+            2026-2027
+          </p>
 
-          <h3>Disney Trip</h3>
+          <h3>
+            Disney Trip
+          </h3>
 
           <p>
-            <strong>March 25-29, 2027</strong>
+            <strong>
+              March 25-29, 2027
+            </strong>
           </p>
 
           <p>
@@ -281,10 +454,13 @@
 
         </article>
 
+
       </div>
 
     </div>
+
   </section>
+
 
 </main>
 
@@ -302,7 +478,9 @@
     </p>
 
     <p>
-      <a href="contact.html">Contact Us</a>
+      <a href="contact.html">
+        Contact Us
+      </a>
     </p>
 
   </div>
