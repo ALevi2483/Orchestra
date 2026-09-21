@@ -22,12 +22,8 @@ content="View Western Branch High School and Jolliff Middle School orchestra con
    CALENDAR PAGE
 ========================================= */
 
-.calendar-school-section {
-  margin-bottom: 60px;
-}
-
-.calendar-school-section:last-child {
-  margin-bottom: 0;
+html {
+  scroll-behavior: smooth;
 }
 
 .calendar-section-header {
@@ -39,7 +35,7 @@ content="View Western Branch High School and Jolliff Middle School orchestra con
 }
 
 .calendar-section-header p {
-  max-width: 800px;
+  max-width: 850px;
 }
 
 .calendar-divider {
@@ -59,59 +55,245 @@ content="View Western Branch High School and Jolliff Middle School orchestra con
   letter-spacing: .06em;
 }
 
-.coming-soon-box {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 28px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+
+/* =========================================
+   UPCOMING AT A GLANCE
+========================================= */
+
+.glance-heading {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
 }
 
-.coming-soon-box h3 {
-  margin-top: 0;
+.glance-heading h2 {
   margin-bottom: 10px;
 }
 
-.next-event-box {
+.glance-heading p {
+  margin-bottom: 0;
+}
+
+.glance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.glance-card {
   background: #ffffff;
   border-radius: 14px;
-  padding: 28px;
+  padding: 20px;
   border-top: 5px solid #f5b942;
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  box-shadow: 0 5px 16px rgba(0,0,0,.08);
 }
 
-.next-event-box h2 {
-  margin-bottom: 8px;
-}
-
-.next-event-box h3 {
+.glance-card-date {
+  font-size: 1.15rem;
+  font-weight: 800;
   color: #16324f;
-  margin-bottom: 8px;
+  margin-bottom: 7px;
 }
 
-.event-type {
+.glance-card-tag {
   display: inline-block;
   background: #16324f;
   color: #ffffff;
-  padding: 4px 10px;
   border-radius: 999px;
-  font-size: .75rem;
+  padding: 4px 9px;
+  font-size: .72rem;
   font-weight: 800;
   text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: 12px;
 }
 
-.calendar-link-row {
+.glance-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.glance-card p {
+  margin-bottom: 10px;
+  font-size: .92rem;
+}
+
+.glance-card a {
+  font-weight: 700;
+}
+
+
+/* =========================================
+   THREE-COLUMN QUICK REFERENCE
+========================================= */
+
+.calendar-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+.calendar-column {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+.calendar-column h2 {
+  color: #16324f;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 1.3rem;
+}
+
+.calendar-column-subtitle {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: .9rem;
+}
+
+.compact-event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.compact-event {
+  border-top: 1px solid #dfe5ea;
+  padding-top: 12px;
+}
+
+.compact-event:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.compact-event-date {
+  display: block;
+  color: #16324f;
+  font-weight: 800;
+  font-size: .9rem;
+  margin-bottom: 3px;
+}
+
+.compact-event-type {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: 4px;
+}
+
+.compact-event h3 {
+  font-size: 1rem;
+  margin: 2px 0 5px;
+}
+
+.compact-event p {
+  font-size: .87rem;
+  margin: 0 0 5px;
+}
+
+.column-details-link {
+  display: inline-block;
   margin-top: 20px;
+  font-weight: 700;
 }
 
-@media(max-width:700px) {
+
+/* =========================================
+   FULL CALENDAR
+========================================= */
+
+.full-calendar-header {
+  max-width: 850px;
+  margin-bottom: 30px;
+}
+
+.full-calendar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.full-calendar-nav a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  background: #16324f;
+  color: #ffffff;
+  padding: 9px 14px;
+  border-radius: 999px;
+}
+
+.full-calendar-nav a:hover {
+  opacity: .9;
+}
+
+.calendar-school-section {
+  margin-bottom: 65px;
+}
+
+.calendar-school-section:last-child {
+  margin-bottom: 0;
+}
+
+.detail-subsection {
+  margin-top: 45px;
+}
+
+.detail-subsection:first-child {
+  margin-top: 0;
+}
+
+.past-event {
+  opacity: .68;
+}
+
+.past-event::after {
+  content: "Past Event";
+  display: inline-block;
+  margin: 0 0 18px 18px;
+  font-size: .7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #6c757d;
+}
+
+
+/* =========================================
+   MOBILE / TABLET
+========================================= */
+
+@media(max-width:1000px) {
+
+  .calendar-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .glance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media(max-width:650px) {
+
+  .glance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-column {
+    padding: 20px;
+  }
 
   .calendar-school-section {
     margin-bottom: 45px;
-  }
-
-  .coming-soon-box,
-  .next-event-box {
-    padding: 22px;
   }
 
 }
@@ -163,6 +345,7 @@ aria-controls="mainNav">
 </header>
 
 
+
 <section class="page-banner">
 
 <div class="container">
@@ -184,56 +367,211 @@ Concerts, performances, trips, meetings, community opportunities, fundraisers, a
 </section>
 
 
+
 <main>
 
 
 <!-- =========================================
-     NEXT EVENT
+     UPCOMING AT A GLANCE
 ========================================= -->
 
 <section class="content">
 
 <div class="container">
 
-<div class="next-event-box">
+<div class="glance-heading">
 
 <p class="card-label">
-Next Event
+Quick Reference
 </p>
 
 <h2>
-Coming Up
+Upcoming at a Glance
 </h2>
 
-<h3>
-Jolliff Orchestra Spirit Wear Order Deadline
-</h3>
-
 <p>
-<span class="event-type">
-Deadline
-</span>
+The next six upcoming orchestra, WBOPA, fundraiser, and community events are automatically displayed here in date order.
 </p>
 
+</div>
+
+
+<div id="glanceGrid" class="glance-grid">
+
+<noscript>
 <p>
-<strong>
-Thursday, October 1, 2026
-</strong>
+Please enable JavaScript to view the automatic upcoming-event summary.
+</p>
+</noscript>
+
+</div>
+
+
+<p class="small-text" style="text-align:center; margin-top:20px;">
+Past events automatically drop out of this section as the school year progresses.
 </p>
 
-<p>
-<strong>
-Jolliff Middle School Orchestra
-</strong>
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     THREE COLUMN QUICK REFERENCE
+========================================= -->
+
+<section class="content alt-bg">
+
+<div class="container">
+
+<div class="section-heading">
+
+<p class="card-label">
+Browse by Group
 </p>
 
+<h2>
+Upcoming Events by Program
+</h2>
+
 <p>
-Spirit wear orders are due October 1. Orders must be submitted using the paper order form with cash or check. Electronic ordering and Givebacks are not available for spirit wear.
+Quickly find the next events for Western Branch High School, Jolliff Middle School, or WBOPA and community activities.
 </p>
 
-<a class="button" href="fundraising.html#spirit-wear">
-Spirit Wear Information
+</div>
+
+
+<div class="calendar-columns">
+
+
+<!-- WBHS COLUMN -->
+
+<div class="calendar-column">
+
+<p class="card-label">
+WBHS
+</p>
+
+<h2>
+Western Branch High School
+</h2>
+
+<p class="calendar-column-subtitle">
+Upcoming high school orchestra events.
+</p>
+
+<div id="wbhsUpcoming" class="compact-event-list"></div>
+
+<a class="column-details-link" href="#wbhs-details">
+View All WBHS Details
 </a>
+
+</div>
+
+
+
+<!-- JMS COLUMN -->
+
+<div class="calendar-column">
+
+<p class="card-label">
+JMS
+</p>
+
+<h2>
+Jolliff Middle School
+</h2>
+
+<p class="calendar-column-subtitle">
+Upcoming Jolliff Orchestra events and deadlines.
+</p>
+
+<div id="jmsUpcoming" class="compact-event-list"></div>
+
+<a class="column-details-link" href="#jms-details">
+View All Jolliff Details
+</a>
+
+</div>
+
+
+
+<!-- WBOPA / COMMUNITY COLUMN -->
+
+<div class="calendar-column">
+
+<p class="card-label">
+WBOPA &amp; Community
+</p>
+
+<h2>
+Additional Events
+</h2>
+
+<p class="calendar-column-subtitle">
+WBOPA meetings, fundraisers, and community music opportunities.
+</p>
+
+<div id="communityUpcoming" class="compact-event-list"></div>
+
+<a class="column-details-link" href="#community-details">
+View All WBOPA &amp; Community Details
+</a>
+
+</div>
+
+
+</div>
+
+
+<p class="small-text" style="text-align:center; margin-top:25px;">
+These quick-reference lists automatically update based on the event dates below.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     FULL EVENT DETAILS
+========================================= -->
+
+<section class="content">
+
+<div class="container">
+
+<div class="full-calendar-header">
+
+<p class="card-label">
+Complete Calendar
+</p>
+
+<h2>
+Full Event Details
+</h2>
+
+<p>
+Use the quick-reference sections above to find what is coming up, or browse the complete event information below for report times, locations, attire, registration links, and other details.
+</p>
+
+<div class="full-calendar-nav">
+
+<a href="#wbhs-details">
+WBHS Details
+</a>
+
+<a href="#jms-details">
+Jolliff Details
+</a>
+
+<a href="#community-details">
+WBOPA &amp; Community
+</a>
+
+</div>
 
 </div>
 
@@ -242,20 +580,16 @@ Spirit Wear Information
 </section>
 
 
+
 <!-- =========================================
-     MAIN CALENDAR
+     WESTERN BRANCH HIGH SCHOOL DETAILS
 ========================================= -->
 
-<section class="content">
+<section class="content alt-bg">
 
 <div class="container">
 
-
-<!-- =========================================
-     WESTERN BRANCH HIGH SCHOOL
-========================================= -->
-
-<div id="wbhs" class="calendar-school-section">
+<div id="wbhs-details" class="calendar-school-section">
 
 <div class="calendar-section-header">
 
@@ -281,7 +615,17 @@ Concerts, trips, performances, and important dates for Western Branch High Schoo
 
 <!-- OCTOBER 27 -->
 
-<article class="event-card">
+<article
+id="event-wbhs-halloween"
+class="event-card"
+data-calendar-event
+data-date="2026-10-27"
+data-end="2026-10-27"
+data-group="wbhs"
+data-label="WBHS"
+data-type="Concert"
+data-date-display="Oct 27"
+data-short="7:00 PM • Location TBD">
 
 <div class="event-date-box">
 
@@ -330,9 +674,20 @@ Location will be posted when available.
 </article>
 
 
+
 <!-- DECEMBER 15 -->
 
-<article class="event-card">
+<article
+id="event-wbhs-winter"
+class="event-card"
+data-calendar-event
+data-date="2026-12-15"
+data-end="2026-12-15"
+data-group="wbhs"
+data-label="WBHS"
+data-type="Concert"
+data-date-display="Dec 15"
+data-short="7:00 PM">
 
 <div class="event-date-box">
 
@@ -381,9 +736,20 @@ Location will be posted when available.
 </article>
 
 
+
 <!-- MARCH 25-29 -->
 
-<article class="event-card">
+<article
+id="event-wbhs-disney"
+class="event-card"
+data-calendar-event
+data-date="2027-03-25"
+data-end="2027-03-29"
+data-group="wbhs"
+data-label="WBHS"
+data-type="Trip"
+data-date-display="Mar 25-29"
+data-short="Disney Trip">
 
 <div class="event-date-box">
 
@@ -426,9 +792,20 @@ Additional trip information will be provided to participating students and famil
 </article>
 
 
+
 <!-- JUNE 1 -->
 
-<article class="event-card">
+<article
+id="event-wbhs-spring"
+class="event-card"
+data-calendar-event
+data-date="2027-06-01"
+data-end="2027-06-01"
+data-group="wbhs"
+data-label="WBHS"
+data-type="Concert"
+data-date-display="Jun 1"
+data-short="7:00 PM">
 
 <div class="event-date-box">
 
@@ -481,12 +858,21 @@ Location will be posted when available.
 
 </div>
 
+</div>
+
+</section>
+
+
 
 <!-- =========================================
-     JOLLIFF MIDDLE SCHOOL
+     JOLLIFF MIDDLE SCHOOL DETAILS
 ========================================= -->
 
-<div id="jms" class="calendar-school-section">
+<section class="content">
+
+<div class="container">
+
+<div id="jms-details" class="calendar-school-section">
 
 <div class="calendar-section-header">
 
@@ -526,9 +912,19 @@ View Official JMS Events Calendar
 <div class="event-list">
 
 
-<!-- OCTOBER 1 - SPIRIT WEAR DEADLINE -->
+<!-- OCTOBER 1 -->
 
-<article class="event-card">
+<article
+id="event-jms-spirit-wear"
+class="event-card"
+data-calendar-event
+data-date="2026-10-01"
+data-end="2026-10-01"
+data-group="jms"
+data-label="JMS"
+data-type="Deadline"
+data-date-display="Oct 1"
+data-short="Spirit wear orders due">
 
 <div class="event-date-box">
 
@@ -581,9 +977,20 @@ Spirit Wear Information &amp; Order Form
 </article>
 
 
+
 <!-- OCTOBER 24 -->
 
-<article class="event-card">
+<article
+id="event-jms-jr-district-audition"
+class="event-card"
+data-calendar-event
+data-date="2026-10-24"
+data-end="2026-10-24"
+data-group="jms"
+data-label="JMS"
+data-type="Audition"
+data-date-display="Oct 24"
+data-short="Jr. District Audition">
 
 <div class="event-date-box">
 
@@ -647,9 +1054,20 @@ JR. District IV Orchestra Audition Registration
 </article>
 
 
+
 <!-- OCTOBER 27 -->
 
-<article class="event-card">
+<article
+id="event-jms-fall-concert"
+class="event-card"
+data-calendar-event
+data-date="2026-10-27"
+data-end="2026-10-27"
+data-group="jms"
+data-label="JMS"
+data-type="Concert"
+data-date-display="Oct 27"
+data-short="8th Grade • 7:00 PM">
 
 <div class="event-date-box">
 
@@ -714,9 +1132,20 @@ Formal
 </article>
 
 
+
 <!-- NOVEMBER 19 -->
 
-<article class="event-card">
+<article
+id="event-jms-va-arts"
+class="event-card"
+data-calendar-event
+data-date="2026-11-19"
+data-end="2026-11-19"
+data-group="jms"
+data-label="JMS"
+data-type="Performance"
+data-date-display="Nov 19"
+data-short="VA Arts Festival Quartet • 9:30 AM">
 
 <div class="event-date-box">
 
@@ -771,9 +1200,20 @@ Thursday, November 19, 2026
 </article>
 
 
+
 <!-- DECEMBER 10 -->
 
-<article class="event-card">
+<article
+id="event-jms-winter"
+class="event-card"
+data-calendar-event
+data-date="2026-12-10"
+data-end="2026-12-10"
+data-group="jms"
+data-label="JMS"
+data-type="Concert"
+data-date-display="Dec 10"
+data-short="All grades • 7:30 PM">
 
 <div class="event-date-box">
 
@@ -841,9 +1281,20 @@ Formal
 </article>
 
 
+
 <!-- JANUARY 15 -->
 
-<article class="event-card">
+<article
+id="event-jms-jr-district-event"
+class="event-card"
+data-calendar-event
+data-date="2027-01-15"
+data-end="2027-01-15"
+data-group="jms"
+data-label="JMS"
+data-type="District Event"
+data-date-display="Jan 15"
+data-short="Selected 7th & 8th • 6:30 PM">
 
 <div class="event-date-box">
 
@@ -908,9 +1359,20 @@ Formal
 </article>
 
 
+
 <!-- JANUARY 20-21 -->
 
-<article class="event-card">
+<article
+id="event-jms-rising-sixth"
+class="event-card"
+data-calendar-event
+data-date="2027-01-20"
+data-end="2027-01-21"
+data-group="jms"
+data-label="JMS"
+data-type="Performance"
+data-date-display="Jan 20-21"
+data-short="Rising 6th Grade Performances">
 
 <div class="event-date-box">
 
@@ -979,9 +1441,20 @@ Casual
 </article>
 
 
+
 <!-- MARCH 10 -->
 
-<article class="event-card">
+<article
+id="event-jms-preassessment"
+class="event-card"
+data-calendar-event
+data-date="2027-03-10"
+data-end="2027-03-10"
+data-group="jms"
+data-label="JMS"
+data-type="Concert"
+data-date-display="Mar 10"
+data-short="8th Grade • 7:00 PM">
 
 <div class="event-date-box">
 
@@ -1046,9 +1519,20 @@ Formal
 </article>
 
 
+
 <!-- MARCH 16-18 -->
 
-<article class="event-card">
+<article
+id="event-jms-state-assessment"
+class="event-card"
+data-calendar-event
+data-date="2027-03-16"
+data-end="2027-03-18"
+data-group="jms"
+data-label="JMS"
+data-type="Assessment"
+data-date-display="Mar 16-18"
+data-short="8th Grade • Details TBD">
 
 <div class="event-date-box">
 
@@ -1105,9 +1589,20 @@ Formal
 </article>
 
 
+
 <!-- MARCH 25 -->
 
-<article class="event-card">
+<article
+id="event-jms-miosm"
+class="event-card"
+data-calendar-event
+data-date="2027-03-25"
+data-end="2027-03-25"
+data-group="jms"
+data-label="JMS"
+data-type="Performance"
+data-date-display="Mar 25"
+data-short="6th Grade • 2:15 PM">
 
 <div class="event-date-box">
 
@@ -1172,9 +1667,20 @@ Casual
 </article>
 
 
+
 <!-- APRIL 23 -->
 
-<article class="event-card">
+<article
+id="event-jms-all-city"
+class="event-card"
+data-calendar-event
+data-date="2027-04-23"
+data-end="2027-04-23"
+data-group="jms"
+data-label="JMS"
+data-type="All-City"
+data-date-display="Apr 23"
+data-short="Selected 6th & 7th • 6:30 PM">
 
 <div class="event-date-box">
 
@@ -1239,9 +1745,20 @@ Formal
 </article>
 
 
+
 <!-- MAY 4 -->
 
-<article class="event-card">
+<article
+id="event-jms-spring-seven"
+class="event-card"
+data-calendar-event
+data-date="2027-05-04"
+data-end="2027-05-04"
+data-group="jms"
+data-label="JMS"
+data-type="Concert"
+data-date-display="May 4"
+data-short="7th Grade • 7:00 PM">
 
 <div class="event-date-box">
 
@@ -1302,9 +1819,20 @@ Formal
 </article>
 
 
+
 <!-- MAY 5 -->
 
-<article class="event-card">
+<article
+id="event-jms-spring-six-eight"
+class="event-card"
+data-calendar-event
+data-date="2027-05-05"
+data-end="2027-05-05"
+data-group="jms"
+data-label="JMS"
+data-type="Concert"
+data-date-display="May 5"
+data-short="6th & 8th Grade • 7:00 PM">
 
 <div class="event-date-box">
 
@@ -1367,9 +1895,20 @@ Formal
 </article>
 
 
+
 <!-- JUNE 5 -->
 
-<article class="event-card">
+<article
+id="event-jms-music-parks"
+class="event-card"
+data-calendar-event
+data-date="2027-06-05"
+data-end="2027-06-05"
+data-group="jms"
+data-label="JMS"
+data-type="Performance / Trip"
+data-date-display="Jun 5"
+data-short="Interested 8th Grade • Busch Gardens">
 
 <div class="event-date-box">
 
@@ -1434,12 +1973,26 @@ Casual
 
 </div>
 
+</div>
+
+</section>
+
+
 
 <!-- =========================================
-     BEYOND SCHOOL OPPORTUNITIES
+     WBOPA & COMMUNITY DETAILS
 ========================================= -->
 
-<div id="beyond-school" class="calendar-school-section">
+<section class="content alt-bg">
+
+<div class="container">
+
+<div id="community-details" class="calendar-school-section">
+
+
+<!-- COMMUNITY OPPORTUNITIES -->
+
+<div class="detail-subsection">
 
 <div class="calendar-section-header">
 
@@ -1457,19 +2010,25 @@ Beyond School Opportunities
 Optional music opportunities shared with Jolliff Orchestra students and families. These events are separate from required school orchestra activities.
 </p>
 
-<p>
-Additional opportunities may be added throughout the school year as they are shared by the orchestra directors.
-</p>
-
 </div>
 
 
 <div class="event-list">
 
 
-<!-- OCTOBER 4 - VIRGINIA SYMPHONY -->
+<!-- OCTOBER 4 -->
 
-<article class="event-card">
+<article
+id="event-community-vso"
+class="event-card"
+data-calendar-event
+data-date="2026-10-04"
+data-end="2026-10-04"
+data-group="community"
+data-label="Community"
+data-type="Free Community Event"
+data-date-display="Oct 4"
+data-short="VSO Play-In & Sing-Along • 3:00 PM">
 
 <div class="event-date-box">
 
@@ -1542,7 +2101,7 @@ View Virginia Symphony Opportunities &amp; Flyers
 </div>
 
 
-<div class="info-box" style="margin-top: 25px;">
+<div class="info-box" style="margin-top:25px;">
 
 <h3>
 Virginia Symphony Student Tickets
@@ -1571,15 +2130,13 @@ These are optional community opportunities and are not required Jolliff Orchestr
 
 </div>
 
-
 </div>
 
 
-<!-- =========================================
-     WBOPA
-========================================= -->
 
-<div id="wbopa" class="calendar-school-section">
+<!-- WBOPA -->
+
+<div class="detail-subsection">
 
 <div class="calendar-section-header">
 
@@ -1603,9 +2160,19 @@ Meetings, fundraisers, and activities organized by the Western Branch Orchestras
 <div class="event-list">
 
 
-<!-- OCTOBER 6 - FLOWER SALE DEADLINE -->
+<!-- OCTOBER 6 -->
 
-<article class="event-card">
+<article
+id="event-wbopa-flower-deadline"
+class="event-card"
+data-calendar-event
+data-date="2026-10-06"
+data-end="2026-10-06"
+data-group="community"
+data-label="WBOPA"
+data-type="Fundraiser"
+data-date-display="Oct 6"
+data-short="Fall Flower Sale orders due">
 
 <div class="event-date-box">
 
@@ -1656,9 +2223,20 @@ Flower Sale Information &amp; Ordering
 </article>
 
 
-<!-- OCTOBER 7 - RED ROBIN FUNDRAISER -->
 
-<article class="event-card">
+<!-- OCTOBER 7 -->
+
+<article
+id="event-wbopa-red-robin"
+class="event-card"
+data-calendar-event
+data-date="2026-10-07"
+data-end="2026-10-07"
+data-group="community"
+data-label="WBOPA"
+data-type="Fundraiser"
+data-date-display="Oct 7"
+data-short="Red Robin Giveback Fundraiser">
 
 <div class="event-date-box">
 
@@ -1714,9 +2292,20 @@ View Red Robin Fundraiser Details
 </article>
 
 
-<!-- OCTOBER 8 - WBOPA MEETING -->
 
-<article class="event-card">
+<!-- OCTOBER 8 -->
+
+<article
+id="event-wbopa-october-meeting"
+class="event-card"
+data-calendar-event
+data-date="2026-10-08"
+data-end="2026-10-08"
+data-group="community"
+data-label="WBOPA"
+data-type="Meeting"
+data-date-display="Oct 8"
+data-short="Monthly Meeting • 7:30 PM">
 
 <div class="event-date-box">
 
@@ -1777,9 +2366,20 @@ Meeting Information
 </article>
 
 
-<!-- OCTOBER 10 - FLOWER PICKUP AND VOLUNTEER DAY -->
 
-<article class="event-card">
+<!-- OCTOBER 10 -->
+
+<article
+id="event-wbopa-flower-pickup"
+class="event-card"
+data-calendar-event
+data-date="2026-10-10"
+data-end="2026-10-10"
+data-group="community"
+data-label="WBOPA"
+data-type="Fundraiser / Volunteer"
+data-date-display="Oct 10"
+data-short="Flower Pickup • 8:45 AM to 11:00 AM">
 
 <div class="event-date-box">
 
@@ -1848,14 +2448,17 @@ View Flower Sale &amp; Volunteer Information
 
 </div>
 
+</div>
+
 </section>
+
 
 
 <!-- =========================================
      IMPORTANT INFORMATION
 ========================================= -->
 
-<section class="content alt-bg">
+<section class="content">
 
 <div class="container">
 
@@ -1894,7 +2497,9 @@ Optional community and Beyond School Opportunities are provided for informationa
 </section>
 
 
+
 </main>
+
 
 
 <footer>
@@ -1920,7 +2525,268 @@ Contact Us
 </footer>
 
 
+
 <script src="js/script.js"></script>
+
+
+<script>
+
+/* =========================================
+   AUTOMATIC CALENDAR QUICK REFERENCE
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  function parseCalendarDate(value) {
+
+    const parts = value.split("-").map(Number);
+
+    return new Date(
+      parts[0],
+      parts[1] - 1,
+      parts[2]
+    );
+
+  }
+
+
+  function getEventTitle(card) {
+
+    const heading = card.querySelector("h3");
+
+    return heading ? heading.textContent.trim() : "Calendar Event";
+
+  }
+
+
+  const today = new Date();
+
+  today.setHours(0, 0, 0, 0);
+
+
+  const eventCards = Array.from(
+    document.querySelectorAll("[data-calendar-event]")
+  );
+
+
+  const events = eventCards.map(function (card) {
+
+    const startDate = parseCalendarDate(card.dataset.date);
+
+    const endDate = parseCalendarDate(
+      card.dataset.end || card.dataset.date
+    );
+
+    return {
+
+      card: card,
+
+      id: card.id,
+
+      title: getEventTitle(card),
+
+      start: startDate,
+
+      end: endDate,
+
+      group: card.dataset.group || "",
+
+      label: card.dataset.label || "",
+
+      type: card.dataset.type || "",
+
+      dateDisplay: card.dataset.dateDisplay || "",
+
+      short: card.dataset.short || ""
+
+    };
+
+  });
+
+
+  events.sort(function (a, b) {
+
+    return a.start - b.start;
+
+  });
+
+
+  /* -----------------------------------------
+     MARK PAST EVENTS IN FULL CALENDAR
+  ----------------------------------------- */
+
+  events.forEach(function (event) {
+
+    if (event.end < today) {
+
+      event.card.classList.add("past-event");
+
+    }
+
+  });
+
+
+  /* -----------------------------------------
+     ONLY UPCOMING EVENTS
+  ----------------------------------------- */
+
+  const upcomingEvents = events.filter(function (event) {
+
+    return event.end >= today;
+
+  });
+
+
+  /* -----------------------------------------
+     UPCOMING AT A GLANCE
+  ----------------------------------------- */
+
+  const glanceGrid = document.getElementById("glanceGrid");
+
+  if (glanceGrid) {
+
+    glanceGrid.innerHTML = "";
+
+    const nextEvents = upcomingEvents.slice(0, 6);
+
+
+    if (nextEvents.length === 0) {
+
+      glanceGrid.innerHTML =
+        "<p>No additional upcoming events are currently listed.</p>";
+
+    } else {
+
+      nextEvents.forEach(function (event) {
+
+        const card = document.createElement("article");
+
+        card.className = "glance-card";
+
+        card.innerHTML = `
+          <div class="glance-card-date">
+            ${event.dateDisplay}
+          </div>
+
+          <span class="glance-card-tag">
+            ${event.label}
+          </span>
+
+          <h3>
+            ${event.title}
+          </h3>
+
+          <p>
+            ${event.short}
+          </p>
+
+          <a href="#${event.id}">
+            View Details
+          </a>
+        `;
+
+        glanceGrid.appendChild(card);
+
+      });
+
+    }
+
+  }
+
+
+  /* -----------------------------------------
+     THREE-COLUMN QUICK REFERENCE
+  ----------------------------------------- */
+
+  function buildColumn(targetId, groupName, limit) {
+
+    const target = document.getElementById(targetId);
+
+    if (!target) {
+      return;
+    }
+
+    target.innerHTML = "";
+
+
+    const groupEvents = upcomingEvents
+      .filter(function (event) {
+
+        return event.group === groupName;
+
+      })
+      .slice(0, limit);
+
+
+    if (groupEvents.length === 0) {
+
+      target.innerHTML =
+        '<p class="small-text">No upcoming events are currently listed.</p>';
+
+      return;
+
+    }
+
+
+    groupEvents.forEach(function (event) {
+
+      const item = document.createElement("div");
+
+      item.className = "compact-event";
+
+      item.innerHTML = `
+        <span class="compact-event-date">
+          ${event.dateDisplay}
+        </span>
+
+        <span class="compact-event-type">
+          ${event.type}
+        </span>
+
+        <h3>
+          ${event.title}
+        </h3>
+
+        <p>
+          ${event.short}
+        </p>
+
+        <a href="#${event.id}">
+          Details
+        </a>
+      `;
+
+      target.appendChild(item);
+
+    });
+
+  }
+
+
+  buildColumn(
+    "wbhsUpcoming",
+    "wbhs",
+    5
+  );
+
+
+  buildColumn(
+    "jmsUpcoming",
+    "jms",
+    5
+  );
+
+
+  buildColumn(
+    "communityUpcoming",
+    "community",
+    5
+  );
+
+});
+
+</script>
+
 
 </body>
 
