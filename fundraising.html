@@ -1,24 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Support Western Branch Orchestra | WBOPA Fundraising</title>
 
-<meta
-name="description"
-content="Support Western Branch High School and Jolliff Middle School orchestra students through WBOPA fundraising, flower sale pickup, volunteer opportunities, donations, and community support."
->
+<meta name="description" content="Support Western Branch High School and Jolliff Middle School orchestra students through WBOPA fundraising, donations, volunteering, and community support.">
 
 <link rel="icon" type="image/png" href="images/favicon.png">
-
 <link rel="stylesheet" href="css/style.css">
 
 <style>
-
 .red-robin-flyer {
   width: 100%;
   max-width: 620px;
@@ -41,39 +36,134 @@ content="Support Western Branch High School and Jolliff Middle School orchestra 
   margin-bottom: 10px;
 }
 
+/* DONATION FEATURE */
+
+.donation-feature {
+  background: #0b2138;
+  color: #fff;
+  padding: 44px 0;
+  border-top: 5px solid #c99b3d;
+  border-bottom: 5px solid #c99b3d;
+}
+
+.donation-feature h2,
+.donation-feature h3 {
+  color: #f4c86b;
+}
+
+.donation-feature p {
+  color: #fff;
+}
+
+.donation-layout {
+  display: grid;
+  grid-template-columns: minmax(0,1.5fr) minmax(220px,1fr);
+  gap: 36px;
+  align-items: center;
+}
+
+.donation-feature .card-label {
+  color: #f4c86b;
+}
+
+.donation-qr {
+  background: #fff;
+  border: 4px solid #c99b3d;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  color: #0b2138;
+  max-width: 330px;
+  margin: auto;
+}
+
+.donation-qr img {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.donation-qr p {
+  color: #0b2138;
+  font-weight: bold;
+  margin: 10px 0 0;
+}
+
+.donation-button {
+  display: inline-block;
+  background: #e2b451;
+  color: #0b2138 !important;
+  padding: 13px 24px;
+  border-radius: 5px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 12px 0;
+}
+
+.donation-button:hover,
+.donation-button:focus {
+  background: #f4cd77;
+  text-decoration: underline;
+}
+
+.donation-link {
+  overflow-wrap: anywhere;
+  font-size: .92rem;
+}
+
+.donation-link a {
+  color: #ffe09a;
+}
+
+.donation-info {
+  background: #f7f4ed;
+  border: 1px solid #d8c59d;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.donation-info .donation-qr {
+  max-width: 240px;
+}
+
+@media (max-width: 720px) {
+  .donation-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-feature {
+    padding: 32px 0;
+  }
+
+  .donation-qr {
+    max-width: 270px;
+  }
+}
 </style>
 
 </head>
 
-
 <body>
 
-
 <header>
-
 <div class="container header-container">
 
 <a class="site-title" href="index.html">
 Western Branch Orchestras
 </a>
 
-
 <button
-class="menu-toggle"
-onclick="toggleMenu()"
-aria-label="Toggle navigation menu"
-aria-expanded="false"
-aria-controls="mainNav">
-
-☰ Menu
-
+  class="menu-toggle"
+  onclick="toggleMenu()"
+  aria-label="Toggle navigation menu"
+  aria-expanded="false"
+  aria-controls="mainNav">
+  ☰ Menu
 </button>
 
-
 <nav id="mainNav">
-
 <ul>
-
 <li><a href="index.html">Home</a></li>
 <li><a href="about.html">Orchestras</a></li>
 <li><a href="calendar.html">Calendar</a></li>
@@ -82,348 +172,307 @@ aria-controls="mainNav">
 <li><a class="active" aria-current="page" href="fundraising.html">Fundraising</a></li>
 <li><a href="gallery.html">Gallery</a></li>
 <li><a href="contact.html">Contact</a></li>
-
 </ul>
-
 </nav>
 
 </div>
-
 </header>
 
-
-
 <section class="page-banner">
-
 <div class="container">
 
-<p class="eyebrow">
-Support Student Musicians
-</p>
+<p class="eyebrow">Support Student Musicians</p>
 
-<h1>
-Fundraising &amp; Support
-</h1>
+<h1>Fundraising &amp; Support</h1>
 
 <p>
-Helping provide resources, experiences, and opportunities for Western Branch orchestra students.
+Helping provide resources, experiences, and opportunities
+for Western Branch orchestra students.
+</p>
+
+</div>
+</section>
+
+<main>
+
+<!-- =========================================
+     FEATURED SQUARE DONATION SECTION
+========================================= -->
+
+<section class="donation-feature" aria-labelledby="donation-feature-title">
+
+<div class="container donation-layout">
+
+<div>
+
+<p class="card-label">
+Western Branch Orchestras Parents Association
+</p>
+
+<h2 id="donation-feature-title">
+Support Our Student Musicians
+</h2>
+
+<p>
+Help us provide instruments, music, performances,
+educational experiences, and opportunities for
+Western Branch High School and Jolliff Middle School
+orchestra students.
+</p>
+
+<p>
+Every contribution, large or small, makes a difference.
+</p>
+
+<a
+  class="donation-button"
+  href="https://square.link/u/GncxXojN?src=sheet"
+  target="_blank"
+  rel="noopener noreferrer">
+  Donate Now Through Square
+</a>
+
+<p class="donation-link">
+Or visit:
+<a
+  href="https://square.link/u/GncxXojN?src=sheet"
+  target="_blank"
+  rel="noopener noreferrer">
+  square.link/u/GncxXojN
+</a>
 </p>
 
 </div>
 
+<div class="donation-qr">
+
+<a
+  href="https://square.link/u/GncxXojN?src=sheet"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Open Square donation page">
+
+<img
+  src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&amp;margin=16&amp;data=https%3A%2F%2Fsquare.link%2Fu%2FGncxXojN%3Fsrc%3Dsheet"
+  alt="QR code linking to the WBOPA Square donation page"
+  width="400"
+  height="400"
+  loading="lazy">
+
+</a>
+
+<p>Scan to Donate</p>
+
+</div>
+
+</div>
 </section>
-
-
-
-<main>
-
-
 
 <!-- =========================================
      WHY FUNDRAISING MATTERS
 ========================================= -->
 
 <section class="content">
-
 <div class="container">
 
 <div class="split-section">
 
-
 <div>
 
-<p class="card-label">
-Why Fundraising Matters
-</p>
+<p class="card-label">Why Fundraising Matters</p>
 
-<h2>
-Supporting Our Orchestra Programs
-</h2>
+<h2>Supporting Our Orchestra Programs</h2>
 
 <p>
-WBOPA fundraising helps provide additional support for orchestra students, directors, performances, activities, trips, supplies, and special opportunities.
-</p>
-
-<p>
-Every purchase, volunteer effort, and contribution helps strengthen the orchestra experience for students at Western Branch High School and Jolliff Middle School.
+WBOPA fundraising helps provide additional support for
+orchestra students, directors, performances, activities,
+trips, supplies, and special opportunities.
 </p>
 
 <p>
-Fundraising also helps provide experiences that may not otherwise be possible. Last year, WBOPA helped fund a performance by the professional Ivalas Quartet for the Jolliff Middle School orchestra program.
+Every purchase, volunteer effort, and contribution helps
+strengthen the orchestra experience for students at
+Western Branch High School and Jolliff Middle School.
 </p>
 
 <p>
-Another professional quartet through the Virginia Arts Festival is already scheduled to perform for Jolliff Orchestra students in November 2026.
+Fundraising also helps provide experiences that may not
+otherwise be possible. Last year, WBOPA helped fund a
+performance by the professional Ivalas Quartet for the
+Jolliff Middle School orchestra program.
+</p>
+
+<p>
+Another professional quartet through the Virginia Arts
+Festival is scheduled to perform for Jolliff Orchestra
+students in November 2026.
 </p>
 
 </div>
 
-
-
 <div class="info-box">
 
-<h3>
-Ways to Support
-</h3>
+<h3>Ways to Support</h3>
 
 <ul>
-
-<li>
-Participate in WBOPA fundraisers
-</li>
-
-<li>
-Pick up Fall Flower Sale orders on October 10
-</li>
-
-<li>
-Volunteer at fundraiser and orchestra events
-</li>
-
-<li>
-Watch for the Spring 2027 Flower Sale
-</li>
-
-<li>
-Support concert raffles and special fundraisers
-</li>
-
-<li>
-Share fundraising opportunities
-</li>
-
-<li>
-Make a donation
-</li>
-
+<li>Participate in WBOPA fundraisers</li>
+<li>Volunteer at fundraiser and orchestra events</li>
+<li>Watch for the Spring 2027 Flower Sale</li>
+<li>Support concert raffles and special fundraisers</li>
+<li>Share fundraising opportunities</li>
+<li><a href="#donations">Make a donation</a></li>
 </ul>
 
 </div>
 
-
 </div>
-
 </div>
-
 </section>
-
-
-
 
 <!-- =========================================
      SUPPORT OPTIONS
 ========================================= -->
 
 <section class="content alt-bg">
-
 <div class="container">
 
 <div class="section-heading">
 
-<p class="card-label">
-Support Options
-</p>
+<p class="card-label">Support Options</p>
 
-<h2>
-Ways Families Can Help
-</h2>
+<h2>Ways Families Can Help</h2>
 
-<p>
-Choose the option that works best for you.
-</p>
+<p>Choose the option that works best for you.</p>
 
 </div>
-
-
 
 <div class="cards">
 
+<article class="card">
+
+<p class="card-label">Donate</p>
+
+<h3>Direct Support</h3>
+
+<p>
+Financial contributions help WBOPA continue supporting
+student opportunities and orchestra programs.
+</p>
+
+<a href="#donations">Donate Now</a>
+
+</article>
+
+<article class="card">
+
+<p class="card-label">Spring 2027</p>
+
+<h3>Spring Flower Sale</h3>
+
+<p>
+Another flower fundraiser is planned for Spring 2027.
+Details will be posted when available.
+</p>
+
+<a href="#other-fundraisers">Future Fundraisers</a>
+
+</article>
 
 <article class="card red-robin-highlight">
 
-<p class="card-label">
-October 10
-</p>
+<p class="card-label">Completed October 7</p>
 
-<h3>
-Fall Flower Sale Pickup
-</h3>
+<h3>Red Robin Giveback</h3>
 
 <p>
-The Fall 2026 ordering period has closed. Customers who placed orders can pick up plants at Western Branch High School on Saturday, October 10.
+Thank you to everyone who supported the October 7
+Red Robin Giveback Fundraiser. The event raised
+<strong>$371.27</strong> for WBOPA.
 </p>
 
-<a href="#flowers">
-Pickup Information
-</a>
+<a href="#red-robin">View Completed Fundraiser</a>
 
 </article>
-
-
 
 <article class="card">
 
-<p class="card-label">
-Volunteer
-</p>
+<p class="card-label">Completed October 10</p>
 
-<h3>
-Flower Pickup Volunteers
-</h3>
+<h3>Fall Flower Sale</h3>
 
 <p>
-Student and parent volunteers are still needed to help receive, organize, and distribute plants on October 10.
+Thank you to everyone who supported the Fall 2026
+Flower Sale.
 </p>
 
-<a href="#flower-volunteers">
-Volunteer Details
-</a>
+<a href="#flowers">View Flower Sale Details</a>
 
 </article>
-
-
-
-<article class="card">
-
-<p class="card-label">
-Spring 2027
-</p>
-
-<h3>
-Spring Flower Sale
-</h3>
-
-<p>
-Another flower fundraiser is planned for Spring 2027. Details will be posted when they are available.
-</p>
-
-<a href="#other-fundraisers">
-Future Fundraisers
-</a>
-
-</article>
-
-
-
-<article class="card">
-
-<p class="card-label">
-Donate
-</p>
-
-<h3>
-Direct Support
-</h3>
-
-<p>
-Financial contributions help WBOPA continue supporting student opportunities and orchestra programs.
-</p>
-
-<a href="#donations">
-Donation Information
-</a>
-
-</article>
-
-
-
-<article class="card">
-
-<p class="card-label">
-Completed
-</p>
-
-<h3>
-Red Robin Giveback
-</h3>
-
-<p>
-Thank you to everyone who supported the October 7 Red Robin Giveback Fundraiser. The event raised <strong>$371.27</strong> for WBOPA.
-</p>
-
-<a href="#red-robin">
-View Completed Fundraiser
-</a>
-
-</article>
-
 
 </div>
-
 </div>
-
 </section>
-
-
-
 
 <!-- =========================================
      RED ROBIN GIVEBACK FUNDRAISER
 ========================================= -->
 
 <section id="red-robin" class="content">
-
 <div class="container">
 
 <div class="section-heading">
 
-<p class="card-label">
-Completed October 7
-</p>
+<p class="card-label">Completed October 7</p>
 
-<h2>
-Red Robin Giveback Fundraiser
-</h2>
+<h2>Red Robin Giveback Fundraiser</h2>
 
 <p>
-Thank you to everyone who participated in the October 7 Red Robin Giveback Fundraiser. Together, the event raised <strong>$371.27</strong> to support Western Branch orchestra students.
+Thank you to everyone who participated in the October 7
+Red Robin Giveback Fundraiser. Together, the event raised
+<strong>$371.27</strong> to support Western Branch
+orchestra students.
 </p>
 
 </div>
 
-
 <div class="split-section">
-
 
 <div>
 
 <img
-src="images/red.png"
-alt="Red Robin fundraiser flyer for the Western Branch Orchestra Parents Association on October 7, 2026"
-class="red-robin-flyer"
->
+  src="images/red.png"
+  alt="Red Robin fundraiser flyer for the Western Branch Orchestra Parents Association on October 7, 2026"
+  class="red-robin-flyer">
 
 </div>
 
-
-
 <div>
 
-<p class="card-label">
-Fundraiser Complete
-</p>
+<p class="card-label">Fundraiser Complete</p>
 
-<h2>
-Thank You for Supporting Our Students
-</h2>
+<h2>Thank You for Supporting Our Students</h2>
 
 <p>
-The Red Robin Giveback Fundraiser was held on <strong>Wednesday, October 7, 2026</strong>.
+The Red Robin Giveback Fundraiser was held on
+<strong>Wednesday, October 7, 2026</strong>.
 </p>
 
 <p>
-Red Robin offered to give <strong>20% of eligible food sales</strong> back to the Western Branch Orchestras Parents Association for qualifying orders made during the fundraiser.
+Red Robin offered to give
+<strong>20% of eligible food sales</strong>
+back to the Western Branch Orchestras Parents
+Association for qualifying orders made during
+the fundraiser.
 </p>
 
 <p>
-Thanks to everyone who participated, WBOPA earned <strong>$371.27</strong> from the fundraiser.
+Thanks to everyone who participated, WBOPA earned
+<strong>$371.27</strong>.
 </p>
 
 <div class="info-box">
 
-<h3>
-Fundraiser Details
-</h3>
+<h3>Fundraiser Details</h3>
 
 <p>
 <strong>Date:</strong><br>
@@ -450,90 +499,54 @@ Completed
 </div>
 
 </div>
-
-
 </div>
-
 </div>
-
 </section>
-
-
-
 
 <!-- =========================================
      FALL FLOWER SALE
 ========================================= -->
 
 <section id="flowers" class="content alt-bg">
-
 <div class="container">
-
 
 <div class="section-heading">
 
-<p class="card-label">
-Pickup October 10
-</p>
+<p class="card-label">Completed October 10</p>
 
-<h2>
-2026 Fall Flower Sale
-</h2>
+<h2>2026 Fall Flower Sale</h2>
 
 <p>
-The Fall 2026 Flower Sale ordering period has closed. Customers who placed orders can pick up their plants on Saturday, October 10.
+Thank you to everyone who supported the Fall 2026
+Flower Sale. Ordering and pickup have concluded.
 </p>
 
 </div>
 
-
-
 <div class="split-section">
-
 
 <div>
 
 <img
-src="images/WBOPA%20Fall%20Flower%20Sale%20Flyer.jpg"
-alt="2026 Western Branch Orchestras Parents Association Fall Flower Sale Flyer"
-style="
-width: 100%;
-max-width: 650px;
-height: auto;
-display: block;
-margin: 0 auto;
-border-radius: 8px;
-"
->
+  src="images/WBOPA%20Fall%20Flower%20Sale%20Flyer.jpg"
+  alt="2026 Western Branch Orchestras Parents Association Fall Flower Sale Flyer"
+  style="width:100%;max-width:650px;height:auto;display:block;margin:0 auto;border-radius:8px;">
 
 </div>
 
-
-
 <div>
 
-<p class="card-label">
-Fall 2026
-</p>
+<p class="card-label">Fall 2026</p>
 
-<h2>
-Fall Flower Sale Pickup
-</h2>
+<h2>Fall Flower Sale Details</h2>
 
 <p>
-Thank you to everyone who supported the 2026 WBOPA Fall Flower Sale. The ordering period is now closed.
+The Fall 2026 ordering period is closed.
 </p>
-
-<p>
-Customers who placed orders should plan to pick up their plants during the scheduled pickup window below.
-</p>
-
 
 <div class="info-box">
 
-<h3>
-Important Dates
-</h3>
+<h3>Sale Dates</h3>
 
 <p>
 <strong>Order Deadline:</strong><br>
@@ -555,350 +568,228 @@ Chesapeake, VA 23321
 
 </div>
 
-
-<p style="margin-top: 25px;">
-<strong>Ordering is closed for the Fall 2026 sale.</strong>
-</p>
-
 </div>
-
-
 </div>
-
 </div>
-
 </section>
-
-
-
 
 <!-- =========================================
      PICKUP DETAILS
 ========================================= -->
 
 <section class="content">
-
 <div class="container">
 
 <div class="section-heading">
 
-<p class="card-label">
-Flower Sale Details
-</p>
+<p class="card-label">Flower Sale Details</p>
 
-<h2>
-Pickup Information
-</h2>
+<h2>Fall Pickup Information</h2>
 
 <p>
-Information for customers who placed Fall 2026 Flower Sale orders.
+Reference information for the completed
+Fall 2026 Flower Sale.
 </p>
 
 </div>
 
-
-
 <div class="cards">
-
 
 <article class="card">
 
-<p class="card-label">
-Customer Pickup
-</p>
+<p class="card-label">Customer Pickup</p>
 
-<h3>
-Saturday, October 10
-</h3>
+<h3>Saturday, October 10</h3>
 
 <p>
-Customer pickup is scheduled from <strong>8:45 a.m. to 11:00 a.m.</strong>
-</p>
-
-<p>
-Please arrive during the pickup window to receive your order.
+Customer pickup was scheduled from
+<strong>8:45 a.m. to 11:00 a.m.</strong>
 </p>
 
 </article>
 
-
-
 <article class="card">
 
-<p class="card-label">
-Location
-</p>
+<p class="card-label">Location</p>
 
-<h3>
-Western Branch High School Bus Ramp
-</h3>
+<h3>Western Branch High School Bus Ramp</h3>
 
 <p>
 1968 Bruin Place<br>
 Chesapeake, VA 23321
 </p>
 
-<p>
-Pickup will take place at the bus ramp.
-</p>
-
 </article>
-
-
 
 <article class="card">
 
-<p class="card-label">
-Prearranged Delivery
-</p>
+<p class="card-label">Prearranged Delivery</p>
 
-<h3>
-Optional Local Delivery
-</h3>
+<h3>Optional Local Delivery</h3>
 
 <p>
-Customers who selected and paid for local delivery when placing their order should follow the delivery arrangements provided with their order.
+Customers who selected and paid for local delivery
+when placing their order should follow the
+arrangements provided with their order.
 </p>
 
 <p class="small-text">
-The optional delivery service was limited to the 23321 ZIP code and one address per order form.
+The optional delivery service was limited to the
+23321 ZIP code and one address per order form.
 </p>
 
 </article>
 
-
 </div>
-
 </div>
-
 </section>
-
-
-
 
 <!-- =========================================
      VOLUNTEERS
 ========================================= -->
 
 <section id="flower-volunteers" class="content alt-bg">
-
 <div class="container">
-
 
 <div class="section-heading">
 
-<p class="card-label">
-Help Needed
-</p>
+<p class="card-label">Thank You, Volunteers</p>
 
-<h2>
-Fall Flower Sale Volunteers
-</h2>
+<h2>Fall Flower Sale Volunteers</h2>
 
 <p>
-Student and parent volunteers are needed to help make the Fall Flower Sale pickup day successful.
+Thank you to the students and parents who helped
+with the Fall 2026 Flower Sale.
 </p>
 
 </div>
-
-
 
 <div class="cards">
 
-
 <article class="card">
 
-<p class="card-label">
-Volunteer
-</p>
+<p class="card-label">Volunteer Shift</p>
 
-<h3>
-7:00 a.m. to 9:00 a.m.
-</h3>
+<h3>7:00 a.m. to 9:00 a.m.</h3>
 
 <p>
-Help receive, organize, and prepare plants for customer pickup.
-</p>
-
-<p>
-Student and parent volunteers are welcome.
+Volunteers helped receive, organize, and prepare
+plants for customer pickup.
 </p>
 
 </article>
 
-
-
 <article class="card">
 
-<p class="card-label">
-Volunteer
-</p>
+<p class="card-label">Volunteer Shift</p>
 
-<h3>
-9:00 a.m. to 11:00 a.m.
-</h3>
+<h3>9:00 a.m. to 11:00 a.m.</h3>
 
 <p>
-Help organize and distribute plants as families arrive for pickup.
-</p>
-
-<p>
-Student and parent volunteers are welcome.
+Volunteers helped organize and distribute plants
+as families arrived.
 </p>
 
 </article>
 
-
-
 <article class="card">
 
-<p class="card-label">
-Students
-</p>
+<p class="card-label">Students</p>
 
-<h3>
-Service Hours
-</h3>
+<h3>Service Hours</h3>
 
 <p>
-Students who need community service or volunteer hours may be able to receive credit for helping with the flower sale.
+Students who participated may be able to receive
+credit for service hours.
 </p>
 
 <p class="small-text">
-Students should confirm eligibility with the school, club, honor society, or organization requiring the service hours.
+Students should confirm eligibility with the
+school or organization requiring the hours.
 </p>
 
 </article>
 
-
 </div>
-
-
-<div class="info-box" style="margin-top: 30px;">
-
-<h3>
-Volunteer Time vs. Customer Pickup
-</h3>
-
-<p>
-The <strong>7:00 a.m.</strong> start time is for volunteers helping prepare the fundraiser.
-</p>
-
-<p>
-Customer plant pickup begins at <strong>8:45 a.m.</strong> and ends at <strong>11:00 a.m.</strong>
-</p>
-
 </div>
-
-
-</div>
-
 </section>
 
-
-
-
 <!-- =========================================
-     COORDINATOR NEEDED
+     SPRING FLOWER SALE COORDINATOR
 ========================================= -->
 
 <section class="content">
-
 <div class="container split-section">
-
 
 <div>
 
-<p class="card-label">
-WBOPA Volunteer Opportunity
-</p>
+<p class="card-label">WBOPA Volunteer Opportunity</p>
 
-<h2>
-Help Lead the Spring Flower Sale
-</h2>
+<h2>Help Lead the Spring Flower Sale</h2>
 
 <p>
-WBOPA is looking for someone interested in learning how the flower fundraiser is organized and managed.
+WBOPA is looking for someone interested in learning
+how the flower fundraiser is organized and managed.
 </p>
 
 <p>
-The current flower coordinator has successfully managed the fundraiser for several years and is ready to pass the responsibility to another volunteer.
+The current flower coordinator has managed the
+fundraiser for several years and is ready to pass
+the responsibility to another volunteer.
 </p>
 
 <p>
-The new volunteer would <strong>shadow the current coordinator during the Fall Flower Sale</strong> to learn the process before potentially taking over coordination of the Spring 2027 Flower Sale.
-</p>
-
-<p>
-This is a good opportunity for someone who wants to become more involved with WBOPA while learning the fundraiser from an experienced coordinator.
+A new volunteer can learn from the current
+coordinator in preparation for the Spring 2027
+Flower Sale.
 </p>
 
 </div>
 
-
-
 <div class="info-box">
 
-<h3>
-Interested in Learning More?
-</h3>
+<h3>Interested in Learning More?</h3>
 
 <p>
-Contact WBOPA if you would like more information about shadowing the current flower coordinator or helping with the Spring Flower Sale.
+Contact WBOPA if you would like to help coordinate
+the Spring Flower Sale.
 </p>
 
-<a
-class="button"
-href="contact.html">
+<a class="button" href="contact.html">
 Contact WBOPA
 </a>
 
 </div>
 
-
 </div>
-
 </section>
-
-
-
 
 <!-- =========================================
      FLOWER SALE CONTACT
 ========================================= -->
 
 <section class="content alt-bg">
-
 <div class="container split-section">
-
 
 <div>
 
-<p class="card-label">
-Questions
-</p>
+<p class="card-label">Questions</p>
 
-<h2>
-Flower Sale Contact
-</h2>
+<h2>Flower Sale Contact</h2>
 
 <p>
-Questions about flower orders, pickup, delivery, or the Fall Flower Sale can be directed to the flower sale coordinator.
+Questions about flower orders, pickup, delivery,
+or the Fall Flower Sale can be directed to the
+flower sale coordinator.
 </p>
 
 </div>
 
-
-
 <div class="info-box">
 
-<h3>
-Kim Hudson
-</h3>
+<h3>Kim Hudson</h3>
 
-<p>
-Call or text:
-</p>
+<p>Call or text:</p>
 
 <p>
 <strong>
@@ -910,93 +801,79 @@ Call or text:
 
 </div>
 
-
 </div>
-
 </section>
-
-
-
 
 <!-- =========================================
      FUNDRAISING GOAL
 ========================================= -->
 
 <section class="content">
-
 <div class="container">
 
 <div class="section-heading">
 
-<p class="card-label">
-Fundraising Goal
-</p>
+<p class="card-label">Fundraising Goal</p>
 
-<h2>
-Support Our Student Musicians
-</h2>
+<h2>Support Our Student Musicians</h2>
 
 <p>
-The Fall 2026 flower sale suggested a fundraising goal of 20 plants per student or family. Families may also support WBOPA through direct donations and future fundraising opportunities.
+Families can support WBOPA through direct donations
+and future fundraising opportunities.
 </p>
 
 </div>
-
-
 
 <div class="info-box">
 
-<h3>
-Where Your Support Goes
-</h3>
+<h3>Where Your Support Goes</h3>
 
 <p>
-WBOPA fundraising supports the Western Branch orchestra programs through scholarships, student participation fees, music and equipment purchases, staff development, and other orchestra activities.
+WBOPA fundraising supports the Western Branch
+orchestra programs through scholarships, student
+participation fees, music and equipment purchases,
+staff development, and other orchestra activities.
 </p>
 
 <p>
-Fundraising also allows orchestra directors to provide special experiences for students.
+Fundraising also allows orchestra directors to
+provide special experiences for students.
 </p>
 
 <p>
-For example, WBOPA previously funded a visit by the <strong>Ivalas Quartet</strong>, a professional string quartet participating in a Virginia Arts Festival residency, to perform for the Jolliff Middle School orchestra program.
+For example, WBOPA previously funded a visit by
+the <strong>Ivalas Quartet</strong>, a professional
+string quartet participating in a Virginia Arts
+Festival residency, to perform for the Jolliff
+Middle School orchestra program.
 </p>
 
 <p>
-Another professional quartet through the Virginia Arts Festival is already scheduled to visit Jolliff in <strong>November 2026</strong>.
+Another professional quartet through the
+Virginia Arts Festival is scheduled to visit
+Jolliff in <strong>November 2026</strong>.
 </p>
 
 </div>
-
-
 </div>
-
 </section>
-
-
-
 
 <!-- =========================================
      SPIRIT WEAR
 ========================================= -->
 
 <section id="spirit-wear" class="content alt-bg">
-
 <div class="container">
-
 
 <div class="section-heading">
 
-<p class="card-label">
-Orders Closed
-</p>
+<p class="card-label">Orders Closed</p>
 
-<h2>
-Jolliff Orchestra Spirit Wear
-</h2>
+<h2>Jolliff Orchestra Spirit Wear</h2>
 
 <p>
-The Fall 2026 Jolliff Orchestra spirit wear ordering period has closed.
+The Fall 2026 Jolliff Orchestra spirit wear
+ordering period has closed.
 </p>
 
 <p>
@@ -1006,207 +883,185 @@ The order deadline was Thursday, October 1, 2026.
 </p>
 
 </div>
-
-
 
 <div class="split-section">
 
-
 <div>
 
-<h3>
-Fall 2026 Spirit Wear
-</h3>
+<h3>Fall 2026 Spirit Wear</h3>
 
 <p>
-Spirit wear order forms were distributed to 6th grade orchestra students and interested 7th and 8th grade students.
+Spirit wear order forms were distributed to 6th grade
+orchestra students and interested 7th and 8th grade
+students.
 </p>
 
 <p>
-The Fall 2026 ordering period is now closed.
+The current designs are the same as last year and
+remain available to view below.
 </p>
 
 <p>
-The current designs are the same as last year and remain available to view below.
-</p>
-
-<p>
-
 <a
-class="button"
-href="https://drive.google.com/drive/folders/1Ra3l3vuBRUVGIkhMBEkK8v3Rq_TUlDTA?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-View Spirit Wear Designs
+  class="button"
+  href="https://drive.google.com/drive/folders/1Ra3l3vuBRUVGIkhMBEkK8v3Rq_TUlDTA?usp=sharing"
+  target="_blank"
+  rel="noopener noreferrer">
+  View Spirit Wear Designs
 </a>
-
 </p>
 
 </div>
-
-
 
 <div class="info-box">
 
-<h3>
-Ordering Status
-</h3>
+<h3>Ordering Status</h3>
 
 <p>
-<strong>
-Fall 2026 orders are closed.
-</strong>
+<strong>Fall 2026 orders are closed.</strong>
 </p>
 
 <p>
-The order deadline was Thursday, October 1, 2026.
-</p>
-
-<p>
-Future spirit wear ordering information will be posted when another ordering period becomes available.
+Future spirit wear ordering information will
+be posted when another ordering period becomes
+available.
 </p>
 
 <p class="small-text">
-Families with questions about an existing order should contact the orchestra program or WBOPA.
+Families with questions about an existing order
+should contact the orchestra program or WBOPA.
 </p>
 
 </div>
 
-
 </div>
-
-
 </div>
-
 </section>
-
-
-
 
 <!-- =========================================
      DIRECT DONATIONS
 ========================================= -->
 
 <section id="donations" class="content">
-
 <div class="container split-section">
-
 
 <div>
 
-<p class="card-label">
-Direct Support
-</p>
+<p class="card-label">Direct Support</p>
 
-<h2>
-Make a Donation
-</h2>
+<h2>Make a Donation</h2>
 
 <p>
-Direct donations help WBOPA support orchestra students, directors, performances, activities, equipment, and other program needs.
+Your gift helps WBOPA support orchestra students,
+directors, performances, activities, instruments,
+sheet music, and other program needs.
 </p>
 
 <p>
-An online donation option is being prepared for the website. Until that link is posted, contact WBOPA if you would like to make a direct contribution.
+Use the button below to contribute through Square,
+or scan the QR code with your phone.
 </p>
-
-</div>
-
-
-
-<div class="info-box">
-
-<h3>
-Want to Support WBOPA?
-</h3>
-
-<p>
-Contact WBOPA for current donation information.
-</p>
-
-<!-- FUTURE SQUARE DONATION LINK:
-     Replace the Contact WBOPA button below with the confirmed Square donation URL
-     when the WBOPA online donation page is ready. -->
 
 <a
-class="button"
-href="contact.html">
-Contact WBOPA
+  class="button"
+  href="https://square.link/u/GncxXojN?src=sheet"
+  target="_blank"
+  rel="noopener noreferrer">
+  Donate Through Square
 </a>
 
+<p class="small-text">
+This link is for donations, not 50/50 raffle
+ticket purchases.
+</p>
+
 </div>
 
+<div class="donation-info">
+
+<h3>Scan to Donate</h3>
+
+<div class="donation-qr">
+
+<a
+  href="https://square.link/u/GncxXojN?src=sheet"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Open Square donation page">
+
+<img
+  src="https://api.qrserver.com/v1/create-qr-code/?size=400x400&amp;margin=16&amp;data=https%3A%2F%2Fsquare.link%2Fu%2FGncxXojN%3Fsrc%3Dsheet"
+  alt="QR code for WBOPA Square donations"
+  width="400"
+  height="400"
+  loading="lazy">
+
+</a>
+
+<p>Scan with your phone camera</p>
 
 </div>
 
+<p class="small-text" style="text-align:center">
+Thank you for supporting our student musicians.
+</p>
+
+</div>
+
+</div>
 </section>
-
-
-
 
 <!-- =========================================
      OTHER FUNDRAISERS
 ========================================= -->
 
 <section id="other-fundraisers" class="content">
-
 <div class="container">
 
 <div class="section-heading">
 
-<p class="card-label">
-Throughout the Year
-</p>
+<p class="card-label">Throughout the Year</p>
 
-<h2>
-Other Fundraising Opportunities
-</h2>
+<h2>Other Fundraising Opportunities</h2>
 
 <p>
-Additional opportunities may be offered throughout the school year to support orchestra activities and student experiences.
+Additional opportunities may be offered throughout
+the school year to support orchestra activities
+and student experiences.
 </p>
 
 </div>
 
-
-
 <div class="cards">
-
 
 <article class="card">
 
-<p class="card-label">
-Spring 2027
-</p>
+<p class="card-label">Spring 2027</p>
 
-<h3>
-Spring Flower Sale
-</h3>
+<h3>Spring Flower Sale</h3>
 
 <p>
-Our spring flower fundraiser provides another opportunity for families and the community to support orchestra students.
+Our spring flower fundraiser provides another
+opportunity for families and the community to
+support orchestra students.
 </p>
 
 <p class="small-text">
-Spring 2027 fundraiser information will be posted later this school year.
+Spring 2027 fundraiser information will be posted
+later this school year.
 </p>
 
 </article>
 
-
-
 <article class="card">
 
-<p class="card-label">
-Concerts
-</p>
+<p class="card-label">Concerts</p>
 
-<h3>
-Concert Raffles
-</h3>
+<h3>Concert Raffles</h3>
 
 <p>
-WBOPA may hold raffles during select concerts and orchestra events.
+WBOPA may hold raffles during select concerts
+and orchestra events.
 </p>
 
 <p class="small-text">
@@ -1215,20 +1070,16 @@ Details will be announced before participating events.
 
 </article>
 
-
-
 <article class="card">
 
-<p class="card-label">
-Special Events
-</p>
+<p class="card-label">Special Events</p>
 
-<h3>
-Additional Fundraisers
-</h3>
+<h3>Additional Fundraisers</h3>
 
 <p>
-Additional fundraising activities may be offered throughout the year to support student opportunities and orchestra programs.
+Additional fundraising activities may be offered
+throughout the year to support student opportunities
+and orchestra programs.
 </p>
 
 <p class="small-text">
@@ -1237,83 +1088,65 @@ New opportunities will be posted here.
 
 </article>
 
-
 </div>
-
 </div>
-
 </section>
-
-
-
 
 <!-- =========================================
      SUPPORT
 ========================================= -->
 
 <section id="support" class="content alt-bg">
-
 <div class="container split-section">
-
 
 <div>
 
-<p class="card-label">
-Where Your Support Goes
-</p>
+<p class="card-label">Where Your Support Goes</p>
 
-<h2>
-Investing in Students
-</h2>
+<h2>Investing in Students</h2>
 
 <p>
-Funds raised through WBOPA help support Western Branch High School and Jolliff Middle School orchestra students.
-</p>
-
-<p>
-Fundraising supports activities, performances, trips, supplies, student opportunities, and other program needs.
+Funds raised through WBOPA help support Western
+Branch High School and Jolliff Middle School
+orchestra students.
 </p>
 
 <p>
-Every purchase, contribution, and volunteer effort helps provide meaningful experiences for student musicians.
+Fundraising supports activities, performances,
+trips, supplies, student opportunities, and
+other program needs.
+</p>
+
+<p>
+Every purchase, contribution, and volunteer effort
+helps provide meaningful experiences for student
+musicians.
 </p>
 
 </div>
 
-
-
 <div class="info-box">
 
-<h3>
-Questions About Fundraising?
-</h3>
+<h3>Questions About Fundraising?</h3>
 
 <p>
-Contact WBOPA with questions about fundraisers, orders, volunteering, or other ways to support orchestra students.
+Contact WBOPA with questions about fundraisers,
+orders, volunteering, or other ways to support
+orchestra students.
 </p>
 
-<a
-class="button"
-href="contact.html">
+<a class="button" href="contact.html">
 Contact WBOPA
 </a>
 
 </div>
 
-
 </div>
-
 </section>
-
-
 
 </main>
 
-
-
-
 <footer>
-
 <div class="container footer-container">
 
 <p>
@@ -1321,24 +1154,18 @@ Contact WBOPA
 </p>
 
 <p>
-Supporting Western Branch High School and Jolliff Middle School Orchestras
+Supporting Western Branch High School and
+Jolliff Middle School Orchestras
 </p>
 
 <p>
-<a href="contact.html">
-Contact Us
-</a>
+<a href="contact.html">Contact Us</a>
 </p>
 
 </div>
-
 </footer>
-
-
 
 <script src="js/script.js"></script>
 
-
 </body>
-
 </html>
