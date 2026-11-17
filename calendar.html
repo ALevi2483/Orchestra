@@ -13,6 +13,9 @@
 <link rel="stylesheet" href="css/style.css">
 
 <style>
+
+/* GENERAL CALENDAR STYLING */
+
 html {
   scroll-behavior: smooth;
 }
@@ -42,11 +45,16 @@ html {
   letter-spacing: .06em;
 }
 
-/* QUICK NAVIGATION */
+/* STICKY JUMP TO NAVIGATION */
 
 .calendar-jump-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
   background: #f4f6f9;
   border-bottom: 1px solid #dfe5ea;
+  box-shadow: 0 3px 9px rgba(0,0,0,.12);
 }
 
 .calendar-jump-inner {
@@ -84,8 +92,12 @@ html {
 #wbhs-details,
 #jms-details,
 #wbopa-events,
-#beyond-school {
-  scroll-margin-top: 20px;
+#beyond-school,
+#community-details,
+.event-card {
+  scroll-margin-top: calc(
+    var(--calendar-jump-height, 82px) + 16px
+  );
 }
 
 /* UPCOMING AT A GLANCE */
@@ -139,11 +151,11 @@ html {
   font-size: .92rem;
 }
 
-/* PROGRAM QUICK REFERENCE */
+/* UPCOMING EVENTS BY PROGRAM */
 
 .calendar-columns {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 22px;
   align-items: start;
 }
@@ -317,19 +329,19 @@ html {
   font-weight: 700;
 }
 
-/* MOBILE */
+/* MOBILE AND TABLET */
 
-@media (max-width: 1000px) {
+@media (max-width:1000px) {
   .calendar-columns {
     grid-template-columns: 1fr;
   }
 
   .glance-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width:650px) {
   .glance-grid {
     grid-template-columns: 1fr;
   }
@@ -343,18 +355,22 @@ html {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce) {
   html {
     scroll-behavior: auto;
   }
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- WEBSITE HEADER -->
+
 <header>
   <div class="container header-container">
+
     <a class="site-title" href="index.html">
       Western Branch Orchestras
     </a>
@@ -372,7 +388,11 @@ html {
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">Orchestras</a></li>
-        <li><a class="active" aria-current="page" href="calendar.html">Calendar</a></li>
+        <li>
+          <a class="active" aria-current="page" href="calendar.html">
+            Calendar
+          </a>
+        </li>
         <li><a href="students.html">Student Resources</a></li>
         <li><a href="parents.html">Families &amp; WBOPA</a></li>
         <li><a href="fundraising.html">Fundraising</a></li>
@@ -380,6 +400,7 @@ html {
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
   </div>
 </header>
 
@@ -387,26 +408,33 @@ html {
 
 <section id="calendar-top" class="page-banner">
   <div class="container">
+
     <p class="eyebrow">2026-2027 School Year</p>
+
     <h1>Orchestra Calendar</h1>
+
     <p>
       Concerts, performances, trips, meetings,
       community opportunities, fundraisers,
       and important dates for Western Branch
       orchestra families.
     </p>
+
   </div>
 </section>
 
-<!-- QUICK NAVIGATION -->
+<!-- STICKY JUMP TO NAVIGATION -->
 
 <nav class="calendar-jump-bar" aria-label="Calendar section navigation">
   <div class="container calendar-jump-inner">
+
     <span class="calendar-jump-label">Jump to:</span>
+
     <a href="#wbhs-details">High School</a>
     <a href="#jms-details">Middle School</a>
     <a href="#wbopa-events">WBOPA</a>
     <a href="#beyond-school">Community</a>
+
   </div>
 </nav>
 
@@ -416,27 +444,36 @@ html {
 
 <section class="content">
   <div class="container">
+
     <div class="glance-heading">
+
       <p class="card-label">Quick Reference</p>
+
       <h2>Upcoming at a Glance</h2>
+
       <p>
         The next six upcoming orchestra, WBOPA,
         fundraiser, and community events are
         automatically displayed here in date order.
       </p>
+
     </div>
 
     <div id="glanceGrid" class="glance-grid"></div>
 
     <noscript>
-      <p>Please enable JavaScript to view the event calendar.</p>
+      <p>
+        Please enable JavaScript to view the
+        automatic calendar.
+      </p>
     </noscript>
 
     <p class="small-text" style="text-align:center;margin-top:20px">
       Past events automatically leave the upcoming lists.
-      Use "Show Past Events" within each program to see
-      previous activities.
+      Use "Show Past Events" within each program
+      to see previous activities.
     </p>
+
   </div>
 </section>
 
@@ -444,9 +481,12 @@ html {
 
 <section class="content alt-bg">
   <div class="container">
+
     <div class="section-heading">
       <p class="card-label">Browse by Group</p>
+
       <h2>Upcoming Events by Program</h2>
+
       <p>
         Quickly find upcoming events for your school
         or the Parents Association.
@@ -455,43 +495,77 @@ html {
 
     <div class="calendar-columns">
 
+      <!-- WBHS COLUMN -->
+
       <div class="calendar-column">
+
         <p class="card-label">WBHS</p>
+
         <h2>Western Branch High School</h2>
+
         <p class="calendar-column-subtitle">
           Upcoming high school orchestra events.
         </p>
-        <div id="wbhsUpcoming" class="compact-event-list"></div>
+
+        <div
+          id="wbhsUpcoming"
+          class="compact-event-list">
+        </div>
+
         <a class="column-details-link" href="#wbhs-details">
           View All WBHS Details
         </a>
+
       </div>
 
+      <!-- JMS COLUMN -->
+
       <div class="calendar-column">
+
         <p class="card-label">JMS</p>
+
         <h2>Jolliff Middle School</h2>
+
         <p class="calendar-column-subtitle">
           Upcoming Jolliff Orchestra events and deadlines.
         </p>
-        <div id="jmsUpcoming" class="compact-event-list"></div>
+
+        <div
+          id="jmsUpcoming"
+          class="compact-event-list">
+        </div>
+
         <a class="column-details-link" href="#jms-details">
           View All Jolliff Details
         </a>
+
       </div>
 
+      <!-- WBOPA COLUMN -->
+
       <div class="calendar-column">
+
         <p class="card-label">WBOPA &amp; Community</p>
+
         <h2>Additional Events</h2>
+
         <p class="calendar-column-subtitle">
           WBOPA meetings, fundraisers, and community music.
         </p>
-        <div id="communityUpcoming" class="compact-event-list"></div>
+
+        <div
+          id="communityUpcoming"
+          class="compact-event-list">
+        </div>
+
         <a class="column-details-link" href="#community-details">
           View All WBOPA &amp; Community Details
         </a>
+
       </div>
 
     </div>
+
   </div>
 </section>
 
@@ -499,9 +573,13 @@ html {
 
 <section class="content">
   <div class="container">
+
     <div class="full-calendar-header">
+
       <p class="card-label">Complete Calendar</p>
+
       <h2>Full Event Details</h2>
+
       <p>
         Find report times, performance times,
         locations, attire, and other important details.
@@ -513,7 +591,9 @@ html {
         <a href="#wbopa-events">WBOPA Events</a>
         <a href="#beyond-school">Community Opportunities</a>
       </div>
+
     </div>
+
   </div>
 </section>
 
@@ -521,19 +601,28 @@ html {
 
 <section id="wbhs" class="content alt-bg">
   <div class="container">
+
     <div id="wbhs-details" class="calendar-school-section">
+
       <div class="calendar-section-header">
+
         <p class="card-label">WBHS</p>
+
         <h2>Western Branch High School</h2>
+
         <div class="calendar-divider"></div>
+
         <p>
           Concerts, trips, performances, and important dates
           for Western Branch High School orchestra families.
         </p>
+
       </div>
 
       <div id="wbhsList" class="event-list"></div>
+
     </div>
+
   </div>
 </section>
 
@@ -541,10 +630,15 @@ html {
 
 <section id="jms" class="content">
   <div class="container">
+
     <div id="jms-details" class="calendar-school-section">
+
       <div class="calendar-section-header">
+
         <p class="card-label">JMS</p>
+
         <h2>Jolliff Middle School</h2>
+
         <div class="calendar-divider"></div>
 
         <p>
@@ -562,17 +656,20 @@ html {
           <strong>Required attendance:</strong>
           An asterisk (*) beside a grade identifies a
           required performance under the
+
           <a
             href="https://docs.google.com/document/d/1X-eu34mQdecRtrc6mlpTvvafs2Cte9ODCtU2_crjRuU/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer">
             CPS Music Performance Attendance Policy
           </a>.
+
           Events marked "Not open to the public"
           are for students and school audiences only.
         </p>
 
         <div class="calendar-link-row">
+
           <a
             class="button"
             href="https://docs.google.com/spreadsheets/d/1LhwOk10iXg6YnTyOks83w6tsvvb5adyk2Jg0632OqzY/edit?usp=sharing"
@@ -580,40 +677,56 @@ html {
             rel="noopener noreferrer">
             View Official JMS Events Calendar
           </a>
+
         </div>
+
       </div>
 
       <div id="jmsList" class="event-list"></div>
+
     </div>
+
   </div>
 </section>
 
-<!-- WBOPA AND COMMUNITY -->
+<!-- COMMUNITY AND WBOPA -->
 
 <section class="content alt-bg">
   <div class="container">
+
     <div id="community-details" class="calendar-school-section">
 
+      <!-- COMMUNITY OPPORTUNITIES -->
+
       <div id="beyond-school" class="detail-subsection">
+
         <div class="calendar-section-header">
+
           <p class="card-label">Community Opportunities</p>
+
           <h2>Beyond School Opportunities</h2>
+
           <div class="calendar-divider"></div>
+
           <p>
             Optional music opportunities shared with
             Jolliff Orchestra students and families.
             These are separate from required performances.
           </p>
+
         </div>
 
         <div id="vsoList" class="event-list"></div>
 
         <div class="info-box" style="margin-top:25px">
+
           <h3>Virginia Symphony Student Tickets</h3>
+
           <p>
             The Virginia Symphony Orchestra offers
             discounted student tickets for many performances.
           </p>
+
           <p>
             <a
               href="https://drive.google.com/file/d/1wK6Qj-vyXkRnGMRbOAqe0z4YE-eYya92/view?usp=sharing"
@@ -622,38 +735,53 @@ html {
               View VSO Opportunities &amp; Flyers
             </a>
           </p>
+
           <p class="small-text">
             These are optional activities, not required
             orchestra performances. Flyers are also
             available in the Canvas Beyond School
             Opportunities module.
           </p>
+
         </div>
+
       </div>
 
+      <!-- WBOPA -->
+
       <div id="wbopa-events" class="detail-subsection">
+
         <div class="calendar-section-header">
+
           <p class="card-label">Parents Association</p>
+
           <h2>WBOPA Events &amp; Meetings</h2>
+
           <div class="calendar-divider"></div>
+
           <p>
             Meetings, fundraisers, and activities organized
             by the Western Branch Orchestras Parents Association.
           </p>
+
         </div>
 
         <div id="wbopaList" class="event-list"></div>
+
       </div>
 
     </div>
+
   </div>
 </section>
 
-<!-- IMPORTANT CALENDAR INFORMATION -->
+<!-- IMPORTANT INFORMATION -->
 
 <section class="content">
   <div class="container">
+
     <div class="info-box">
+
       <h3>Important Calendar Information</h3>
 
       <p>
@@ -670,6 +798,7 @@ html {
       <p>
         An asterisk (*) beside a Jolliff Middle School
         grade indicates a required performance under the
+
         <a
           href="https://docs.google.com/document/d/1X-eu34mQdecRtrc6mlpTvvafs2Cte9ODCtU2_crjRuU/edit?usp=sharing"
           target="_blank"
@@ -682,29 +811,42 @@ html {
         Community opportunities are optional and are
         separate from required school orchestra activities.
       </p>
+
     </div>
+
   </div>
 </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
   <div class="container footer-container">
-    <p>© 2026 Western Branch Orchestras Parents Association</p>
+
+    <p>
+      © 2026 Western Branch Orchestras Parents Association
+    </p>
+
     <p>
       Supporting Western Branch High School
       and Jolliff Middle School Orchestras
     </p>
-    <p><a href="contact.html">Contact Us</a></p>
+
+    <p>
+      <a href="contact.html">Contact Us</a>
+    </p>
+
   </div>
 </footer>
 
 <script src="js/script.js"></script>
 
 <script>
-// ==========================================
-// SHARED LINKS
-// ==========================================
+
+/* =========================================
+   SHARED LINKS
+========================================= */
 
 const FORMAL_URL =
   "https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing";
@@ -715,26 +857,19 @@ const FORMAL =
 const CASUAL =
   `<a href="${FORMAL_URL}" target="_blank" rel="noopener noreferrer">Casual</a>`;
 
-// ==========================================
-// COMPLETE 2026-2027 EVENT DATA
-// ==========================================
-//
-// g = group
-// d = event date
-// end = final date for multiday events
-// label = date shown on cards
-// k = event category
-// t = event title
-// short = quick-reference description
-// details = full event information
-//
-// Add future events to this list using
-// the same structure.
-// ==========================================
+
+/* =========================================
+   COMPLETE 2026-2027 EVENT DATA
+
+   All dates, event details, and links
+   are stored in this section.
+
+   Add future events using the same format.
+========================================= */
 
 const EVENTS = [
 
-  // WESTERN BRANCH HIGH SCHOOL
+  /* HIGH SCHOOL EVENTS */
 
   {
     id: "event-wbhs-halloween",
@@ -799,7 +934,7 @@ const EVENTS = [
     `
   },
 
-  // JOLLIFF MIDDLE SCHOOL
+  /* JOLLIFF MIDDLE SCHOOL EVENTS */
 
   {
     id: "event-jms-spirit-wear",
@@ -1090,7 +1225,7 @@ const EVENTS = [
     `
   },
 
-  // COMMUNITY OPPORTUNITIES
+  /* COMMUNITY OPPORTUNITIES */
 
   {
     id: "event-community-vso",
@@ -1127,7 +1262,7 @@ const EVENTS = [
     `
   },
 
-  // WBOPA EVENTS AND MEETINGS
+  /* WBOPA EVENTS */
 
   {
     id: "event-wbopa-flower-deadline",
@@ -1280,9 +1415,10 @@ const EVENTS = [
 
 ];
 
-// ==========================================
-// DATE FUNCTIONS
-// ==========================================
+
+/* =========================================
+   DATE FUNCTIONS
+========================================= */
 
 function parseCalendarDate(value) {
   const parts = value.split("-").map(Number);
@@ -1290,6 +1426,7 @@ function parseCalendarDate(value) {
 }
 
 const today = new Date();
+
 today.setHours(0, 0, 0, 0);
 
 const events = EVENTS.map(function(event) {
@@ -1310,35 +1447,49 @@ const past = events.filter(function(event) {
   return event.finish < today;
 });
 
-// ==========================================
-// EVENT CARD CREATION
-// ==========================================
+
+/* =========================================
+   EVENT CARD CREATION
+========================================= */
 
 function getEventSchool(event) {
+
   if (event.g === "wbhs") {
     return "Western Branch High School";
   }
+
   if (event.g === "jms") {
     return "Jolliff Middle School";
   }
+
   if (event.id === "event-community-vso") {
     return "Virginia Symphony Orchestra";
   }
+
   return "WBOPA";
 }
 
 function getEventTarget(event) {
-  if (event.g === "wbhs") return "wbhsList";
-  if (event.g === "jms") return "jmsList";
+
+  if (event.g === "wbhs") {
+    return "wbhsList";
+  }
+
+  if (event.g === "jms") {
+    return "jmsList";
+  }
 
   if (event.id === "event-community-vso") {
     return "vsoList";
   }
+
   return "wbopaList";
 }
 
 function makeEventCard(event) {
+
   const card = document.createElement("article");
+
   card.id = event.id;
   card.className = "event-card";
 
@@ -1348,67 +1499,60 @@ function makeEventCard(event) {
 
   card.innerHTML = `
     <div class="event-date-box">
+
       <span class="month">${month}</span>
       <span class="day">${day}</span>
+
     </div>
 
     <div class="event-details">
+
       <span class="event-school">
         ${getEventSchool(event)}
       </span>
+
       <p class="card-label">${event.k}</p>
+
       <h3>${event.t}</h3>
+
       ${event.details}
+
     </div>
   `;
 
   return card;
 }
 
-// ==========================================
-// AUTOMATIC UPCOMING EVENT LISTS
-// ==========================================
+
+/* =========================================
+   BUILD UPCOMING EVENT LISTS
+========================================= */
 
 function buildUpcomingLists() {
-  const grouped = {
-    wbhs: [],
-    jms: [],
-    community: []
-  };
 
   upcoming.forEach(function(event) {
-    grouped[event.g].push(event);
-  });
 
-  Object.keys(grouped).forEach(function(group) {
-    const targetId =
-      group === "wbhs" ? "wbhsList" :
-      group === "jms" ? "jmsList" :
-      null;
+    const target = document.getElementById(
+      getEventTarget(event)
+    );
 
-    if (!targetId) return;
-
-    const target = document.getElementById(targetId);
-
-    grouped[group].forEach(function(event) {
+    if (target) {
       target.appendChild(makeEventCard(event));
-    });
+    }
+
   });
 
-  upcoming.filter(function(event) {
-    return event.g === "community";
-  }).forEach(function(event) {
-    document.getElementById(getEventTarget(event))
-      .appendChild(makeEventCard(event));
-  });
 }
 
-// ==========================================
-// PAST EVENT ARCHIVE BUTTONS
-// ==========================================
+
+/* =========================================
+   PAST EVENT ARCHIVES
+========================================= */
 
 function createArchive(group, sectionId, groupLabel) {
+
   const section = document.getElementById(sectionId);
+
   if (!section) return;
 
   const groupPast = past.filter(function(event) {
@@ -1418,6 +1562,7 @@ function createArchive(group, sectionId, groupLabel) {
   });
 
   if (groupPast.length > 0) {
+
     const controls = document.createElement("div");
     controls.className = "past-event-controls";
 
@@ -1454,12 +1599,18 @@ function createArchive(group, sectionId, groupLabel) {
     panel.appendChild(archiveList);
 
     function setArchiveOpen(open) {
+
       panel.hidden = !open;
-      button.setAttribute("aria-expanded", String(open));
+
+      button.setAttribute(
+        "aria-expanded",
+        String(open)
+      );
 
       button.innerHTML = open
         ? "&#9652; Hide Past Events (" + groupPast.length + ")"
         : "&#9662; Show Past Events (" + groupPast.length + ")";
+
     }
 
     setArchiveOpen(false);
@@ -1471,47 +1622,65 @@ function createArchive(group, sectionId, groupLabel) {
     controls.appendChild(button);
     controls.appendChild(panel);
     section.appendChild(controls);
+
   }
 
   const backLink = document.createElement("a");
   backLink.href = "#calendar-top";
   backLink.className = "calendar-back-to-top";
   backLink.textContent = "Back to calendar navigation";
+
   section.appendChild(backLink);
+
 }
 
-// ==========================================
-// EMPTY EVENT NOTICES
-// ==========================================
 
-function addEmptyMessage(containerId, text) {
+/* =========================================
+   EMPTY EVENT MESSAGES
+========================================= */
+
+function addEmptyMessage(containerId, messageText) {
+
   const container = document.getElementById(containerId);
 
-  if (container && container.children.length === 0) {
+  if (!container) return;
+
+  if (container.children.length === 0) {
+
     const message = document.createElement("p");
     message.className = "calendar-empty-note";
-    message.textContent = text;
+    message.textContent = messageText;
+
     container.appendChild(message);
+
   }
+
 }
 
-// ==========================================
-// UPCOMING AT A GLANCE
-// ==========================================
+
+/* =========================================
+   UPCOMING AT A GLANCE
+========================================= */
 
 function buildGlance() {
+
   const grid = document.getElementById("glanceGrid");
+
   grid.innerHTML = "";
 
   const nextSix = upcoming.slice(0, 6);
 
   if (nextSix.length === 0) {
+
     grid.innerHTML =
       "<p>No additional upcoming events are currently listed.</p>";
+
     return;
+
   }
 
   nextSix.forEach(function(event) {
+
     const card = document.createElement("article");
     card.className = "glance-card";
 
@@ -1522,23 +1691,38 @@ function buildGlance() {
       "Community" : "WBOPA";
 
     card.innerHTML = `
-      <div class="glance-card-date">${event.label}</div>
-      <span class="glance-card-tag">${groupName}</span>
+      <div class="glance-card-date">
+        ${event.label}
+      </div>
+
+      <span class="glance-card-tag">
+        ${groupName}
+      </span>
+
       <h3>${event.t}</h3>
+
       <p>${event.short}</p>
+
       <a href="#${event.id}">View Details</a>
     `;
 
     grid.appendChild(card);
+
   });
+
 }
 
-// ==========================================
-// UPCOMING EVENTS BY PROGRAM
-// ==========================================
+
+/* =========================================
+   UPCOMING EVENTS BY PROGRAM
+========================================= */
 
 function buildColumn(targetId, group, limit) {
+
   const target = document.getElementById(targetId);
+
+  if (!target) return;
+
   target.innerHTML = "";
 
   const matches = upcoming.filter(function(event) {
@@ -1546,12 +1730,16 @@ function buildColumn(targetId, group, limit) {
   }).slice(0, limit);
 
   if (matches.length === 0) {
+
     target.innerHTML =
       '<p class="small-text">No upcoming events are currently listed.</p>';
+
     return;
+
   }
 
   matches.forEach(function(event) {
+
     const item = document.createElement("div");
     item.className = "compact-event";
 
@@ -1559,33 +1747,45 @@ function buildColumn(targetId, group, limit) {
       <span class="compact-event-date">
         ${event.label}
       </span>
+
       <span class="compact-event-type">
         ${event.k}
       </span>
+
       <h3>${event.t}</h3>
+
       <p>${event.short}</p>
+
       <a href="#${event.id}">Details</a>
     `;
 
     target.appendChild(item);
+
   });
+
 }
 
-// ==========================================
-// OPEN ARCHIVE FOR DIRECT EVENT LINKS
-// ==========================================
+
+/* =========================================
+   OPEN ARCHIVE FOR DIRECT EVENT LINKS
+========================================= */
 
 function revealLinkedPastEvent() {
+
   if (!window.location.hash) return;
 
   let eventId;
 
   try {
+
     eventId = decodeURIComponent(
       window.location.hash.slice(1)
     );
+
   } catch (error) {
+
     return;
+
   }
 
   const event = past.find(function(item) {
@@ -1611,15 +1811,19 @@ function revealLinkedPastEvent() {
   const card = document.getElementById(eventId);
 
   if (card) {
+
     window.requestAnimationFrame(function() {
       card.scrollIntoView({block: "start"});
     });
+
   }
+
 }
 
-// ==========================================
-// INITIALIZE THE CALENDAR
-// ==========================================
+
+/* =========================================
+   INITIALIZE CALENDAR
+========================================= */
 
 buildUpcomingLists();
 
@@ -1673,6 +1877,42 @@ window.addEventListener(
 );
 
 revealLinkedPastEvent();
+
+
+/* =========================================
+   STICKY NAVIGATION HEIGHT ADJUSTMENT
+
+   This keeps section titles visible when
+   clicking Jump To links, even on mobile.
+========================================= */
+
+(function() {
+
+  const bar = document.querySelector(".calendar-jump-bar");
+
+  if (!bar) return;
+
+  function updateJumpHeight() {
+
+    document.documentElement.style.setProperty(
+      "--calendar-jump-height",
+      bar.getBoundingClientRect().height + "px"
+    );
+
+  }
+
+  updateJumpHeight();
+
+  window.addEventListener("resize", updateJumpHeight);
+  window.addEventListener("load", updateJumpHeight);
+
+  if ("ResizeObserver" in window) {
+
+    new ResizeObserver(updateJumpHeight).observe(bar);
+
+  }
+
+})();
 
 </script>
 
