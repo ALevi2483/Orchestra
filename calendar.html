@@ -1,30 +1,18 @@
 
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Western Branch Orchestra Calendar | Concerts, Events & WBOPA Meetings</title>
 
-<meta
-name="description"
-content="View Western Branch High School and Jolliff Middle School orchestra concerts, performances, trips, WBOPA meetings, Virginia Symphony opportunities, fundraisers, and important dates for Chesapeake, Virginia families."
->
+<meta name="description" content="Western Branch High School and Jolliff Middle School orchestra concerts, performances, trips, WBOPA meetings, fundraisers, and important dates.">
 
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="css/style.css">
 
 <style>
-
 html {
   scroll-behavior: smooth;
 }
@@ -35,10 +23,6 @@ html {
 
 .calendar-section-header h2 {
   margin-bottom: 8px;
-}
-
-.calendar-section-header p {
-  max-width: 850px;
 }
 
 .calendar-divider {
@@ -58,23 +42,58 @@ html {
   letter-spacing: .06em;
 }
 
+/* QUICK NAVIGATION */
 
-/* =========================================
-   UPCOMING AT A GLANCE
-========================================= */
+.calendar-jump-bar {
+  background: #f4f6f9;
+  border-bottom: 1px solid #dfe5ea;
+}
+
+.calendar-jump-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.calendar-jump-label {
+  color: #16324f;
+  font-weight: 800;
+  margin-right: 5px;
+}
+
+.calendar-jump-inner a {
+  display: inline-block;
+  padding: 8px 13px;
+  border: 1px solid #aab8c5;
+  border-radius: 999px;
+  color: #16324f;
+  background: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.calendar-jump-inner a:hover,
+.calendar-jump-inner a:focus-visible {
+  background: #e7edf3;
+  border-color: #16324f;
+}
+
+#wbhs-details,
+#jms-details,
+#wbopa-events,
+#beyond-school {
+  scroll-margin-top: 20px;
+}
+
+/* UPCOMING AT A GLANCE */
 
 .glance-heading {
   text-align: center;
   max-width: 800px;
   margin: 0 auto 30px;
-}
-
-.glance-heading h2 {
-  margin-bottom: 10px;
-}
-
-.glance-heading p {
-  margin-bottom: 0;
 }
 
 .glance-grid {
@@ -84,7 +103,7 @@ html {
 }
 
 .glance-card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 14px;
   padding: 20px;
   border-top: 5px solid #f5b942;
@@ -101,19 +120,17 @@ html {
 .glance-card-tag {
   display: inline-block;
   background: #16324f;
-  color: #ffffff;
+  color: #fff;
   border-radius: 999px;
   padding: 4px 9px;
   font-size: .72rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: .04em;
   margin-bottom: 12px;
 }
 
 .glance-card h3 {
-  margin-top: 0;
-  margin-bottom: 8px;
+  margin: 0 0 8px;
   font-size: 1.05rem;
 }
 
@@ -122,14 +139,7 @@ html {
   font-size: .92rem;
 }
 
-.glance-card a {
-  font-weight: 700;
-}
-
-
-/* =========================================
-   THREE-COLUMN QUICK REFERENCE
-========================================= */
+/* PROGRAM QUICK REFERENCE */
 
 .calendar-columns {
   display: grid;
@@ -139,7 +149,7 @@ html {
 }
 
 .calendar-column {
-  background: #ffffff;
+  background: #fff;
   border-radius: 14px;
   padding: 24px;
   box-shadow: 0 6px 18px rgba(0,0,0,.08);
@@ -147,13 +157,11 @@ html {
 
 .calendar-column h2 {
   color: #16324f;
-  margin-top: 0;
-  margin-bottom: 4px;
   font-size: 1.3rem;
+  margin: 0 0 4px;
 }
 
 .calendar-column-subtitle {
-  margin-top: 0;
   margin-bottom: 18px;
   font-size: .9rem;
 }
@@ -187,7 +195,6 @@ html {
   font-size: .7rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: .04em;
   margin-bottom: 4px;
 }
 
@@ -207,10 +214,7 @@ html {
   font-weight: 700;
 }
 
-
-/* =========================================
-   FULL CALENDAR
-========================================= */
+/* FULL CALENDAR */
 
 .full-calendar-header {
   max-width: 850px;
@@ -229,21 +233,13 @@ html {
   text-decoration: none;
   font-weight: 700;
   background: #16324f;
-  color: #ffffff;
+  color: #fff;
   padding: 9px 14px;
   border-radius: 999px;
 }
 
-.full-calendar-nav a:hover {
-  opacity: .9;
-}
-
 .calendar-school-section {
   margin-bottom: 65px;
-}
-
-.calendar-school-section:last-child {
-  margin-bottom: 0;
 }
 
 .detail-subsection {
@@ -254,27 +250,76 @@ html {
   margin-top: 0;
 }
 
-.past-event {
-  opacity: .68;
+/* AUTOMATIC PAST EVENT ARCHIVES */
+
+.past-event-controls {
+  margin-top: 25px;
 }
 
-.past-event::after {
-  content: "Past Event";
-  display: inline-block;
-  margin: 0 0 18px 18px;
-  font-size: .7rem;
+.past-events-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 11px 18px;
+  border: 2px solid #16324f;
+  border-radius: 9px;
+  background: #16324f;
+  color: #fff;
+  font: inherit;
   font-weight: 800;
-  text-transform: uppercase;
-  color: #6c757d;
+  cursor: pointer;
 }
 
+.past-events-toggle:hover,
+.past-events-toggle:focus-visible {
+  background: #234966;
+  border-color: #234966;
+}
 
-/* =========================================
-   MOBILE / TABLET
-========================================= */
+.past-events-toggle:focus-visible,
+.calendar-jump-inner a:focus-visible {
+  outline: 3px solid #f5b942;
+  outline-offset: 3px;
+}
 
-@media(max-width:1000px) {
+.past-event-archive[hidden] {
+  display: none !important;
+}
 
+.past-event-archive {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 2px solid #dfe5ea;
+}
+
+.archive-heading {
+  color: #16324f;
+  margin: 0 0 8px;
+}
+
+.archive-description {
+  margin-bottom: 20px;
+}
+
+.calendar-empty-note {
+  margin: 12px 0 18px;
+  padding: 14px 17px;
+  border-left: 4px solid #f5b942;
+  background: #f4f6f9;
+  border-radius: 5px;
+}
+
+.calendar-back-to-top {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
   .calendar-columns {
     grid-template-columns: 1fr;
   }
@@ -282,11 +327,9 @@ html {
   .glance-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
-@media(max-width:650px) {
-
+@media (max-width: 650px) {
   .glance-grid {
     grid-template-columns: 1fr;
   }
@@ -298,2659 +341,1340 @@ html {
   .calendar-school-section {
     margin-bottom: 45px;
   }
-
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 </style>
-
 </head>
-
 
 <body>
 
-
 <header>
+  <div class="container header-container">
+    <a class="site-title" href="index.html">
+      Western Branch Orchestras
+    </a>
 
-<div class="container header-container">
+    <button
+      class="menu-toggle"
+      onclick="toggleMenu()"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="mainNav">
+      ☰ Menu
+    </button>
 
-<a class="site-title" href="index.html">
-Western Branch Orchestras
-</a>
-
-<button
-class="menu-toggle"
-onclick="toggleMenu()"
-aria-label="Toggle navigation menu"
-aria-expanded="false"
-aria-controls="mainNav">
-☰ Menu
-</button>
-
-<nav id="mainNav">
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">Orchestras</a></li>
-<li><a class="active" aria-current="page" href="calendar.html">Calendar</a></li>
-<li><a href="students.html">Student Resources</a></li>
-<li><a href="parents.html">Families &amp; WBOPA</a></li>
-<li><a href="fundraising.html">Fundraising</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</div>
-
+    <nav id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Orchestras</a></li>
+        <li><a class="active" aria-current="page" href="calendar.html">Calendar</a></li>
+        <li><a href="students.html">Student Resources</a></li>
+        <li><a href="parents.html">Families &amp; WBOPA</a></li>
+        <li><a href="fundraising.html">Fundraising</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
+<!-- PAGE BANNER -->
 
-
-<section class="page-banner">
-
-<div class="container">
-
-<p class="eyebrow">
-2026-2027 School Year
-</p>
-
-<h1>
-Orchestra Calendar
-</h1>
-
-<p>
-Concerts, performances, trips, meetings, community opportunities, fundraisers, and important dates for Western Branch orchestra families.
-</p>
-
-</div>
-
+<section id="calendar-top" class="page-banner">
+  <div class="container">
+    <p class="eyebrow">2026-2027 School Year</p>
+    <h1>Orchestra Calendar</h1>
+    <p>
+      Concerts, performances, trips, meetings,
+      community opportunities, fundraisers,
+      and important dates for Western Branch
+      orchestra families.
+    </p>
+  </div>
 </section>
 
+<!-- QUICK NAVIGATION -->
 
+<nav class="calendar-jump-bar" aria-label="Calendar section navigation">
+  <div class="container calendar-jump-inner">
+    <span class="calendar-jump-label">Jump to:</span>
+    <a href="#wbhs-details">High School</a>
+    <a href="#jms-details">Middle School</a>
+    <a href="#wbopa-events">WBOPA</a>
+    <a href="#beyond-school">Community</a>
+  </div>
+</nav>
 
 <main>
 
-
-
-<!-- =========================================
-     UPCOMING AT A GLANCE
-========================================= -->
+<!-- UPCOMING AT A GLANCE -->
 
 <section class="content">
+  <div class="container">
+    <div class="glance-heading">
+      <p class="card-label">Quick Reference</p>
+      <h2>Upcoming at a Glance</h2>
+      <p>
+        The next six upcoming orchestra, WBOPA,
+        fundraiser, and community events are
+        automatically displayed here in date order.
+      </p>
+    </div>
 
-<div class="container">
+    <div id="glanceGrid" class="glance-grid"></div>
 
-<div class="glance-heading">
+    <noscript>
+      <p>Please enable JavaScript to view the event calendar.</p>
+    </noscript>
 
-<p class="card-label">
-Quick Reference
-</p>
-
-<h2>
-Upcoming at a Glance
-</h2>
-
-<p>
-The next six upcoming orchestra, WBOPA, fundraiser, and community events are automatically displayed here in date order.
-</p>
-
-</div>
-
-
-<div id="glanceGrid" class="glance-grid">
-
-<noscript>
-<p>
-Please enable JavaScript to view the automatic upcoming-event summary.
-</p>
-</noscript>
-
-</div>
-
-
-<p class="small-text" style="text-align:center; margin-top:20px;">
-Past events automatically drop out of this section as the school year progresses.
-</p>
-
-</div>
-
+    <p class="small-text" style="text-align:center;margin-top:20px">
+      Past events automatically leave the upcoming lists.
+      Use "Show Past Events" within each program to see
+      previous activities.
+    </p>
+  </div>
 </section>
 
-
-
-<!-- =========================================
-     THREE COLUMN QUICK REFERENCE
-========================================= -->
+<!-- UPCOMING EVENTS BY PROGRAM -->
 
 <section class="content alt-bg">
+  <div class="container">
+    <div class="section-heading">
+      <p class="card-label">Browse by Group</p>
+      <h2>Upcoming Events by Program</h2>
+      <p>
+        Quickly find upcoming events for your school
+        or the Parents Association.
+      </p>
+    </div>
 
-<div class="container">
+    <div class="calendar-columns">
 
-<div class="section-heading">
+      <div class="calendar-column">
+        <p class="card-label">WBHS</p>
+        <h2>Western Branch High School</h2>
+        <p class="calendar-column-subtitle">
+          Upcoming high school orchestra events.
+        </p>
+        <div id="wbhsUpcoming" class="compact-event-list"></div>
+        <a class="column-details-link" href="#wbhs-details">
+          View All WBHS Details
+        </a>
+      </div>
 
-<p class="card-label">
-Browse by Group
-</p>
+      <div class="calendar-column">
+        <p class="card-label">JMS</p>
+        <h2>Jolliff Middle School</h2>
+        <p class="calendar-column-subtitle">
+          Upcoming Jolliff Orchestra events and deadlines.
+        </p>
+        <div id="jmsUpcoming" class="compact-event-list"></div>
+        <a class="column-details-link" href="#jms-details">
+          View All Jolliff Details
+        </a>
+      </div>
 
-<h2>
-Upcoming Events by Program
-</h2>
+      <div class="calendar-column">
+        <p class="card-label">WBOPA &amp; Community</p>
+        <h2>Additional Events</h2>
+        <p class="calendar-column-subtitle">
+          WBOPA meetings, fundraisers, and community music.
+        </p>
+        <div id="communityUpcoming" class="compact-event-list"></div>
+        <a class="column-details-link" href="#community-details">
+          View All WBOPA &amp; Community Details
+        </a>
+      </div>
 
-<p>
-Quickly find the next events for Western Branch High School, Jolliff Middle School, or WBOPA and community activities.
-</p>
-
-</div>
-
-
-<div class="calendar-columns">
-
-
-<!-- WBHS COLUMN -->
-
-<div class="calendar-column">
-
-<p class="card-label">
-WBHS
-</p>
-
-<h2>
-Western Branch High School
-</h2>
-
-<p class="calendar-column-subtitle">
-Upcoming high school orchestra events.
-</p>
-
-<div id="wbhsUpcoming" class="compact-event-list"></div>
-
-<a class="column-details-link" href="#wbhs-details">
-View All WBHS Details
-</a>
-
-</div>
-
-
-
-<!-- JMS COLUMN -->
-
-<div class="calendar-column">
-
-<p class="card-label">
-JMS
-</p>
-
-<h2>
-Jolliff Middle School
-</h2>
-
-<p class="calendar-column-subtitle">
-Upcoming Jolliff Orchestra events and deadlines.
-</p>
-
-<div id="jmsUpcoming" class="compact-event-list"></div>
-
-<a class="column-details-link" href="#jms-details">
-View All Jolliff Details
-</a>
-
-</div>
-
-
-
-<!-- WBOPA / COMMUNITY COLUMN -->
-
-<div class="calendar-column">
-
-<p class="card-label">
-WBOPA &amp; Community
-</p>
-
-<h2>
-Additional Events
-</h2>
-
-<p class="calendar-column-subtitle">
-WBOPA meetings, fundraisers, and community music opportunities.
-</p>
-
-<div id="communityUpcoming" class="compact-event-list"></div>
-
-<a class="column-details-link" href="#community-details">
-View All WBOPA &amp; Community Details
-</a>
-
-</div>
-
-
-</div>
-
-
-<p class="small-text" style="text-align:center; margin-top:25px;">
-These quick-reference lists automatically update based on the event dates below.
-</p>
-
-</div>
-
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =========================================
-     FULL EVENT DETAILS
-========================================= -->
+<!-- FULL CALENDAR INTRODUCTION -->
 
 <section class="content">
+  <div class="container">
+    <div class="full-calendar-header">
+      <p class="card-label">Complete Calendar</p>
+      <h2>Full Event Details</h2>
+      <p>
+        Find report times, performance times,
+        locations, attire, and other important details.
+      </p>
 
-<div class="container">
-
-<div class="full-calendar-header">
-
-<p class="card-label">
-Complete Calendar
-</p>
-
-<h2>
-Full Event Details
-</h2>
-
-<p>
-Use the quick-reference sections above to find what is coming up, or browse the complete event information below for report times, locations, attire, registration links, and other details.
-</p>
-
-<div class="full-calendar-nav">
-
-<a href="#wbhs-details">
-WBHS Details
-</a>
-
-<a href="#jms-details">
-Jolliff Details
-</a>
-
-<a href="#community-details">
-WBOPA &amp; Community
-</a>
-
-</div>
-
-</div>
-
-</div>
-
+      <div class="full-calendar-nav">
+        <a href="#wbhs-details">WBHS Details</a>
+        <a href="#jms-details">Jolliff Details</a>
+        <a href="#wbopa-events">WBOPA Events</a>
+        <a href="#beyond-school">Community Opportunities</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =========================================
-     WESTERN BRANCH HIGH SCHOOL
-========================================= -->
+<!-- WESTERN BRANCH HIGH SCHOOL -->
 
 <section id="wbhs" class="content alt-bg">
-
-<div class="container">
-
-<div id="wbhs-details" class="calendar-school-section">
-
-<div class="calendar-section-header">
-
-<p class="card-label">
-WBHS
-</p>
-
-<h2>
-Western Branch High School
-</h2>
-
-<div class="calendar-divider"></div>
-
-<p>
-Concerts, trips, performances, and important dates for Western Branch High School orchestra students and families.
-</p>
-
-</div>
-
-
-<div class="event-list">
-
-
-<!-- OCTOBER 27 -->
-
-<article
-id="event-wbhs-halloween"
-class="event-card"
-data-calendar-event
-data-date="2026-10-27"
-data-end="2026-10-27"
-data-group="wbhs"
-data-label="WBHS"
-data-type="Concert"
-data-date-display="Oct 27"
-data-short="7:00 PM • Location TBD">
-
-<div class="event-date-box">
-
-<span class="month">
-Oct
-</span>
-
-<span class="day">
-27
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Western Branch High School
-</span>
-
-<p class="card-label">
-Concert
-</p>
-
-<h3>
-Halloween Concert
-</h3>
-
-<p>
-<strong>
-Tuesday, October 27, 2026
-</strong>
-</p>
-
-<p>
-<strong>
-7:00 PM
-</strong>
-</p>
-
-<p>
-Location will be posted when available.
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- DECEMBER 15 -->
-
-<article
-id="event-wbhs-winter"
-class="event-card"
-data-calendar-event
-data-date="2026-12-15"
-data-end="2026-12-15"
-data-group="wbhs"
-data-label="WBHS"
-data-type="Concert"
-data-date-display="Dec 15"
-data-short="7:00 PM">
-
-<div class="event-date-box">
-
-<span class="month">
-Dec
-</span>
-
-<span class="day">
-15
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Western Branch High School
-</span>
-
-<p class="card-label">
-Concert
-</p>
-
-<h3>
-Winter Concert
-</h3>
-
-<p>
-<strong>
-Tuesday, December 15, 2026
-</strong>
-</p>
-
-<p>
-<strong>
-7:00 PM
-</strong>
-</p>
-
-<p>
-Location will be posted when available.
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- MARCH 25-29 -->
-
-<article
-id="event-wbhs-disney"
-class="event-card"
-data-calendar-event
-data-date="2027-03-25"
-data-end="2027-03-29"
-data-group="wbhs"
-data-label="WBHS"
-data-type="Trip"
-data-date-display="Mar 25-29"
-data-short="Disney Trip">
-
-<div class="event-date-box">
-
-<span class="month">
-Mar
-</span>
-
-<span class="day">
-25
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Western Branch High School
-</span>
-
-<p class="card-label">
-Trip
-</p>
-
-<h3>
-Disney Trip
-</h3>
-
-<p>
-<strong>
-March 25-29, 2027
-</strong>
-</p>
-
-<p>
-Additional trip information will be provided to participating students and families.
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- JUNE 1 -->
-
-<article
-id="event-wbhs-spring"
-class="event-card"
-data-calendar-event
-data-date="2027-06-01"
-data-end="2027-06-01"
-data-group="wbhs"
-data-label="WBHS"
-data-type="Concert"
-data-date-display="Jun 1"
-data-short="7:00 PM">
-
-<div class="event-date-box">
-
-<span class="month">
-Jun
-</span>
-
-<span class="day">
-1
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Western Branch High School
-</span>
-
-<p class="card-label">
-Concert
-</p>
-
-<h3>
-Spring Concert
-</h3>
-
-<p>
-<strong>
-Tuesday, June 1, 2027
-</strong>
-</p>
-
-<p>
-<strong>
-7:00 PM
-</strong>
-</p>
-
-<p>
-Location will be posted when available.
-</p>
-
-</div>
-
-</article>
-
-
-</div>
-
-</div>
-
-</div>
-
+  <div class="container">
+    <div id="wbhs-details" class="calendar-school-section">
+      <div class="calendar-section-header">
+        <p class="card-label">WBHS</p>
+        <h2>Western Branch High School</h2>
+        <div class="calendar-divider"></div>
+        <p>
+          Concerts, trips, performances, and important dates
+          for Western Branch High School orchestra families.
+        </p>
+      </div>
+
+      <div id="wbhsList" class="event-list"></div>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =========================================
-     JOLLIFF MIDDLE SCHOOL
-========================================= -->
+<!-- JOLLIFF MIDDLE SCHOOL -->
 
 <section id="jms" class="content">
-
-<div class="container">
-
-<div id="jms-details" class="calendar-school-section">
-
-<div class="calendar-section-header">
-
-<p class="card-label">
-JMS
-</p>
-
-<h2>
-Jolliff Middle School
-</h2>
-
-<div class="calendar-divider"></div>
-
-<p>
-Concerts, performances, auditions, assessments, and other important dates for Jolliff Middle School orchestra students and families.
-</p>
-
-<p>
-Dates and details are based on the 2026-2027 Jolliff Orchestra Events Calendar. Families should continue to follow updates provided directly by Mrs. Rosenberg.
-</p>
-
-<p class="small-text"><strong>Required attendance:</strong> An asterisk (*) next to a grade indicates a required performance under the <a href="https://docs.google.com/document/d/1X-eu34mQdecRtrc6mlpTvvafs2Cte9ODCtU2_crjRuU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">CPS Music Performance Attendance Policy</a>. Events marked "Not open to the public" are for students and school audiences only.</p>
-
-<div class="calendar-link-row">
-
-<a
-class="button"
-href="https://docs.google.com/spreadsheets/d/1LhwOk10iXg6YnTyOks83w6tsvvb5adyk2Jg0632OqzY/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-View Official JMS Events Calendar
-</a>
-
-</div>
-
-</div>
-
-
-<div class="event-list">
-
-
-<!-- OCTOBER 1 -->
-
-<article
-id="event-jms-spirit-wear"
-class="event-card"
-data-calendar-event
-data-date="2026-10-01"
-data-end="2026-10-01"
-data-group="jms"
-data-label="JMS"
-data-type="Deadline"
-data-date-display="Oct 1"
-data-short="Spirit wear orders due">
-
-<div class="event-date-box">
-
-<span class="month">
-Oct
-</span>
-
-<span class="day">
-1
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-Deadline
-</p>
-
-<h3>
-Jolliff Orchestra Spirit Wear Order Deadline
-</h3>
-
-<p>
-<strong>
-Thursday, October 1, 2026
-</strong>
-</p>
-
-<p>
-Spirit wear is available for all 6th grade orchestra students and interested 7th and 8th grade students.
-</p>
-
-<p>
-Orders must be submitted using the paper order form with <strong>cash or check</strong>. Electronic ordering and Givebacks are not available for spirit wear.
-</p>
-
-<p>
-<a href="fundraising.html#spirit-wear">
-Spirit Wear Information &amp; Order Form
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- OCTOBER 24 -->
-
-<article
-id="event-jms-jr-district-audition"
-class="event-card"
-data-calendar-event
-data-date="2026-10-24"
-data-end="2026-10-24"
-data-group="jms"
-data-label="JMS"
-data-type="Audition"
-data-date-display="Oct 24"
-data-short="Interested 7th &amp; 8th • Jolliff MS">
-
-<div class="event-date-box">
-
-<span class="month">
-Oct
-</span>
-
-<span class="day">
-24
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-Audition
-</p>
-
-<h3>
-Jr. District Audition
-</h3>
-
-<p>
-<strong>
-Saturday, October 24, 2026
-</strong>
-</p>
-
-<p>
-Interested 7th &amp; 8th grade students
-</p>
-
-<p>
-<strong>Location:</strong> Jolliff Middle School
-</p>
-
-<p>
-<strong>Report:</strong> 8:30 AM to 3:30 PM
-</p>
-
-<p>
-Individual time slots were scheduled to be released by October 16, 2026.
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- OCTOBER 27 -->
-
-<article
-id="event-jms-fall-concert"
-class="event-card"
-data-calendar-event
-data-date="2026-10-27"
-data-end="2026-10-27"
-data-group="jms"
-data-label="JMS"
-data-type="Concert"
-data-date-display="Oct 27"
-data-short="8th Grade* • 7:00 PM">
-
-<div class="event-date-box">
-
-<span class="month">
-Oct
-</span>
-
-<span class="day">
-27
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-Concert
-</p>
-
-<h3>
-Fall Concert
-</h3>
-
-<p>
-<strong>
-Tuesday, October 27, 2026
-</strong>
-</p>
-
-<p>
-8th Grade*
-</p>
-
-<p>
-<strong>Location:</strong> Western Branch High School
-</p>
-
-<p>
-<strong>Report:</strong> 5:45 PM
-</p>
-
-<p>
-<strong>Performance:</strong> 7:00 PM
-</p>
-
-<p>
-<strong>Attire:</strong>
-<a
-href="https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Formal
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- NOVEMBER 19 -->
-
-<article
-id="event-jms-va-arts"
-class="event-card"
-data-calendar-event
-data-date="2026-11-19"
-data-end="2026-11-19"
-data-group="jms"
-data-label="JMS"
-data-type="Performance"
-data-date-display="Nov 19"
-data-short="6th, 7th &amp; 8th • 9:30 AM • Not open to the public">
-
-<div class="event-date-box">
-
-<span class="month">
-Nov
-</span>
-
-<span class="day">
-19
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-Performance
-</p>
-
-<h3>
-VA Arts Festival Quartet Performance
-</h3>
-
-<p>
-<strong>
-Thursday, November 19, 2026
-</strong>
-</p>
-
-<p>
-6th, 7th &amp; 8th Grade
-</p>
-
-<p>
-<strong>Location:</strong> Jolliff Middle School
-</p>
-
-<p>
-<strong>Report:</strong> 9:15 AM, released from class
-</p>
-
-<p>
-<strong>Performance:</strong> 9:30 AM
-</p>
-
-<p>
-<strong>Not open to the public.</strong>
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- DECEMBER 10 -->
-
-<article
-id="event-jms-winter"
-class="event-card"
-data-calendar-event
-data-date="2026-12-10"
-data-end="2026-12-10"
-data-group="jms"
-data-label="JMS"
-data-type="Concert"
-data-date-display="Dec 10"
-data-short="6th*, 7th* &amp; 8th* Grade • 7:30 PM">
-
-<div class="event-date-box">
-
-<span class="month">
-Dec
-</span>
-
-<span class="day">
-10
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-Concert
-</p>
-
-<h3>
-Winter Concert
-</h3>
-
-<p>
-<strong>
-Thursday, December 10, 2026
-</strong>
-</p>
-
-<p>
-6th*, 7th* &amp; 8th* Grade
-</p>
-
-<p>
-<strong>Location:</strong> Jolliff Middle School
-</p>
-
-<p>
-<strong>Report Times:</strong><br>
-6th Grade: by 7:10 PM<br>
-7th Grade: by 6:40 PM<br>
-8th Grade: by 6:50 PM
-</p>
-
-<p>
-<strong>Performance:</strong> 7:30 PM
-</p>
-
-<p>
-<strong>Attire:</strong>
-<a
-href="https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Formal
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- JANUARY 15 -->
-
-<article
-id="event-jms-jr-district-event"
-class="event-card"
-data-calendar-event
-data-date="2027-01-15"
-data-end="2027-01-15"
-data-group="jms"
-data-label="JMS"
-data-type="District Event"
-data-date-display="Jan 15"
-data-short="Select 7th &amp; 8th • 6:30 PM">
-
-<div class="event-date-box">
-
-<span class="month">
-Jan
-</span>
-
-<span class="day">
-15
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-District Event
-</p>
-
-<h3>
-Jr. District Event
-</h3>
-
-<p>
-<strong>
-Friday, January 15, 2027
-</strong>
-</p>
-
-<p>
-Select 7th &amp; 8th grade students
-</p>
-
-<p>
-<strong>Location:</strong> Western Branch High School
-</p>
-
-<p>
-<strong>Depart:</strong> 9:00 AM, released from class
-</p>
-
-<p>
-<strong>Performance:</strong> 6:30 PM
-</p>
-
-<p>
-<strong>Attire:</strong>
-<a
-href="https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Formal
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- JANUARY 20-21 -->
-
-<article
-id="event-jms-rising-sixth"
-class="event-card"
-data-calendar-event
-data-date="2027-01-20"
-data-end="2027-01-21"
-data-group="jms"
-data-label="JMS"
-data-type="Performance"
-data-date-display="Jan 20-21"
-data-short="8th Grade* • TBD with select 7th">
-
-<div class="event-date-box">
-
-<span class="month">
-Jan
-</span>
-
-<span class="day">
-20-21
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-Performance
-</p>
-
-<h3>
-Rising 6th Grade Performances
-</h3>
-
-<p>
-<strong>
-Tentatively Wednesday, January 20 &amp; Thursday, January 21, 2027
-</strong>
-</p>
-
-<p>
-8th Grade* (TBD with select 7th grade students)
-</p>
-
-<p>
-<strong>Location:</strong> Jolliff Middle School
-</p>
-
-<p>
-<strong>Report:</strong> 9:50 AM, released from class
-</p>
-
-<p>
-<strong>Performance:</strong> Approximately 10:45 AM
-</p>
-
-<p>
-<strong>Not open to the public.</strong>
-</p>
-
-<p>
-<strong>Attire:</strong>
-<a
-href="https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Casual
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- MARCH 10 -->
-
-<article
-id="event-jms-preassessment"
-class="event-card"
-data-calendar-event
-data-date="2027-03-10"
-data-end="2027-03-10"
-data-group="jms"
-data-label="JMS"
-data-type="Concert"
-data-date-display="Mar 10"
-data-short="8th Grade* • 7:00 PM">
-
-<div class="event-date-box">
-
-<span class="month">
-Mar
-</span>
-
-<span class="day">
-10
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-Concert
-</p>
-
-<h3>
-Pre-Assessment Concert
-</h3>
-
-<p>
-<strong>
-Wednesday, March 10, 2027
-</strong>
-</p>
-
-<p>
-8th Grade*
-</p>
-
-<p>
-<strong>Location:</strong> Jolliff Middle School
-</p>
-
-<p>
-<strong>Report:</strong> By 6:20 PM
-</p>
-
-<p>
-<strong>Performance:</strong> 7:00 PM
-</p>
-
-<p>
-<strong>Attire:</strong>
-<a
-href="https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Formal
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- MARCH 16-18 -->
-
-<article
-id="event-jms-state-assessment"
-class="event-card"
-data-calendar-event
-data-date="2027-03-16"
-data-end="2027-03-18"
-data-group="jms"
-data-label="JMS"
-data-type="Assessment"
-data-date-display="Mar 16-18"
-data-short="8th Grade* • Details TBD">
-
-<div class="event-date-box">
-
-<span class="month">
-Mar
-</span>
-
-<span class="day">
-16-18
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-Assessment
-</p>
-
-<h3>
-State Assessment Performance
-</h3>
-
-<p>
-<strong>
-March 16, 17, or 18, 2027
-</strong>
-</p>
-
-<p>
-8th Grade*
-</p>
-
-<p>
-Date, location, report time, departure time, return time, and performance time are to be determined.
-</p>
-
-<p>
-<strong>Attire:</strong>
-<a
-href="https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Formal
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- MARCH 25 -->
-
-<article
-id="event-jms-miosm"
-class="event-card"
-data-calendar-event
-data-date="2027-03-25"
-data-end="2027-03-25"
-data-group="jms"
-data-label="JMS"
-data-type="Performance"
-data-date-display="Mar 25"
-data-short="6th Grade* • 2:15 PM">
-
-<div class="event-date-box">
-
-<span class="month">
-Mar
-</span>
-
-<span class="day">
-25
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-Performance
-</p>
-
-<h3>
-Music In Our Schools Month Concert
-</h3>
-
-<p>
-<strong>
-Thursday, March 25, 2027
-</strong>
-</p>
-
-<p>
-6th Grade*
-</p>
-
-<p>
-<strong>Location:</strong> Jolliff Middle School
-</p>
-
-<p>
-<strong>Report:</strong> 1:40 PM, released from class
-</p>
-
-<p>
-<strong>Performance:</strong> 2:15 PM
-</p>
-
-<p>
-<strong>Attire:</strong>
-<a
-href="https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Casual
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- APRIL 23 -->
-
-<article
-id="event-jms-all-city"
-class="event-card"
-data-calendar-event
-data-date="2027-04-23"
-data-end="2027-04-23"
-data-group="jms"
-data-label="JMS"
-data-type="All-City"
-data-date-display="Apr 23"
-data-short="Select 6th &amp; 7th • 6:30 PM">
-
-<div class="event-date-box">
-
-<span class="month">
-Apr
-</span>
-
-<span class="day">
-23
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-All-City
-</p>
-
-<h3>
-All-City Event
-</h3>
-
-<p>
-<strong>
-Friday, April 23, 2027
-</strong>
-</p>
-
-<p>
-Select 6th &amp; 7th grade students
-</p>
-
-<p>
-<strong>Location:</strong> Greenbrier Middle School
-</p>
-
-<p>
-<strong>Depart:</strong> 9:00 AM, released from class
-</p>
-
-<p>
-<strong>Performance:</strong> 6:30 PM
-</p>
-
-<p>
-<strong>Attire:</strong>
-<a
-href="https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Formal
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- MAY 4 -->
-
-<article
-id="event-jms-spring-seven"
-class="event-card"
-data-calendar-event
-data-date="2027-05-04"
-data-end="2027-05-04"
-data-group="jms"
-data-label="JMS"
-data-type="Concert"
-data-date-display="May 4"
-data-short="7th Grade* • 7:00 PM">
-
-<div class="event-date-box">
-
-<span class="month">
-May
-</span>
-
-<span class="day">
-4
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-Concert
-</p>
-
-<h3>
-Spring Concert - 7th Grade
-</h3>
-
-<p>
-<strong>
-Tuesday, May 4, 2027
-</strong>
-</p>
-
-<p>
-7th Grade*
-</p>
-
-<p>
-<strong>Location:</strong> Jolliff Middle School
-</p>
-
-<p>
-<strong>Report:</strong> By 6:20 PM
-</p>
-
-<p>
-<strong>Performance:</strong> 7:00 PM
-</p>
-
-<p>
-<strong>Attire:</strong>
-<a
-href="https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Formal
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- MAY 5 -->
-
-<article
-id="event-jms-spring-six-eight"
-class="event-card"
-data-calendar-event
-data-date="2027-05-05"
-data-end="2027-05-05"
-data-group="jms"
-data-label="JMS"
-data-type="Concert"
-data-date-display="May 5"
-data-short="6th* &amp; 8th* Grade • 7:00 PM">
-
-<div class="event-date-box">
-
-<span class="month">
-May
-</span>
-
-<span class="day">
-5
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-Concert
-</p>
-
-<h3>
-Spring Concert - 6th &amp; 8th Grade
-</h3>
-
-<p>
-<strong>
-Wednesday, May 5, 2027
-</strong>
-</p>
-
-<p>
-6th Grade* &amp; 8th Grade*
-</p>
-
-<p>
-<strong>Location:</strong> Jolliff Middle School
-</p>
-
-<p>
-<strong>Report Times:</strong><br>
-6th Grade: by 6:40 PM<br>
-8th Grade: by 6:20 PM
-</p>
-
-<p>
-<strong>Performance:</strong> 7:00 PM
-</p>
-
-<p>
-<strong>Attire:</strong>
-<a
-href="https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Formal
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- JUNE 5 -->
-
-<article
-id="event-jms-music-parks"
-class="event-card"
-data-calendar-event
-data-date="2027-06-05"
-data-end="2027-06-05"
-data-group="jms"
-data-label="JMS"
-data-type="Performance / Trip"
-data-date-display="Jun 5"
-data-short="Interested 8th Grade • Busch Gardens">
-
-<div class="event-date-box">
-
-<span class="month">
-Jun
-</span>
-
-<span class="day">
-5
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Jolliff Middle School
-</span>
-
-<p class="card-label">
-Performance / Trip
-</p>
-
-<h3>
-Music In The Parks Performance
-</h3>
-
-<p>
-<strong>
-Saturday, June 5, 2027
-</strong>
-</p>
-
-<p>
-Interested 8th grade students
-</p>
-
-<p>
-Competition at a Peninsula-area school followed by Busch Gardens.
-</p>
-
-<p>
-Report, departure, return, and performance times are to be determined.
-</p>
-
-<p>
-<strong>Attire:</strong>
-<a
-href="https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Casual
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-</div>
-
-</div>
-
-</div>
-
+  <div class="container">
+    <div id="jms-details" class="calendar-school-section">
+      <div class="calendar-section-header">
+        <p class="card-label">JMS</p>
+        <h2>Jolliff Middle School</h2>
+        <div class="calendar-divider"></div>
+
+        <p>
+          Concerts, performances, auditions, assessments,
+          and important dates for Jolliff Middle School.
+        </p>
+
+        <p>
+          Dates and details are based on the 2026-2027
+          Jolliff Orchestra Events Calendar. Families
+          should follow updates from Mrs. Rosenberg.
+        </p>
+
+        <p class="small-text">
+          <strong>Required attendance:</strong>
+          An asterisk (*) beside a grade identifies a
+          required performance under the
+          <a
+            href="https://docs.google.com/document/d/1X-eu34mQdecRtrc6mlpTvvafs2Cte9ODCtU2_crjRuU/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            CPS Music Performance Attendance Policy
+          </a>.
+          Events marked "Not open to the public"
+          are for students and school audiences only.
+        </p>
+
+        <div class="calendar-link-row">
+          <a
+            class="button"
+            href="https://docs.google.com/spreadsheets/d/1LhwOk10iXg6YnTyOks83w6tsvvb5adyk2Jg0632OqzY/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            View Official JMS Events Calendar
+          </a>
+        </div>
+      </div>
+
+      <div id="jmsList" class="event-list"></div>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =========================================
-     WBOPA & COMMUNITY
-========================================= -->
+<!-- WBOPA AND COMMUNITY -->
 
 <section class="content alt-bg">
-
-<div class="container">
-
-<div id="community-details" class="calendar-school-section">
-
-
-<!-- COMMUNITY OPPORTUNITIES -->
-
-<div id="beyond-school" class="detail-subsection">
-
-<div class="calendar-section-header">
-
-<p class="card-label">
-Community Opportunities
-</p>
-
-<h2>
-Beyond School Opportunities
-</h2>
-
-<div class="calendar-divider"></div>
-
-<p>
-Optional music opportunities shared with Jolliff Orchestra students and families. These events are separate from required school orchestra activities.
-</p>
-
-</div>
-
-
-<div class="event-list">
-
-
-<!-- OCTOBER 4 -->
-
-<article
-id="event-community-vso"
-class="event-card"
-data-calendar-event
-data-date="2026-10-04"
-data-end="2026-10-04"
-data-group="community"
-data-label="Free Community Event"
-data-type=""
-data-date-display="Oct 4"
-data-short="VSO Play-In & Sing-Along • 3:00 PM">
-
-<div class="event-date-box">
-
-<span class="month">
-Oct
-</span>
-
-<span class="day">
-4
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-Virginia Symphony Orchestra
-</span>
-
-<p class="card-label">
-Free Community Event
-</p>
-
-<h3>
-CommUNITY Play-In &amp; Sing-Along
-</h3>
-
-<p>
-<strong>
-Sunday, October 4, 2026
-</strong>
-</p>
-
-<p>
-<strong>
-3:00 PM
-</strong>
-</p>
-
-<p>
-<strong>Location:</strong> Booker T. Washington High School<br>
-1111 Park Avenue<br>
-Norfolk, VA 23504
-</p>
-
-<p>
-This free event gives community musicians and singers an opportunity to play and sing alongside Virginia Symphony Orchestra musicians and the Virginia Symphony Orchestra Chorus.
-</p>
-
-<p>
-<strong>
-Free and open to the public.
-</strong>
-</p>
-
-<p>
-<a
-href="https://drive.google.com/file/d/1wK6Qj-vyXkRnGMRbOAqe0z4YE-eYya92/view?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-View Virginia Symphony Opportunities &amp; Flyers
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-</div>
-
-
-<div class="info-box" style="margin-top:25px;">
-
-<h3>
-Virginia Symphony Student Tickets
-</h3>
-
-<p>
-The Virginia Symphony Orchestra offers discounted student tickets for many performances.
-</p>
-
-<p>
-The current flyer packet includes additional opportunities for students and families to hear the Virginia Symphony Orchestra.
-</p>
-
-<p>
-<a
-href="https://drive.google.com/file/d/1wK6Qj-vyXkRnGMRbOAqe0z4YE-eYya92/view?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-View Current VSO Opportunities &amp; Flyers
-</a>
-</p>
-
-<p class="small-text">
-These are optional community opportunities and are not required Jolliff Orchestra performances. The flyers are also available in the Canvas "Beyond School Opportunities" module.
-</p>
-
-</div>
-
-</div>
-
-
-
-<!-- WBOPA -->
-
-<div class="detail-subsection">
-
-<div class="calendar-section-header">
-
-<p class="card-label">
-Parents Association
-</p>
-
-<h2>
-WBOPA Events &amp; Meetings
-</h2>
-
-<div class="calendar-divider"></div>
-
-<p>
-Meetings, fundraisers, and activities organized by the Western Branch Orchestras Parents Association.
-</p>
-
-</div>
-
-
-<div class="event-list">
-
-
-<!-- OCTOBER 6 -->
-
-<article
-id="event-wbopa-flower-deadline"
-class="event-card"
-data-calendar-event
-data-date="2026-10-06"
-data-end="2026-10-06"
-data-group="community"
-data-label="WBOPA"
-data-type="Fundraiser"
-data-date-display="Oct 6"
-data-short="Fall Flower Sale orders due">
-
-<div class="event-date-box">
-
-<span class="month">
-Oct
-</span>
-
-<span class="day">
-6
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-WBOPA
-</span>
-
-<p class="card-label">
-Fundraiser
-</p>
-
-<h3>
-Fall Flower Sale Order Deadline
-</h3>
-
-<p>
-<strong>
-Tuesday, October 6, 2026
-</strong>
-</p>
-
-<p>
-Online orders for the 2026 WBOPA Fall Flower Sale are due by October 6.
-</p>
-
-<p>
-Paper orders being mailed must be postmarked by September 30. Completed paper forms may also be turned in to an orchestra director.
-</p>
-
-<a href="fundraising.html#flowers">
-Flower Sale Information &amp; Ordering
-</a>
-
-</div>
-
-</article>
-
-
-
-<!-- OCTOBER 7 RED ROBIN -->
-
-<article
-id="event-wbopa-red-robin"
-class="event-card"
-data-calendar-event
-data-date="2026-10-07"
-data-end="2026-10-07"
-data-group="community"
-data-label="WBOPA"
-data-type="Fundraiser"
-data-date-display="Oct 7"
-data-short="Red Robin Giveback • 20% of eligible food sales">
-
-<div class="event-date-box">
-
-<span class="month">
-Oct
-</span>
-
-<span class="day">
-7
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-WBOPA
-</span>
-
-<p class="card-label">
-Fundraiser
-</p>
-
-<h3>
-Red Robin Giveback Fundraiser
-</h3>
-
-<p>
-<strong>
-Wednesday, October 7, 2026
-</strong>
-</p>
-
-<p>
-Red Robin will give <strong>20% of eligible food sales</strong> back to support the Western Branch Orchestra Parents Association.
-</p>
-
-<p>
-<strong>Location:</strong><br>
-Red Robin<br>
-2524 Chesapeake Sq Ring Rd<br>
-Chesapeake, VA 23321
-</p>
-
-<p>
-For dine-in orders, show the fundraiser flyer or simply mention the fundraiser to your server so your purchase can be counted.
-</p>
-
-<p>
-Online and to-go orders can also qualify when the fundraiser ordering instructions are followed.
-</p>
-
-<p>
-<a href="fundraising.html#red-robin">
-View Red Robin Fundraiser Details
-</a>
-</p>
-
-</div>
-
-</article>
-
-
-
-<!-- OCTOBER 8 -->
-
-<article
-id="event-wbopa-october-meeting"
-class="event-card"
-data-calendar-event
-data-date="2026-10-08"
-data-end="2026-10-08"
-data-group="community"
-data-label="WBOPA"
-data-type="Meeting"
-data-date-display="Oct 8"
-data-short="Monthly Meeting • 7:30 PM">
-
-<div class="event-date-box">
-
-<span class="month">
-Oct
-</span>
-
-<span class="day">
-8
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-WBOPA
-</span>
-
-<p class="card-label">
-Meeting
-</p>
-
-<h3>
-WBOPA Monthly Meeting
-</h3>
-
-<p>
-<strong>
-Thursday, October 8, 2026
-</strong>
-</p>
-
-<p>
-<strong>
-7:30 PM
-</strong>
-</p>
-
-<p>
-The meeting will be held virtually via Zoom.
-</p>
-
-<p>
-Regular WBOPA meetings are held on the second Thursday of each month during the school year.
-</p>
-
-<p>
-Contact WBOPA for the current Zoom meeting link.
-</p>
-
-<a href="parents.html#meetings">
-Meeting Information
-</a>
-
-</div>
-
-</article>
-
-
-
-<!-- OCTOBER 10 -->
-
-<article
-id="event-wbopa-flower-pickup"
-class="event-card"
-data-calendar-event
-data-date="2026-10-10"
-data-end="2026-10-10"
-data-group="community"
-data-label="WBOPA"
-data-type="Fundraiser / Volunteer"
-data-date-display="Oct 10"
-data-short="Flower Pickup • 8:45 AM to 11:00 AM">
-
-<div class="event-date-box">
-
-<span class="month">
-Oct
-</span>
-
-<span class="day">
-10
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-WBOPA
-</span>
-
-<p class="card-label">
-Fundraiser / Volunteer
-</p>
-
-<h3>
-Fall Flower Sale Pickup &amp; Volunteer Day
-</h3>
-
-<p>
-<strong>
-Saturday, October 10, 2026
-</strong>
-</p>
-
-<p>
-<strong>Location:</strong> Western Branch High School Bus Ramp<br>
-1968 Bruin Place, Chesapeake, VA 23321
-</p>
-
-<p>
-<strong>Customer Pickup:</strong> 8:45 AM to 11:00 AM
-</p>
-
-<p>
-<strong>Volunteer Shifts:</strong><br>
-7:00 AM to 9:00 AM<br>
-9:00 AM to 11:00 AM
-</p>
-
-<p>
-Student and parent volunteers are welcome. Students needing service hours should confirm eligibility with the school, club, honor society, or organization requiring the hours.
-</p>
-
-<a href="fundraising.html#flowers">
-View Flower Sale &amp; Volunteer Information
-</a>
-
-</div>
-
-</article>
-
-
-
-<!-- NOVEMBER 12 -->
-
-<article
-id="event-wbopa-november-meeting"
-class="event-card"
-data-calendar-event
-data-date="2026-11-12"
-data-end="2026-11-12"
-data-group="community"
-data-label="WBOPA"
-data-type="Meeting"
-data-date-display="Nov 12"
-data-short="Monthly Meeting • 7:30 PM">
-
-<div class="event-date-box">
-
-<span class="month">
-Nov
-</span>
-
-<span class="day">
-12
-</span>
-
-</div>
-
-<div class="event-details">
-
-<span class="event-school">
-WBOPA
-</span>
-
-<p class="card-label">
-Meeting
-</p>
-
-<h3>
-WBOPA Monthly Meeting
-</h3>
-
-<p>
-<strong>
-Thursday, November 12, 2026
-</strong>
-</p>
-
-<p>
-<strong>
-7:30 PM
-</strong>
-</p>
-
-<p>
-The meeting will be held virtually via Zoom.
-</p>
-
-<p>
-Regular WBOPA meetings are held on the second Thursday of each month during the school year.
-</p>
-
-<p>
-Contact WBOPA for the current Zoom meeting link.
-</p>
-
-<a href="parents.html#meetings">
-Meeting Information
-</a>
-
-</div>
-
-</article>
-
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
+  <div class="container">
+    <div id="community-details" class="calendar-school-section">
+
+      <div id="beyond-school" class="detail-subsection">
+        <div class="calendar-section-header">
+          <p class="card-label">Community Opportunities</p>
+          <h2>Beyond School Opportunities</h2>
+          <div class="calendar-divider"></div>
+          <p>
+            Optional music opportunities shared with
+            Jolliff Orchestra students and families.
+            These are separate from required performances.
+          </p>
+        </div>
+
+        <div id="vsoList" class="event-list"></div>
+
+        <div class="info-box" style="margin-top:25px">
+          <h3>Virginia Symphony Student Tickets</h3>
+          <p>
+            The Virginia Symphony Orchestra offers
+            discounted student tickets for many performances.
+          </p>
+          <p>
+            <a
+              href="https://drive.google.com/file/d/1wK6Qj-vyXkRnGMRbOAqe0z4YE-eYya92/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer">
+              View VSO Opportunities &amp; Flyers
+            </a>
+          </p>
+          <p class="small-text">
+            These are optional activities, not required
+            orchestra performances. Flyers are also
+            available in the Canvas Beyond School
+            Opportunities module.
+          </p>
+        </div>
+      </div>
+
+      <div id="wbopa-events" class="detail-subsection">
+        <div class="calendar-section-header">
+          <p class="card-label">Parents Association</p>
+          <h2>WBOPA Events &amp; Meetings</h2>
+          <div class="calendar-divider"></div>
+          <p>
+            Meetings, fundraisers, and activities organized
+            by the Western Branch Orchestras Parents Association.
+          </p>
+        </div>
+
+        <div id="wbopaList" class="event-list"></div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =========================================
-     IMPORTANT INFORMATION
-========================================= -->
+<!-- IMPORTANT CALENDAR INFORMATION -->
 
 <section class="content">
+  <div class="container">
+    <div class="info-box">
+      <h3>Important Calendar Information</h3>
 
-<div class="container">
+      <p>
+        More information will be shared before each event.
+        Dates, times, locations, and other details
+        are subject to change.
+      </p>
 
-<div class="info-box">
+      <p>
+        Students and families should continue to follow
+        information provided directly by their orchestra director.
+      </p>
 
-<h3>
-Important Calendar Information
-</h3>
+      <p>
+        An asterisk (*) beside a Jolliff Middle School
+        grade indicates a required performance under the
+        <a
+          href="https://docs.google.com/document/d/1X-eu34mQdecRtrc6mlpTvvafs2Cte9ODCtU2_crjRuU/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer">
+          CPS Music Performance Attendance Policy
+        </a>.
+      </p>
 
-<p>
-More information will be shared before individual events. Dates, times, locations, and other details are subject to change.
-</p>
-
-<p>
-Students and families should continue to follow information provided directly by their orchestra director.
-</p>
-
-<p>
-For Jolliff Middle School events, an asterisk (*) after a grade indicates a required performance. These performances are subject to the
-<a
-href="https://docs.google.com/document/d/1X-eu34mQdecRtrc6mlpTvvafs2Cte9ODCtU2_crjRuU/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-CPS Music Performance Attendance Policy
-</a>.
-</p>
-
-<p>
-Optional community and Beyond School Opportunities are provided for informational purposes and are separate from required school orchestra activities.
-</p>
-
-</div>
-
-</div>
-
+      <p>
+        Community opportunities are optional and are
+        separate from required school orchestra activities.
+      </p>
+    </div>
+  </div>
 </section>
-
-
 
 </main>
 
-
-
 <footer>
-
-<div class="container footer-container">
-
-<p>
-© 2026 Western Branch Orchestras Parents Association
-</p>
-
-<p>
-Supporting Western Branch High School and Jolliff Middle School Orchestras
-</p>
-
-<p>
-<a href="contact.html">
-Contact Us
-</a>
-</p>
-
-</div>
-
+  <div class="container footer-container">
+    <p>© 2026 Western Branch Orchestras Parents Association</p>
+    <p>
+      Supporting Western Branch High School
+      and Jolliff Middle School Orchestras
+    </p>
+    <p><a href="contact.html">Contact Us</a></p>
+  </div>
 </footer>
-
-
 
 <script src="js/script.js"></script>
 
-
 <script>
+// ==========================================
+// SHARED LINKS
+// ==========================================
 
-document.addEventListener("DOMContentLoaded", function () {
+const FORMAL_URL =
+  "https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing";
 
-  function parseCalendarDate(value) {
+const FORMAL =
+  `<a href="${FORMAL_URL}" target="_blank" rel="noopener noreferrer">Formal</a>`;
 
-    const parts = value.split("-").map(Number);
+const CASUAL =
+  `<a href="${FORMAL_URL}" target="_blank" rel="noopener noreferrer">Casual</a>`;
 
-    return new Date(
-      parts[0],
-      parts[1] - 1,
-      parts[2]
-    );
+// ==========================================
+// COMPLETE 2026-2027 EVENT DATA
+// ==========================================
+//
+// g = group
+// d = event date
+// end = final date for multiday events
+// label = date shown on cards
+// k = event category
+// t = event title
+// short = quick-reference description
+// details = full event information
+//
+// Add future events to this list using
+// the same structure.
+// ==========================================
 
+const EVENTS = [
+
+  // WESTERN BRANCH HIGH SCHOOL
+
+  {
+    id: "event-wbhs-halloween",
+    g: "wbhs",
+    d: "2026-10-27",
+    label: "Oct 27",
+    k: "Concert",
+    t: "Halloween Concert",
+    short: "7:00 PM • Location TBD",
+    details: `
+      <p><strong>Tuesday, October 27, 2026</strong></p>
+      <p><strong>7:00 PM</strong></p>
+      <p>Location will be posted when available.</p>
+    `
+  },
+
+  {
+    id: "event-wbhs-winter",
+    g: "wbhs",
+    d: "2026-12-15",
+    label: "Dec 15",
+    k: "Concert",
+    t: "Winter Concert",
+    short: "7:00 PM",
+    details: `
+      <p><strong>Tuesday, December 15, 2026</strong></p>
+      <p><strong>7:00 PM</strong></p>
+      <p>Location will be posted when available.</p>
+    `
+  },
+
+  {
+    id: "event-wbhs-disney",
+    g: "wbhs",
+    d: "2027-03-25",
+    end: "2027-03-29",
+    label: "Mar 25-29",
+    k: "Trip",
+    t: "Disney Trip",
+    short: "Disney Trip",
+    details: `
+      <p><strong>March 25-29, 2027</strong></p>
+      <p>
+        Additional trip information will be provided
+        to participating students and families.
+      </p>
+    `
+  },
+
+  {
+    id: "event-wbhs-spring",
+    g: "wbhs",
+    d: "2027-06-01",
+    label: "Jun 1",
+    k: "Concert",
+    t: "Spring Concert",
+    short: "7:00 PM",
+    details: `
+      <p><strong>Tuesday, June 1, 2027</strong></p>
+      <p><strong>7:00 PM</strong></p>
+      <p>Location will be posted when available.</p>
+    `
+  },
+
+  // JOLLIFF MIDDLE SCHOOL
+
+  {
+    id: "event-jms-spirit-wear",
+    g: "jms",
+    d: "2026-10-01",
+    label: "Oct 1",
+    k: "Deadline",
+    t: "Jolliff Orchestra Spirit Wear Order Deadline",
+    short: "Spirit wear orders due",
+    details: `
+      <p><strong>Thursday, October 1, 2026</strong></p>
+      <p>
+        Spirit wear is available for all 6th grade
+        orchestra students and interested 7th and
+        8th grade students.
+      </p>
+      <p>
+        Orders must be submitted using a paper order
+        form with <strong>cash or check</strong>.
+        Electronic ordering and Givebacks are not
+        available for spirit wear.
+      </p>
+      <p>
+        <a href="fundraising.html#spirit-wear">
+          Spirit Wear Information &amp; Order Form
+        </a>
+      </p>
+    `
+  },
+
+  {
+    id: "event-jms-jr-district-audition",
+    g: "jms",
+    d: "2026-10-24",
+    label: "Oct 24",
+    k: "Audition",
+    t: "Jr. District Audition",
+    short: "Interested 7th & 8th • Jolliff MS",
+    details: `
+      <p><strong>Saturday, October 24, 2026</strong></p>
+      <p>Interested 7th and 8th grade students</p>
+      <p><strong>Location:</strong> Jolliff Middle School</p>
+      <p><strong>Report:</strong> 8:30 AM to 3:30 PM</p>
+      <p>
+        Individual time slots were scheduled
+        to be released by October 16, 2026.
+      </p>
+    `
+  },
+
+  {
+    id: "event-jms-fall-concert",
+    g: "jms",
+    d: "2026-10-27",
+    label: "Oct 27",
+    k: "Concert",
+    t: "Fall Concert",
+    short: "8th Grade* • 7:00 PM",
+    details: `
+      <p><strong>Tuesday, October 27, 2026</strong></p>
+      <p>8th Grade*</p>
+      <p><strong>Location:</strong> Western Branch High School</p>
+      <p><strong>Report:</strong> 5:45 PM</p>
+      <p><strong>Performance:</strong> 7:00 PM</p>
+      <p><strong>Attire:</strong> ${FORMAL}</p>
+    `
+  },
+
+  {
+    id: "event-jms-va-arts",
+    g: "jms",
+    d: "2026-11-19",
+    label: "Nov 19",
+    k: "Performance",
+    t: "VA Arts Festival Quartet Performance",
+    short: "6th, 7th & 8th • 9:30 AM • Not open to the public",
+    details: `
+      <p><strong>Thursday, November 19, 2026</strong></p>
+      <p>6th, 7th and 8th Grade</p>
+      <p><strong>Location:</strong> Jolliff Middle School</p>
+      <p><strong>Report:</strong> 9:15 AM, released from class</p>
+      <p><strong>Performance:</strong> 9:30 AM</p>
+      <p><strong>Not open to the public.</strong></p>
+    `
+  },
+
+  {
+    id: "event-jms-winter",
+    g: "jms",
+    d: "2026-12-10",
+    label: "Dec 10",
+    k: "Concert",
+    t: "Winter Concert",
+    short: "6th*, 7th* & 8th* Grade • 7:30 PM",
+    details: `
+      <p><strong>Thursday, December 10, 2026</strong></p>
+      <p>6th*, 7th* and 8th* Grade</p>
+      <p><strong>Location:</strong> Jolliff Middle School</p>
+      <p>
+        <strong>Report Times:</strong><br>
+        6th Grade: by 7:10 PM<br>
+        7th Grade: by 6:40 PM<br>
+        8th Grade: by 6:50 PM
+      </p>
+      <p><strong>Performance:</strong> 7:30 PM</p>
+      <p><strong>Attire:</strong> ${FORMAL}</p>
+    `
+  },
+
+  {
+    id: "event-jms-jr-district-event",
+    g: "jms",
+    d: "2027-01-15",
+    label: "Jan 15",
+    k: "District Event",
+    t: "Jr. District Event",
+    short: "Select 7th & 8th • 6:30 PM",
+    details: `
+      <p><strong>Friday, January 15, 2027</strong></p>
+      <p>Select 7th and 8th grade students</p>
+      <p><strong>Location:</strong> Western Branch High School</p>
+      <p><strong>Depart:</strong> 9:00 AM, released from class</p>
+      <p><strong>Performance:</strong> 6:30 PM</p>
+      <p><strong>Attire:</strong> ${FORMAL}</p>
+    `
+  },
+
+  {
+    id: "event-jms-rising-sixth",
+    g: "jms",
+    d: "2027-01-20",
+    end: "2027-01-21",
+    label: "Jan 20-21",
+    k: "Performance",
+    t: "Rising 6th Grade Performances",
+    short: "8th Grade* • TBD with select 7th",
+    details: `
+      <p>
+        <strong>
+          Tentatively Wednesday, January 20
+          and Thursday, January 21, 2027
+        </strong>
+      </p>
+      <p>8th Grade* (TBD with select 7th grade students)</p>
+      <p><strong>Location:</strong> Jolliff Middle School</p>
+      <p><strong>Report:</strong> 9:50 AM, released from class</p>
+      <p><strong>Performance:</strong> Approximately 10:45 AM</p>
+      <p><strong>Not open to the public.</strong></p>
+      <p><strong>Attire:</strong> ${CASUAL}</p>
+    `
+  },
+
+  {
+    id: "event-jms-preassessment",
+    g: "jms",
+    d: "2027-03-10",
+    label: "Mar 10",
+    k: "Concert",
+    t: "Pre-Assessment Concert",
+    short: "8th Grade* • 7:00 PM",
+    details: `
+      <p><strong>Wednesday, March 10, 2027</strong></p>
+      <p>8th Grade*</p>
+      <p><strong>Location:</strong> Jolliff Middle School</p>
+      <p><strong>Report:</strong> By 6:20 PM</p>
+      <p><strong>Performance:</strong> 7:00 PM</p>
+      <p><strong>Attire:</strong> ${FORMAL}</p>
+    `
+  },
+
+  {
+    id: "event-jms-state-assessment",
+    g: "jms",
+    d: "2027-03-16",
+    end: "2027-03-18",
+    label: "Mar 16-18",
+    k: "Assessment",
+    t: "State Assessment Performance",
+    short: "8th Grade* • Details TBD",
+    details: `
+      <p><strong>March 16, 17, or 18, 2027</strong></p>
+      <p>8th Grade*</p>
+      <p>
+        Date, location, report time, departure time,
+        return time, and performance time
+        are to be determined.
+      </p>
+      <p><strong>Attire:</strong> ${FORMAL}</p>
+    `
+  },
+
+  {
+    id: "event-jms-miosm",
+    g: "jms",
+    d: "2027-03-25",
+    label: "Mar 25",
+    k: "Performance",
+    t: "Music In Our Schools Month Concert",
+    short: "6th Grade* • 2:15 PM",
+    details: `
+      <p><strong>Thursday, March 25, 2027</strong></p>
+      <p>6th Grade*</p>
+      <p><strong>Location:</strong> Jolliff Middle School</p>
+      <p><strong>Report:</strong> 1:40 PM, released from class</p>
+      <p><strong>Performance:</strong> 2:15 PM</p>
+      <p><strong>Attire:</strong> ${CASUAL}</p>
+    `
+  },
+
+  {
+    id: "event-jms-all-city",
+    g: "jms",
+    d: "2027-04-23",
+    label: "Apr 23",
+    k: "All-City",
+    t: "All-City Event",
+    short: "Select 6th & 7th • 6:30 PM",
+    details: `
+      <p><strong>Friday, April 23, 2027</strong></p>
+      <p>Select 6th and 7th grade students</p>
+      <p><strong>Location:</strong> Greenbrier Middle School</p>
+      <p><strong>Depart:</strong> 9:00 AM, released from class</p>
+      <p><strong>Performance:</strong> 6:30 PM</p>
+      <p><strong>Attire:</strong> ${FORMAL}</p>
+    `
+  },
+
+  {
+    id: "event-jms-spring-seven",
+    g: "jms",
+    d: "2027-05-04",
+    label: "May 4",
+    k: "Concert",
+    t: "Spring Concert - 7th Grade",
+    short: "7th Grade* • 7:00 PM",
+    details: `
+      <p><strong>Tuesday, May 4, 2027</strong></p>
+      <p>7th Grade*</p>
+      <p><strong>Location:</strong> Jolliff Middle School</p>
+      <p><strong>Report:</strong> By 6:20 PM</p>
+      <p><strong>Performance:</strong> 7:00 PM</p>
+      <p><strong>Attire:</strong> ${FORMAL}</p>
+    `
+  },
+
+  {
+    id: "event-jms-spring-six-eight",
+    g: "jms",
+    d: "2027-05-05",
+    label: "May 5",
+    k: "Concert",
+    t: "Spring Concert - 6th & 8th Grade",
+    short: "6th* & 8th* Grade • 7:00 PM",
+    details: `
+      <p><strong>Wednesday, May 5, 2027</strong></p>
+      <p>6th Grade* and 8th Grade*</p>
+      <p><strong>Location:</strong> Jolliff Middle School</p>
+      <p>
+        <strong>Report Times:</strong><br>
+        6th Grade: by 6:40 PM<br>
+        8th Grade: by 6:20 PM
+      </p>
+      <p><strong>Performance:</strong> 7:00 PM</p>
+      <p><strong>Attire:</strong> ${FORMAL}</p>
+    `
+  },
+
+  {
+    id: "event-jms-music-parks",
+    g: "jms",
+    d: "2027-06-05",
+    label: "Jun 5",
+    k: "Performance / Trip",
+    t: "Music In The Parks Performance",
+    short: "Interested 8th Grade • Busch Gardens",
+    details: `
+      <p><strong>Saturday, June 5, 2027</strong></p>
+      <p>Interested 8th grade students</p>
+      <p>
+        Competition at a Peninsula-area school
+        followed by Busch Gardens.
+      </p>
+      <p>
+        Report, departure, return, and performance
+        times are to be determined.
+      </p>
+      <p><strong>Attire:</strong> ${CASUAL}</p>
+    `
+  },
+
+  // COMMUNITY OPPORTUNITIES
+
+  {
+    id: "event-community-vso",
+    g: "community",
+    d: "2026-10-04",
+    label: "Oct 4",
+    k: "Free Community Event",
+    t: "CommUNITY Play-In & Sing-Along",
+    short: "VSO Play-In & Sing-Along • 3:00 PM",
+    details: `
+      <p><strong>Sunday, October 4, 2026</strong></p>
+      <p><strong>3:00 PM</strong></p>
+      <p>
+        <strong>Location:</strong>
+        Booker T. Washington High School<br>
+        1111 Park Avenue<br>
+        Norfolk, VA 23504
+      </p>
+      <p>
+        This free event gives community musicians and
+        singers an opportunity to play and sing alongside
+        Virginia Symphony Orchestra musicians and the
+        Virginia Symphony Orchestra Chorus.
+      </p>
+      <p><strong>Free and open to the public.</strong></p>
+      <p>
+        <a
+          href="https://drive.google.com/file/d/1wK6Qj-vyXkRnGMRbOAqe0z4YE-eYya92/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer">
+          View Virginia Symphony Opportunities &amp; Flyers
+        </a>
+      </p>
+    `
+  },
+
+  // WBOPA EVENTS AND MEETINGS
+
+  {
+    id: "event-wbopa-flower-deadline",
+    g: "community",
+    d: "2026-10-06",
+    label: "Oct 6",
+    k: "Fundraiser",
+    t: "Fall Flower Sale Order Deadline",
+    short: "Fall Flower Sale orders due",
+    details: `
+      <p><strong>Tuesday, October 6, 2026</strong></p>
+      <p>
+        Online orders for the 2026 WBOPA Fall Flower
+        Sale are due by October 6.
+      </p>
+      <p>
+        Paper orders being mailed must be postmarked
+        by September 30. Completed paper forms may
+        also be turned in to an orchestra director.
+      </p>
+      <p>
+        <a href="fundraising.html#flowers">
+          Flower Sale Information &amp; Ordering
+        </a>
+      </p>
+    `
+  },
+
+  {
+    id: "event-wbopa-red-robin",
+    g: "community",
+    d: "2026-10-07",
+    label: "Oct 7",
+    k: "Fundraiser",
+    t: "Red Robin Giveback Fundraiser",
+    short: "Red Robin Giveback • 20% of eligible food sales",
+    details: `
+      <p><strong>Wednesday, October 7, 2026</strong></p>
+      <p>
+        Red Robin will give
+        <strong>20% of eligible food sales</strong>
+        back to support the Western Branch
+        Orchestra Parents Association.
+      </p>
+      <p>
+        <strong>Location:</strong><br>
+        Red Robin<br>
+        2524 Chesapeake Sq Ring Rd<br>
+        Chesapeake, VA 23321
+      </p>
+      <p>
+        For dine-in orders, show the fundraiser flyer
+        or mention the fundraiser to your server.
+      </p>
+      <p>
+        Online and to-go orders can also qualify
+        when fundraiser instructions are followed.
+      </p>
+      <p>
+        <a href="fundraising.html#red-robin">
+          View Red Robin Fundraiser Details
+        </a>
+      </p>
+    `
+  },
+
+  {
+    id: "event-wbopa-october-meeting",
+    g: "community",
+    d: "2026-10-08",
+    label: "Oct 8",
+    k: "Meeting",
+    t: "WBOPA Monthly Meeting",
+    short: "Monthly Meeting • 7:30 PM",
+    details: `
+      <p><strong>Thursday, October 8, 2026</strong></p>
+      <p><strong>7:30 PM</strong></p>
+      <p>The meeting will be held virtually via Zoom.</p>
+      <p>
+        Regular WBOPA meetings are held on the
+        second Thursday of each month during the school year.
+      </p>
+      <p>Contact WBOPA for the current Zoom meeting link.</p>
+      <p>
+        <a href="parents.html#meetings">
+          Meeting Information
+        </a>
+      </p>
+    `
+  },
+
+  {
+    id: "event-wbopa-flower-pickup",
+    g: "community",
+    d: "2026-10-10",
+    label: "Oct 10",
+    k: "Fundraiser / Volunteer",
+    t: "Fall Flower Sale Pickup & Volunteer Day",
+    short: "Flower Pickup • 8:45 AM to 11:00 AM",
+    details: `
+      <p><strong>Saturday, October 10, 2026</strong></p>
+      <p>
+        <strong>Location:</strong>
+        Western Branch High School Bus Ramp<br>
+        1968 Bruin Place, Chesapeake, VA 23321
+      </p>
+      <p><strong>Customer Pickup:</strong> 8:45 AM to 11:00 AM</p>
+      <p>
+        <strong>Volunteer Shifts:</strong><br>
+        7:00 AM to 9:00 AM<br>
+        9:00 AM to 11:00 AM
+      </p>
+      <p>
+        Student and parent volunteers are welcome.
+        Students needing service hours should confirm
+        eligibility with their school or organization.
+      </p>
+      <p>
+        <a href="fundraising.html#flowers">
+          View Flower Sale &amp; Volunteer Information
+        </a>
+      </p>
+    `
+  },
+
+  {
+    id: "event-wbopa-november-meeting",
+    g: "community",
+    d: "2026-11-12",
+    label: "Nov 12",
+    k: "Meeting",
+    t: "WBOPA Monthly Meeting",
+    short: "Monthly Meeting • 7:30 PM",
+    details: `
+      <p><strong>Thursday, November 12, 2026</strong></p>
+      <p><strong>7:30 PM</strong></p>
+      <p>The meeting will be held virtually via Zoom.</p>
+      <p>
+        Regular WBOPA meetings are held on the
+        second Thursday of each month during the school year.
+      </p>
+      <p>Contact WBOPA for the current Zoom meeting link.</p>
+      <p>
+        <a href="parents.html#meetings">
+          Meeting Information
+        </a>
+      </p>
+    `
   }
 
+];
 
-  function getEventTitle(card) {
+// ==========================================
+// DATE FUNCTIONS
+// ==========================================
 
-    const heading = card.querySelector("h3");
+function parseCalendarDate(value) {
+  const parts = value.split("-").map(Number);
+  return new Date(parts[0], parts[1] - 1, parts[2]);
+}
 
-    return heading
-      ? heading.textContent.trim()
-      : "Calendar Event";
+const today = new Date();
+today.setHours(0, 0, 0, 0);
 
+const events = EVENTS.map(function(event) {
+  return {
+    ...event,
+    start: parseCalendarDate(event.d),
+    finish: parseCalendarDate(event.end || event.d)
+  };
+}).sort(function(a, b) {
+  return a.start - b.start;
+});
+
+const upcoming = events.filter(function(event) {
+  return event.finish >= today;
+});
+
+const past = events.filter(function(event) {
+  return event.finish < today;
+});
+
+// ==========================================
+// EVENT CARD CREATION
+// ==========================================
+
+function getEventSchool(event) {
+  if (event.g === "wbhs") {
+    return "Western Branch High School";
   }
+  if (event.g === "jms") {
+    return "Jolliff Middle School";
+  }
+  if (event.id === "event-community-vso") {
+    return "Virginia Symphony Orchestra";
+  }
+  return "WBOPA";
+}
 
+function getEventTarget(event) {
+  if (event.g === "wbhs") return "wbhsList";
+  if (event.g === "jms") return "jmsList";
 
-  const today = new Date();
+  if (event.id === "event-community-vso") {
+    return "vsoList";
+  }
+  return "wbopaList";
+}
 
-  today.setHours(
-    0,
-    0,
-    0,
-    0
-  );
+function makeEventCard(event) {
+  const card = document.createElement("article");
+  card.id = event.id;
+  card.className = "event-card";
 
+  const dateParts = event.label.split(" ");
+  const month = dateParts[0];
+  const day = dateParts.slice(1).join(" ");
 
-  const eventCards = Array.from(
-    document.querySelectorAll("[data-calendar-event]")
-  );
+  card.innerHTML = `
+    <div class="event-date-box">
+      <span class="month">${month}</span>
+      <span class="day">${day}</span>
+    </div>
 
+    <div class="event-details">
+      <span class="event-school">
+        ${getEventSchool(event)}
+      </span>
+      <p class="card-label">${event.k}</p>
+      <h3>${event.t}</h3>
+      ${event.details}
+    </div>
+  `;
 
-  const events = eventCards.map(function (card) {
+  return card;
+}
 
-    const startDate =
-      parseCalendarDate(
-        card.dataset.date
-      );
+// ==========================================
+// AUTOMATIC UPCOMING EVENT LISTS
+// ==========================================
 
+function buildUpcomingLists() {
+  const grouped = {
+    wbhs: [],
+    jms: [],
+    community: []
+  };
 
-    const endDate =
-      parseCalendarDate(
-        card.dataset.end ||
-        card.dataset.date
-      );
-
-
-    return {
-
-      card: card,
-
-      id: card.id,
-
-      title:
-        getEventTitle(card),
-
-      start:
-        startDate,
-
-      end:
-        endDate,
-
-      group:
-        card.dataset.group || "",
-
-      label:
-        card.dataset.label || "",
-
-      type:
-        card.dataset.type || "",
-
-      dateDisplay:
-        card.dataset.dateDisplay || "",
-
-      short:
-        card.dataset.short || ""
-
-    };
-
+  upcoming.forEach(function(event) {
+    grouped[event.g].push(event);
   });
 
+  Object.keys(grouped).forEach(function(group) {
+    const targetId =
+      group === "wbhs" ? "wbhsList" :
+      group === "jms" ? "jmsList" :
+      null;
 
-  events.sort(function (a, b) {
+    if (!targetId) return;
 
-    return a.start - b.start;
+    const target = document.getElementById(targetId);
 
+    grouped[group].forEach(function(event) {
+      target.appendChild(makeEventCard(event));
+    });
   });
 
+  upcoming.filter(function(event) {
+    return event.g === "community";
+  }).forEach(function(event) {
+    document.getElementById(getEventTarget(event))
+      .appendChild(makeEventCard(event));
+  });
+}
 
-  events.forEach(function (event) {
+// ==========================================
+// PAST EVENT ARCHIVE BUTTONS
+// ==========================================
 
-    if (event.end < today) {
+function createArchive(group, sectionId, groupLabel) {
+  const section = document.getElementById(sectionId);
+  if (!section) return;
 
-      event.card.classList.add(
-        "past-event"
-      );
-
-    }
-
+  const groupPast = past.filter(function(event) {
+    return event.g === group;
+  }).sort(function(a, b) {
+    return b.finish - a.finish;
   });
 
+  if (groupPast.length > 0) {
+    const controls = document.createElement("div");
+    controls.className = "past-event-controls";
 
-  const upcomingEvents =
-    events.filter(function (event) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "past-events-toggle";
+    button.id = group + "-past-toggle";
 
-      return event.end >= today;
+    const panel = document.createElement("div");
+    panel.id = group + "-past-archive";
+    panel.className = "past-event-archive";
+    panel.hidden = true;
 
+    button.setAttribute("aria-controls", panel.id);
+
+    const heading = document.createElement("h3");
+    heading.className = "archive-heading";
+    heading.textContent = "Past " + groupLabel + " Events";
+
+    const description = document.createElement("p");
+    description.className = "archive-description";
+    description.textContent =
+      "Previous events are listed with the most recent first.";
+
+    const archiveList = document.createElement("div");
+    archiveList.className = "event-list";
+
+    groupPast.forEach(function(event) {
+      archiveList.appendChild(makeEventCard(event));
     });
 
+    panel.appendChild(heading);
+    panel.appendChild(description);
+    panel.appendChild(archiveList);
 
-  /* =========================================
-     UPCOMING AT A GLANCE
-  ========================================= */
+    function setArchiveOpen(open) {
+      panel.hidden = !open;
+      button.setAttribute("aria-expanded", String(open));
 
-  const glanceGrid =
-    document.getElementById(
-      "glanceGrid"
-    );
-
-
-  if (glanceGrid) {
-
-    glanceGrid.innerHTML = "";
-
-
-    const nextEvents =
-      upcomingEvents.slice(
-        0,
-        6
-      );
-
-
-    if (nextEvents.length === 0) {
-
-      glanceGrid.innerHTML =
-        "<p>No additional upcoming events are currently listed.</p>";
-
+      button.innerHTML = open
+        ? "&#9652; Hide Past Events (" + groupPast.length + ")"
+        : "&#9662; Show Past Events (" + groupPast.length + ")";
     }
 
-    else {
+    setArchiveOpen(false);
 
-      nextEvents.forEach(
-        function (event) {
+    button.addEventListener("click", function() {
+      setArchiveOpen(panel.hidden);
+    });
 
-          const card =
-            document.createElement(
-              "article"
-            );
-
-
-          card.className =
-            "glance-card";
-
-
-          card.innerHTML = `
-
-            <div class="glance-card-date">
-              ${event.dateDisplay}
-            </div>
-
-            <span class="glance-card-tag">
-              ${event.label}
-            </span>
-
-            <h3>
-              ${event.title}
-            </h3>
-
-            <p>
-              ${event.short}
-            </p>
-
-            <a href="#${event.id}">
-              View Details
-            </a>
-
-          `;
-
-
-          glanceGrid.appendChild(
-            card
-          );
-
-        }
-      );
-
-    }
-
+    controls.appendChild(button);
+    controls.appendChild(panel);
+    section.appendChild(controls);
   }
 
+  const backLink = document.createElement("a");
+  backLink.href = "#calendar-top";
+  backLink.className = "calendar-back-to-top";
+  backLink.textContent = "Back to calendar navigation";
+  section.appendChild(backLink);
+}
 
-  /* =========================================
-     THREE COLUMN QUICK REFERENCE
-  ========================================= */
+// ==========================================
+// EMPTY EVENT NOTICES
+// ==========================================
 
-  function buildColumn(
-    targetId,
-    groupName,
-    limit
-  ) {
+function addEmptyMessage(containerId, text) {
+  const container = document.getElementById(containerId);
 
-    const target =
-      document.getElementById(
-        targetId
-      );
+  if (container && container.children.length === 0) {
+    const message = document.createElement("p");
+    message.className = "calendar-empty-note";
+    message.textContent = text;
+    container.appendChild(message);
+  }
+}
 
+// ==========================================
+// UPCOMING AT A GLANCE
+// ==========================================
 
-    if (!target) {
-      return;
-    }
+function buildGlance() {
+  const grid = document.getElementById("glanceGrid");
+  grid.innerHTML = "";
 
+  const nextSix = upcoming.slice(0, 6);
 
-    target.innerHTML = "";
-
-
-    const groupEvents =
-      upcomingEvents
-
-      .filter(function (event) {
-
-        return event.group ===
-          groupName;
-
-      })
-
-      .slice(
-        0,
-        limit
-      );
-
-
-    if (groupEvents.length === 0) {
-
-      target.innerHTML =
-        '<p class="small-text">No upcoming events are currently listed.</p>';
-
-      return;
-
-    }
-
-
-    groupEvents.forEach(
-      function (event) {
-
-        const item =
-          document.createElement(
-            "div"
-          );
-
-
-        item.className =
-          "compact-event";
-
-
-        item.innerHTML = `
-
-          <span class="compact-event-date">
-            ${event.dateDisplay}
-          </span>
-
-          ${
-            event.type
-              ? `<span class="compact-event-type">${event.type}</span>`
-              : ""
-          }
-
-          <h3>
-            ${event.title}
-          </h3>
-
-          <p>
-            ${event.short}
-          </p>
-
-          <a href="#${event.id}">
-            Details
-          </a>
-
-        `;
-
-
-        target.appendChild(
-          item
-        );
-
-      }
-    );
-
+  if (nextSix.length === 0) {
+    grid.innerHTML =
+      "<p>No additional upcoming events are currently listed.</p>";
+    return;
   }
 
+  nextSix.forEach(function(event) {
+    const card = document.createElement("article");
+    card.className = "glance-card";
 
-  buildColumn(
-    "wbhsUpcoming",
-    "wbhs",
-    5
+    const groupName =
+      event.g === "wbhs" ? "WBHS" :
+      event.g === "jms" ? "JMS" :
+      event.id === "event-community-vso" ?
+      "Community" : "WBOPA";
+
+    card.innerHTML = `
+      <div class="glance-card-date">${event.label}</div>
+      <span class="glance-card-tag">${groupName}</span>
+      <h3>${event.t}</h3>
+      <p>${event.short}</p>
+      <a href="#${event.id}">View Details</a>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+// ==========================================
+// UPCOMING EVENTS BY PROGRAM
+// ==========================================
+
+function buildColumn(targetId, group, limit) {
+  const target = document.getElementById(targetId);
+  target.innerHTML = "";
+
+  const matches = upcoming.filter(function(event) {
+    return event.g === group;
+  }).slice(0, limit);
+
+  if (matches.length === 0) {
+    target.innerHTML =
+      '<p class="small-text">No upcoming events are currently listed.</p>';
+    return;
+  }
+
+  matches.forEach(function(event) {
+    const item = document.createElement("div");
+    item.className = "compact-event";
+
+    item.innerHTML = `
+      <span class="compact-event-date">
+        ${event.label}
+      </span>
+      <span class="compact-event-type">
+        ${event.k}
+      </span>
+      <h3>${event.t}</h3>
+      <p>${event.short}</p>
+      <a href="#${event.id}">Details</a>
+    `;
+
+    target.appendChild(item);
+  });
+}
+
+// ==========================================
+// OPEN ARCHIVE FOR DIRECT EVENT LINKS
+// ==========================================
+
+function revealLinkedPastEvent() {
+  if (!window.location.hash) return;
+
+  let eventId;
+
+  try {
+    eventId = decodeURIComponent(
+      window.location.hash.slice(1)
+    );
+  } catch (error) {
+    return;
+  }
+
+  const event = past.find(function(item) {
+    return item.id === eventId;
+  });
+
+  if (!event) return;
+
+  const panel = document.getElementById(
+    event.g + "-past-archive"
   );
 
-
-  buildColumn(
-    "jmsUpcoming",
-    "jms",
-    5
+  const button = document.getElementById(
+    event.g + "-past-toggle"
   );
 
+  if (!panel || !button) return;
 
-  buildColumn(
-    "communityUpcoming",
-    "community",
-    5
-  );
+  if (panel.hidden) {
+    button.click();
+  }
 
-});
+  const card = document.getElementById(eventId);
+
+  if (card) {
+    window.requestAnimationFrame(function() {
+      card.scrollIntoView({block: "start"});
+    });
+  }
+}
+
+// ==========================================
+// INITIALIZE THE CALENDAR
+// ==========================================
+
+buildUpcomingLists();
+
+createArchive(
+  "wbhs",
+  "wbhs-details",
+  "WBHS"
+);
+
+createArchive(
+  "jms",
+  "jms-details",
+  "JMS"
+);
+
+createArchive(
+  "community",
+  "community-details",
+  "WBOPA & Community"
+);
+
+addEmptyMessage(
+  "wbhsList",
+  "No upcoming high school events are currently listed."
+);
+
+addEmptyMessage(
+  "jmsList",
+  "No upcoming middle school events are currently listed."
+);
+
+addEmptyMessage(
+  "vsoList",
+  "No upcoming community performances are currently listed."
+);
+
+addEmptyMessage(
+  "wbopaList",
+  "No upcoming WBOPA meetings or fundraisers are currently listed."
+);
+
+buildGlance();
+
+buildColumn("wbhsUpcoming", "wbhs", 5);
+buildColumn("jmsUpcoming", "jms", 5);
+buildColumn("communityUpcoming", "community", 5);
+
+window.addEventListener(
+  "hashchange",
+  revealLinkedPastEvent
+);
+
+revealLinkedPastEvent();
 
 </script>
 
-
 </body>
-
 </html>
-
-
-
-
