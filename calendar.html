@@ -423,7 +423,7 @@ html {
   </div>
 </section>
 
-<!-- STICKY JUMP TO NAVIGATION -->
+<!-- STICKY JUMP TO NAVIGATION WITH TOP BUTTON -->
 
 <nav class="calendar-jump-bar" aria-label="Calendar section navigation">
   <div class="container calendar-jump-inner">
@@ -431,9 +431,16 @@ html {
     <span class="calendar-jump-label">Jump to:</span>
 
     <a href="#wbhs-details">High School</a>
+
     <a href="#jms-details">Middle School</a>
+
     <a href="#wbopa-events">WBOPA</a>
+
     <a href="#beyond-school">Community</a>
+
+    <a href="#" aria-label="Back to the top of the page">
+      ↑ Top
+    </a>
 
   </div>
 </nav>
@@ -860,11 +867,6 @@ const CASUAL =
 
 /* =========================================
    COMPLETE 2026-2027 EVENT DATA
-
-   All dates, event details, and links
-   are stored in this section.
-
-   Add future events using the same format.
 ========================================= */
 
 const EVENTS = [
@@ -1881,9 +1883,6 @@ revealLinkedPastEvent();
 
 /* =========================================
    STICKY NAVIGATION HEIGHT ADJUSTMENT
-
-   This keeps section titles visible when
-   clicking Jump To links, even on mobile.
 ========================================= */
 
 (function() {
