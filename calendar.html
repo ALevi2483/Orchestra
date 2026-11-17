@@ -28,6 +28,10 @@ html {
   margin-bottom: 8px;
 }
 
+.calendar-section-header p {
+  max-width: 850px;
+}
+
 .calendar-divider {
   width: 70px;
   height: 4px;
@@ -45,49 +49,68 @@ html {
   letter-spacing: .06em;
 }
 
-/* STICKY JUMP TO NAVIGATION */
+/* MOBILE-FRIENDLY STICKY JUMP TO NAVIGATION */
 
-.calendar-jump-bar {
+body > .calendar-jump-bar {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1100;
+  width: 100%;
   background: #f4f6f9;
   border-bottom: 1px solid #dfe5ea;
   box-shadow: 0 3px 9px rgba(0,0,0,.12);
 }
 
-.calendar-jump-inner {
-  display: flex;
+body > .calendar-jump-bar .calendar-jump-inner {
+  display: flex !important;
   flex-wrap: wrap;
   align-items: center;
-  gap: 9px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  justify-content: flex-start;
+  gap: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .calendar-jump-label {
   color: #16324f;
   font-weight: 800;
-  margin-right: 5px;
+  margin-right: 4px;
 }
 
-.calendar-jump-inner a {
-  display: inline-block;
-  padding: 8px 13px;
+body > .calendar-jump-bar .calendar-jump-inner a {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 8px 12px;
+  color: #16324f;
+  background: #ffffff;
   border: 1px solid #aab8c5;
   border-radius: 999px;
-  color: #16324f;
-  background: #fff;
+  font-size: .91rem;
   font-weight: 700;
   text-decoration: none;
 }
 
-.calendar-jump-inner a:hover,
-.calendar-jump-inner a:focus-visible {
+body > .calendar-jump-bar a:hover,
+body > .calendar-jump-bar a:focus-visible {
   background: #e7edf3;
   border-color: #16324f;
 }
+
+body > .calendar-jump-bar a:focus-visible,
+.past-events-toggle:focus-visible {
+  outline: 3px solid #f5b942;
+  outline-offset: 2px;
+}
+
+/* PREVENT JUMP BAR FROM COVERING HEADINGS */
 
 #wbhs-details,
 #jms-details,
@@ -96,7 +119,7 @@ html {
 #community-details,
 .event-card {
   scroll-margin-top: calc(
-    var(--calendar-jump-height, 82px) + 16px
+    var(--calendar-jump-height, 90px) + 16px
   );
 }
 
@@ -110,15 +133,15 @@ html {
 
 .glance-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 18px;
 }
 
 .glance-card {
-  background: #fff;
+  background: #ffffff;
+  border-top: 5px solid #f5b942;
   border-radius: 14px;
   padding: 20px;
-  border-top: 5px solid #f5b942;
   box-shadow: 0 5px 16px rgba(0,0,0,.08);
 }
 
@@ -132,12 +155,11 @@ html {
 .glance-card-tag {
   display: inline-block;
   background: #16324f;
-  color: #fff;
+  color: #ffffff;
   border-radius: 999px;
   padding: 4px 9px;
   font-size: .72rem;
   font-weight: 800;
-  text-transform: uppercase;
   margin-bottom: 12px;
 }
 
@@ -147,8 +169,8 @@ html {
 }
 
 .glance-card p {
-  margin-bottom: 10px;
   font-size: .92rem;
+  margin-bottom: 10px;
 }
 
 /* UPCOMING EVENTS BY PROGRAM */
@@ -161,9 +183,9 @@ html {
 }
 
 .calendar-column {
-  background: #fff;
-  border-radius: 14px;
+  background: #ffffff;
   padding: 24px;
+  border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0,0,0,.08);
 }
 
@@ -174,7 +196,7 @@ html {
 }
 
 .calendar-column-subtitle {
-  margin-bottom: 18px;
+  margin: 0 0 18px;
   font-size: .9rem;
 }
 
@@ -242,12 +264,12 @@ html {
 
 .full-calendar-nav a {
   display: inline-block;
-  text-decoration: none;
-  font-weight: 700;
   background: #16324f;
-  color: #fff;
-  padding: 9px 14px;
+  color: #ffffff;
+  font-weight: 700;
   border-radius: 999px;
+  padding: 9px 14px;
+  text-decoration: none;
 }
 
 .calendar-school-section {
@@ -269,31 +291,19 @@ html {
 }
 
 .past-events-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
   min-height: 44px;
   padding: 11px 18px;
   border: 2px solid #16324f;
   border-radius: 9px;
   background: #16324f;
-  color: #fff;
+  color: #ffffff;
   font: inherit;
   font-weight: 800;
   cursor: pointer;
 }
 
-.past-events-toggle:hover,
-.past-events-toggle:focus-visible {
+.past-events-toggle:hover {
   background: #234966;
-  border-color: #234966;
-}
-
-.past-events-toggle:focus-visible,
-.calendar-jump-inner a:focus-visible {
-  outline: 3px solid #f5b942;
-  outline-offset: 3px;
 }
 
 .past-event-archive[hidden] {
@@ -306,13 +316,9 @@ html {
   border-top: 2px solid #dfe5ea;
 }
 
-.archive-heading {
+.past-event-archive h3 {
+  margin: 0 0 10px;
   color: #16324f;
-  margin: 0 0 8px;
-}
-
-.archive-description {
-  margin-bottom: 20px;
 }
 
 .calendar-empty-note {
@@ -329,19 +335,24 @@ html {
   font-weight: 700;
 }
 
-/* MOBILE AND TABLET */
+/* TABLET */
 
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
+
   .calendar-columns {
     grid-template-columns: 1fr;
   }
 
   .glance-grid {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, minmax(0,1fr));
   }
+
 }
 
-@media (max-width:650px) {
+/* MOBILE */
+
+@media (max-width: 650px) {
+
   .glance-grid {
     grid-template-columns: 1fr;
   }
@@ -353,9 +364,25 @@ html {
   .calendar-school-section {
     margin-bottom: 45px;
   }
+
+  body > .calendar-jump-bar .calendar-jump-inner {
+    gap: 6px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  body > .calendar-jump-bar .calendar-jump-inner a {
+    padding: 7px 10px;
+    font-size: .8rem;
+  }
+
+  .calendar-jump-label {
+    font-size: .82rem;
+  }
+
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
@@ -423,9 +450,13 @@ html {
   </div>
 </section>
 
-<!-- STICKY JUMP TO NAVIGATION WITH TOP BUTTON -->
+<!-- MOBILE-FRIENDLY STICKY JUMP TO MENU -->
 
-<nav class="calendar-jump-bar" aria-label="Calendar section navigation">
+<div
+  class="calendar-jump-bar"
+  role="navigation"
+  aria-label="Jump to calendar sections">
+
   <div class="container calendar-jump-inner">
 
     <span class="calendar-jump-label">Jump to:</span>
@@ -443,7 +474,8 @@ html {
     </a>
 
   </div>
-</nav>
+
+</div>
 
 <main>
 
@@ -460,8 +492,8 @@ html {
 
       <p>
         The next six upcoming orchestra, WBOPA,
-        fundraiser, and community events are
-        automatically displayed here in date order.
+        fundraiser, and community events appear
+        automatically in date order.
       </p>
 
     </div>
@@ -469,16 +501,13 @@ html {
     <div id="glanceGrid" class="glance-grid"></div>
 
     <noscript>
-      <p>
-        Please enable JavaScript to view the
-        automatic calendar.
-      </p>
+      <p>Please enable JavaScript to view the event calendar.</p>
     </noscript>
 
     <p class="small-text" style="text-align:center;margin-top:20px">
       Past events automatically leave the upcoming lists.
-      Use "Show Past Events" within each program
-      to see previous activities.
+      Select "Show Past Events" under a program
+      to view earlier activities.
     </p>
 
   </div>
@@ -490,19 +519,21 @@ html {
   <div class="container">
 
     <div class="section-heading">
+
       <p class="card-label">Browse by Group</p>
 
       <h2>Upcoming Events by Program</h2>
 
       <p>
-        Quickly find upcoming events for your school
-        or the Parents Association.
+        Find upcoming high school, middle school,
+        and WBOPA or community activities.
       </p>
+
     </div>
 
     <div class="calendar-columns">
 
-      <!-- WBHS COLUMN -->
+      <!-- HIGH SCHOOL -->
 
       <div class="calendar-column">
 
@@ -514,10 +545,7 @@ html {
           Upcoming high school orchestra events.
         </p>
 
-        <div
-          id="wbhsUpcoming"
-          class="compact-event-list">
-        </div>
+        <div id="wbhsUpcoming" class="compact-event-list"></div>
 
         <a class="column-details-link" href="#wbhs-details">
           View All WBHS Details
@@ -525,7 +553,7 @@ html {
 
       </div>
 
-      <!-- JMS COLUMN -->
+      <!-- MIDDLE SCHOOL -->
 
       <div class="calendar-column">
 
@@ -537,10 +565,7 @@ html {
           Upcoming Jolliff Orchestra events and deadlines.
         </p>
 
-        <div
-          id="jmsUpcoming"
-          class="compact-event-list">
-        </div>
+        <div id="jmsUpcoming" class="compact-event-list"></div>
 
         <a class="column-details-link" href="#jms-details">
           View All Jolliff Details
@@ -548,7 +573,7 @@ html {
 
       </div>
 
-      <!-- WBOPA COLUMN -->
+      <!-- WBOPA AND COMMUNITY -->
 
       <div class="calendar-column">
 
@@ -560,10 +585,7 @@ html {
           WBOPA meetings, fundraisers, and community music.
         </p>
 
-        <div
-          id="communityUpcoming"
-          class="compact-event-list">
-        </div>
+        <div id="communityUpcoming" class="compact-event-list"></div>
 
         <a class="column-details-link" href="#community-details">
           View All WBOPA &amp; Community Details
@@ -588,15 +610,21 @@ html {
       <h2>Full Event Details</h2>
 
       <p>
-        Find report times, performance times,
-        locations, attire, and other important details.
+        Browse report times, performance times,
+        locations, attire, registration links,
+        and other event information.
       </p>
 
       <div class="full-calendar-nav">
+
         <a href="#wbhs-details">WBHS Details</a>
+
         <a href="#jms-details">Jolliff Details</a>
+
         <a href="#wbopa-events">WBOPA Events</a>
+
         <a href="#beyond-school">Community Opportunities</a>
+
       </div>
 
     </div>
@@ -650,19 +678,21 @@ html {
 
         <p>
           Concerts, performances, auditions, assessments,
-          and important dates for Jolliff Middle School.
+          and important dates for Jolliff orchestra families.
         </p>
 
         <p>
-          Dates and details are based on the 2026-2027
-          Jolliff Orchestra Events Calendar. Families
-          should follow updates from Mrs. Rosenberg.
+          Dates are based on the 2026-2027
+          Jolliff Orchestra Events Calendar.
+          Follow updates from Mrs. Rosenberg.
         </p>
 
         <p class="small-text">
+
           <strong>Required attendance:</strong>
-          An asterisk (*) beside a grade identifies a
-          required performance under the
+
+          An asterisk (*) next to a grade identifies
+          a required performance under the
 
           <a
             href="https://docs.google.com/document/d/1X-eu34mQdecRtrc6mlpTvvafs2Cte9ODCtU2_crjRuU/edit?usp=sharing"
@@ -672,7 +702,8 @@ html {
           </a>.
 
           Events marked "Not open to the public"
-          are for students and school audiences only.
+          are for school audiences only.
+
         </p>
 
         <div class="calendar-link-row">
@@ -696,14 +727,14 @@ html {
   </div>
 </section>
 
-<!-- COMMUNITY AND WBOPA -->
+<!-- WBOPA AND COMMUNITY -->
 
 <section class="content alt-bg">
   <div class="container">
 
     <div id="community-details" class="calendar-school-section">
 
-      <!-- COMMUNITY OPPORTUNITIES -->
+      <!-- COMMUNITY -->
 
       <div id="beyond-school" class="detail-subsection">
 
@@ -716,9 +747,8 @@ html {
           <div class="calendar-divider"></div>
 
           <p>
-            Optional music opportunities shared with
-            Jolliff Orchestra students and families.
-            These are separate from required performances.
+            Optional music opportunities shared with students
+            and families, separate from required school events.
           </p>
 
         </div>
@@ -730,31 +760,32 @@ html {
           <h3>Virginia Symphony Student Tickets</h3>
 
           <p>
-            The Virginia Symphony Orchestra offers
-            discounted student tickets for many performances.
+            The Virginia Symphony Orchestra offers discounted
+            student tickets for many performances.
           </p>
 
           <p>
+
             <a
               href="https://drive.google.com/file/d/1wK6Qj-vyXkRnGMRbOAqe0z4YE-eYya92/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer">
               View VSO Opportunities &amp; Flyers
             </a>
+
           </p>
 
           <p class="small-text">
-            These are optional activities, not required
-            orchestra performances. Flyers are also
-            available in the Canvas Beyond School
-            Opportunities module.
+            These are optional community events.
+            Flyers are also available in the Canvas
+            Beyond School Opportunities module.
           </p>
 
         </div>
 
       </div>
 
-      <!-- WBOPA -->
+      <!-- PARENTS ASSOCIATION -->
 
       <div id="wbopa-events" class="detail-subsection">
 
@@ -782,7 +813,7 @@ html {
   </div>
 </section>
 
-<!-- IMPORTANT INFORMATION -->
+<!-- IMPORTANT CALENDAR INFORMATION -->
 
 <section class="content">
   <div class="container">
@@ -792,19 +823,14 @@ html {
       <h3>Important Calendar Information</h3>
 
       <p>
-        More information will be shared before each event.
-        Dates, times, locations, and other details
-        are subject to change.
+        Dates, times, locations, and details may change.
+        Families should follow information provided
+        directly by orchestra directors.
       </p>
 
       <p>
-        Students and families should continue to follow
-        information provided directly by their orchestra director.
-      </p>
-
-      <p>
-        An asterisk (*) beside a Jolliff Middle School
-        grade indicates a required performance under the
+        An asterisk (*) next to a Jolliff grade
+        indicates a required performance under the
 
         <a
           href="https://docs.google.com/document/d/1X-eu34mQdecRtrc6mlpTvvafs2Cte9ODCtU2_crjRuU/edit?usp=sharing"
@@ -815,8 +841,8 @@ html {
       </p>
 
       <p>
-        Community opportunities are optional and are
-        separate from required school orchestra activities.
+        Community opportunities are optional
+        and separate from required school events.
       </p>
 
     </div>
@@ -831,18 +857,14 @@ html {
 <footer>
   <div class="container footer-container">
 
-    <p>
-      © 2026 Western Branch Orchestras Parents Association
-    </p>
+    <p>© 2026 Western Branch Orchestras Parents Association</p>
 
     <p>
       Supporting Western Branch High School
       and Jolliff Middle School Orchestras
     </p>
 
-    <p>
-      <a href="contact.html">Contact Us</a>
-    </p>
+    <p><a href="contact.html">Contact Us</a></p>
 
   </div>
 </footer>
@@ -852,8 +874,8 @@ html {
 <script>
 
 /* =========================================
-   SHARED LINKS
-========================================= */
+   COMPLETE 2026-2027 CALENDAR EVENT DATA
+   ========================================= */
 
 const FORMAL_URL =
   "https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing";
@@ -864,11 +886,6 @@ const FORMAL =
 const CASUAL =
   `<a href="${FORMAL_URL}" target="_blank" rel="noopener noreferrer">Casual</a>`;
 
-
-/* =========================================
-   COMPLETE 2026-2027 EVENT DATA
-========================================= */
-
 const EVENTS = [
 
   /* HIGH SCHOOL EVENTS */
@@ -877,6 +894,7 @@ const EVENTS = [
     id: "event-wbhs-halloween",
     g: "wbhs",
     d: "2026-10-27",
+    to: "2026-10-27",
     label: "Oct 27",
     k: "Concert",
     t: "Halloween Concert",
@@ -892,6 +910,7 @@ const EVENTS = [
     id: "event-wbhs-winter",
     g: "wbhs",
     d: "2026-12-15",
+    to: "2026-12-15",
     label: "Dec 15",
     k: "Concert",
     t: "Winter Concert",
@@ -907,7 +926,7 @@ const EVENTS = [
     id: "event-wbhs-disney",
     g: "wbhs",
     d: "2027-03-25",
-    end: "2027-03-29",
+    to: "2027-03-29",
     label: "Mar 25-29",
     k: "Trip",
     t: "Disney Trip",
@@ -925,6 +944,7 @@ const EVENTS = [
     id: "event-wbhs-spring",
     g: "wbhs",
     d: "2027-06-01",
+    to: "2027-06-01",
     label: "Jun 1",
     k: "Concert",
     t: "Spring Concert",
@@ -942,6 +962,7 @@ const EVENTS = [
     id: "event-jms-spirit-wear",
     g: "jms",
     d: "2026-10-01",
+    to: "2026-10-01",
     label: "Oct 1",
     k: "Deadline",
     t: "Jolliff Orchestra Spirit Wear Order Deadline",
@@ -954,10 +975,10 @@ const EVENTS = [
         8th grade students.
       </p>
       <p>
-        Orders must be submitted using a paper order
-        form with <strong>cash or check</strong>.
-        Electronic ordering and Givebacks are not
-        available for spirit wear.
+        Orders must be submitted using the paper
+        order form with <strong>cash or check</strong>.
+        Electronic ordering and Givebacks are
+        not available for spirit wear.
       </p>
       <p>
         <a href="fundraising.html#spirit-wear">
@@ -971,6 +992,7 @@ const EVENTS = [
     id: "event-jms-jr-district-audition",
     g: "jms",
     d: "2026-10-24",
+    to: "2026-10-24",
     label: "Oct 24",
     k: "Audition",
     t: "Jr. District Audition",
@@ -991,6 +1013,7 @@ const EVENTS = [
     id: "event-jms-fall-concert",
     g: "jms",
     d: "2026-10-27",
+    to: "2026-10-27",
     label: "Oct 27",
     k: "Concert",
     t: "Fall Concert",
@@ -1009,6 +1032,7 @@ const EVENTS = [
     id: "event-jms-va-arts",
     g: "jms",
     d: "2026-11-19",
+    to: "2026-11-19",
     label: "Nov 19",
     k: "Performance",
     t: "VA Arts Festival Quartet Performance",
@@ -1027,6 +1051,7 @@ const EVENTS = [
     id: "event-jms-winter",
     g: "jms",
     d: "2026-12-10",
+    to: "2026-12-10",
     label: "Dec 10",
     k: "Concert",
     t: "Winter Concert",
@@ -1050,6 +1075,7 @@ const EVENTS = [
     id: "event-jms-jr-district-event",
     g: "jms",
     d: "2027-01-15",
+    to: "2027-01-15",
     label: "Jan 15",
     k: "District Event",
     t: "Jr. District Event",
@@ -1068,7 +1094,7 @@ const EVENTS = [
     id: "event-jms-rising-sixth",
     g: "jms",
     d: "2027-01-20",
-    end: "2027-01-21",
+    to: "2027-01-21",
     label: "Jan 20-21",
     k: "Performance",
     t: "Rising 6th Grade Performances",
@@ -1080,7 +1106,9 @@ const EVENTS = [
           and Thursday, January 21, 2027
         </strong>
       </p>
-      <p>8th Grade* (TBD with select 7th grade students)</p>
+      <p>
+        8th Grade* (TBD with select 7th grade students)
+      </p>
       <p><strong>Location:</strong> Jolliff Middle School</p>
       <p><strong>Report:</strong> 9:50 AM, released from class</p>
       <p><strong>Performance:</strong> Approximately 10:45 AM</p>
@@ -1093,6 +1121,7 @@ const EVENTS = [
     id: "event-jms-preassessment",
     g: "jms",
     d: "2027-03-10",
+    to: "2027-03-10",
     label: "Mar 10",
     k: "Concert",
     t: "Pre-Assessment Concert",
@@ -1111,7 +1140,7 @@ const EVENTS = [
     id: "event-jms-state-assessment",
     g: "jms",
     d: "2027-03-16",
-    end: "2027-03-18",
+    to: "2027-03-18",
     label: "Mar 16-18",
     k: "Assessment",
     t: "State Assessment Performance",
@@ -1132,6 +1161,7 @@ const EVENTS = [
     id: "event-jms-miosm",
     g: "jms",
     d: "2027-03-25",
+    to: "2027-03-25",
     label: "Mar 25",
     k: "Performance",
     t: "Music In Our Schools Month Concert",
@@ -1150,6 +1180,7 @@ const EVENTS = [
     id: "event-jms-all-city",
     g: "jms",
     d: "2027-04-23",
+    to: "2027-04-23",
     label: "Apr 23",
     k: "All-City",
     t: "All-City Event",
@@ -1168,6 +1199,7 @@ const EVENTS = [
     id: "event-jms-spring-seven",
     g: "jms",
     d: "2027-05-04",
+    to: "2027-05-04",
     label: "May 4",
     k: "Concert",
     t: "Spring Concert - 7th Grade",
@@ -1186,6 +1218,7 @@ const EVENTS = [
     id: "event-jms-spring-six-eight",
     g: "jms",
     d: "2027-05-05",
+    to: "2027-05-05",
     label: "May 5",
     k: "Concert",
     t: "Spring Concert - 6th & 8th Grade",
@@ -1208,6 +1241,7 @@ const EVENTS = [
     id: "event-jms-music-parks",
     g: "jms",
     d: "2027-06-05",
+    to: "2027-06-05",
     label: "Jun 5",
     k: "Performance / Trip",
     t: "Music In The Parks Performance",
@@ -1233,6 +1267,7 @@ const EVENTS = [
     id: "event-community-vso",
     g: "community",
     d: "2026-10-04",
+    to: "2026-10-04",
     label: "Oct 4",
     k: "Free Community Event",
     t: "CommUNITY Play-In & Sing-Along",
@@ -1270,6 +1305,7 @@ const EVENTS = [
     id: "event-wbopa-flower-deadline",
     g: "community",
     d: "2026-10-06",
+    to: "2026-10-06",
     label: "Oct 6",
     k: "Fundraiser",
     t: "Fall Flower Sale Order Deadline",
@@ -1297,6 +1333,7 @@ const EVENTS = [
     id: "event-wbopa-red-robin",
     g: "community",
     d: "2026-10-07",
+    to: "2026-10-07",
     label: "Oct 7",
     k: "Fundraiser",
     t: "Red Robin Giveback Fundraiser",
@@ -1335,6 +1372,7 @@ const EVENTS = [
     id: "event-wbopa-october-meeting",
     g: "community",
     d: "2026-10-08",
+    to: "2026-10-08",
     label: "Oct 8",
     k: "Meeting",
     t: "WBOPA Monthly Meeting",
@@ -1360,6 +1398,7 @@ const EVENTS = [
     id: "event-wbopa-flower-pickup",
     g: "community",
     d: "2026-10-10",
+    to: "2026-10-10",
     label: "Oct 10",
     k: "Fundraiser / Volunteer",
     t: "Fall Flower Sale Pickup & Volunteer Day",
@@ -1394,6 +1433,7 @@ const EVENTS = [
     id: "event-wbopa-november-meeting",
     g: "community",
     d: "2026-11-12",
+    to: "2026-11-12",
     label: "Nov 12",
     k: "Meeting",
     t: "WBOPA Monthly Meeting",
@@ -1417,497 +1457,396 @@ const EVENTS = [
 
 ];
 
-
 /* =========================================
-   DATE FUNCTIONS
-========================================= */
+   AUTOMATIC UPCOMING LISTS AND ARCHIVES
+   ========================================= */
 
-function parseCalendarDate(value) {
-  const parts = value.split("-").map(Number);
-  return new Date(parts[0], parts[1] - 1, parts[2]);
-}
+(function () {
 
-const today = new Date();
+  // HANDLE DATES IN LOCAL TIME
 
-today.setHours(0, 0, 0, 0);
-
-const events = EVENTS.map(function(event) {
-  return {
-    ...event,
-    start: parseCalendarDate(event.d),
-    finish: parseCalendarDate(event.end || event.d)
-  };
-}).sort(function(a, b) {
-  return a.start - b.start;
-});
-
-const upcoming = events.filter(function(event) {
-  return event.finish >= today;
-});
-
-const past = events.filter(function(event) {
-  return event.finish < today;
-});
-
-
-/* =========================================
-   EVENT CARD CREATION
-========================================= */
-
-function getEventSchool(event) {
-
-  if (event.g === "wbhs") {
-    return "Western Branch High School";
+  function localDate(s) {
+    const p = s.split("-").map(Number);
+    return new Date(p[0], p[1] - 1, p[2]);
   }
 
-  if (event.g === "jms") {
-    return "Jolliff Middle School";
-  }
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
-  if (event.id === "event-community-vso") {
-    return "Virginia Symphony Orchestra";
-  }
-
-  return "WBOPA";
-}
-
-function getEventTarget(event) {
-
-  if (event.g === "wbhs") {
-    return "wbhsList";
-  }
-
-  if (event.g === "jms") {
-    return "jmsList";
-  }
-
-  if (event.id === "event-community-vso") {
-    return "vsoList";
-  }
-
-  return "wbopaList";
-}
-
-function makeEventCard(event) {
-
-  const card = document.createElement("article");
-
-  card.id = event.id;
-  card.className = "event-card";
-
-  const dateParts = event.label.split(" ");
-  const month = dateParts[0];
-  const day = dateParts.slice(1).join(" ");
-
-  card.innerHTML = `
-    <div class="event-date-box">
-
-      <span class="month">${month}</span>
-      <span class="day">${day}</span>
-
-    </div>
-
-    <div class="event-details">
-
-      <span class="event-school">
-        ${getEventSchool(event)}
-      </span>
-
-      <p class="card-label">${event.k}</p>
-
-      <h3>${event.t}</h3>
-
-      ${event.details}
-
-    </div>
-  `;
-
-  return card;
-}
-
-
-/* =========================================
-   BUILD UPCOMING EVENT LISTS
-========================================= */
-
-function buildUpcomingLists() {
-
-  upcoming.forEach(function(event) {
-
-    const target = document.getElementById(
-      getEventTarget(event)
-    );
-
-    if (target) {
-      target.appendChild(makeEventCard(event));
-    }
-
-  });
-
-}
-
-
-/* =========================================
-   PAST EVENT ARCHIVES
-========================================= */
-
-function createArchive(group, sectionId, groupLabel) {
-
-  const section = document.getElementById(sectionId);
-
-  if (!section) return;
-
-  const groupPast = past.filter(function(event) {
-    return event.g === group;
+  const events = EVENTS.map(function(e) {
+    return {
+      ...e,
+      start: localDate(e.d),
+      finish: localDate(e.to || e.d)
+    };
   }).sort(function(a, b) {
-    return b.finish - a.finish;
+    return a.start - b.start;
   });
 
-  if (groupPast.length > 0) {
+  const upcoming = events.filter(function(e) {
+    return e.finish >= today;
+  });
 
-    const controls = document.createElement("div");
-    controls.className = "past-event-controls";
+  const past = events.filter(function(e) {
+    return e.finish < today;
+  });
 
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "past-events-toggle";
-    button.id = group + "-past-toggle";
+  // IDENTIFY PROGRAM
 
-    const panel = document.createElement("div");
-    panel.id = group + "-past-archive";
-    panel.className = "past-event-archive";
-    panel.hidden = true;
-
-    button.setAttribute("aria-controls", panel.id);
-
-    const heading = document.createElement("h3");
-    heading.className = "archive-heading";
-    heading.textContent = "Past " + groupLabel + " Events";
-
-    const description = document.createElement("p");
-    description.className = "archive-description";
-    description.textContent =
-      "Previous events are listed with the most recent first.";
-
-    const archiveList = document.createElement("div");
-    archiveList.className = "event-list";
-
-    groupPast.forEach(function(event) {
-      archiveList.appendChild(makeEventCard(event));
-    });
-
-    panel.appendChild(heading);
-    panel.appendChild(description);
-    panel.appendChild(archiveList);
-
-    function setArchiveOpen(open) {
-
-      panel.hidden = !open;
-
-      button.setAttribute(
-        "aria-expanded",
-        String(open)
-      );
-
-      button.innerHTML = open
-        ? "&#9652; Hide Past Events (" + groupPast.length + ")"
-        : "&#9662; Show Past Events (" + groupPast.length + ")";
-
-    }
-
-    setArchiveOpen(false);
-
-    button.addEventListener("click", function() {
-      setArchiveOpen(panel.hidden);
-    });
-
-    controls.appendChild(button);
-    controls.appendChild(panel);
-    section.appendChild(controls);
-
+  function program(e) {
+    if (e.g === "wbhs") return "wbhs";
+    if (e.g === "jms") return "jms";
+    if (e.id === "event-community-vso") return "vso";
+    return "wbopa";
   }
 
-  const backLink = document.createElement("a");
-  backLink.href = "#calendar-top";
-  backLink.className = "calendar-back-to-top";
-  backLink.textContent = "Back to calendar navigation";
-
-  section.appendChild(backLink);
-
-}
-
-
-/* =========================================
-   EMPTY EVENT MESSAGES
-========================================= */
-
-function addEmptyMessage(containerId, messageText) {
-
-  const container = document.getElementById(containerId);
-
-  if (!container) return;
-
-  if (container.children.length === 0) {
-
-    const message = document.createElement("p");
-    message.className = "calendar-empty-note";
-    message.textContent = messageText;
-
-    container.appendChild(message);
-
+  function school(e) {
+    if (e.g === "wbhs") return "Western Branch High School";
+    if (e.g === "jms") return "Jolliff Middle School";
+    if (program(e) === "vso") return "Virginia Symphony Orchestra";
+    return "WBOPA";
   }
 
-}
+  // CREATE FULL EVENT CARDS
 
+  function card(e) {
 
-/* =========================================
-   UPCOMING AT A GLANCE
-========================================= */
+    const article = document.createElement("article");
+    const dateParts = e.label.split(" ");
 
-function buildGlance() {
+    article.id = e.id;
+    article.className = "event-card";
 
-  const grid = document.getElementById("glanceGrid");
-
-  grid.innerHTML = "";
-
-  const nextSix = upcoming.slice(0, 6);
-
-  if (nextSix.length === 0) {
-
-    grid.innerHTML =
-      "<p>No additional upcoming events are currently listed.</p>";
-
-    return;
-
-  }
-
-  nextSix.forEach(function(event) {
-
-    const card = document.createElement("article");
-    card.className = "glance-card";
-
-    const groupName =
-      event.g === "wbhs" ? "WBHS" :
-      event.g === "jms" ? "JMS" :
-      event.id === "event-community-vso" ?
-      "Community" : "WBOPA";
-
-    card.innerHTML = `
-      <div class="glance-card-date">
-        ${event.label}
+    article.innerHTML = `
+      <div class="event-date-box">
+        <span class="month">${dateParts[0]}</span>
+        <span class="day">${dateParts.slice(1).join(" ")}</span>
       </div>
 
-      <span class="glance-card-tag">
-        ${groupName}
-      </span>
-
-      <h3>${event.t}</h3>
-
-      <p>${event.short}</p>
-
-      <a href="#${event.id}">View Details</a>
+      <div class="event-details">
+        <span class="event-school">${school(e)}</span>
+        <p class="card-label">${e.k || "Free Community Event"}</p>
+        <h3>${e.t}</h3>
+        ${e.details}
+      </div>
     `;
 
-    grid.appendChild(card);
-
-  });
-
-}
-
-
-/* =========================================
-   UPCOMING EVENTS BY PROGRAM
-========================================= */
-
-function buildColumn(targetId, group, limit) {
-
-  const target = document.getElementById(targetId);
-
-  if (!target) return;
-
-  target.innerHTML = "";
-
-  const matches = upcoming.filter(function(event) {
-    return event.g === group;
-  }).slice(0, limit);
-
-  if (matches.length === 0) {
-
-    target.innerHTML =
-      '<p class="small-text">No upcoming events are currently listed.</p>';
-
-    return;
+    return article;
 
   }
 
-  matches.forEach(function(event) {
+  // BUILD EACH PROGRAM'S CALENDAR AND ARCHIVE
 
-    const item = document.createElement("div");
-    item.className = "compact-event";
+  function renderProgram(key, listId, sectionId, name) {
 
-    item.innerHTML = `
-      <span class="compact-event-date">
-        ${event.label}
-      </span>
+    const list = document.getElementById(listId);
+    const section = document.getElementById(sectionId);
 
-      <span class="compact-event-type">
-        ${event.k}
-      </span>
+    if (!list || !section) return;
 
-      <h3>${event.t}</h3>
+    const current = upcoming.filter(function(e) {
+      return program(e) === key;
+    });
 
-      <p>${event.short}</p>
+    const history = past.filter(function(e) {
+      return program(e) === key;
+    }).sort(function(a, b) {
+      return b.finish - a.finish;
+    });
 
-      <a href="#${event.id}">Details</a>
-    `;
+    // DISPLAY UPCOMING EVENTS
 
-    target.appendChild(item);
+    current.forEach(function(e) {
+      list.appendChild(card(e));
+    });
 
-  });
+    if (!current.length) {
 
-}
+      const p = document.createElement("p");
+      p.className = "calendar-empty-note";
 
+      p.textContent =
+        "No upcoming " + name + " events are currently listed.";
 
-/* =========================================
-   OPEN ARCHIVE FOR DIRECT EVENT LINKS
-========================================= */
+      list.appendChild(p);
 
-function revealLinkedPastEvent() {
+    }
 
-  if (!window.location.hash) return;
+    // CREATE HIDDEN ARCHIVE
 
-  let eventId;
+    if (history.length) {
 
-  try {
+      const controls = document.createElement("div");
+      controls.className = "past-event-controls";
 
-    eventId = decodeURIComponent(
-      window.location.hash.slice(1)
-    );
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "past-events-toggle";
+      button.id = key + "-past-toggle";
 
-  } catch (error) {
+      button.setAttribute(
+        "aria-controls",
+        key + "-past-archive"
+      );
 
-    return;
+      const archive = document.createElement("div");
+      archive.id = key + "-past-archive";
+      archive.className = "past-event-archive";
+      archive.hidden = true;
+
+      archive.innerHTML = `
+        <h3>Past ${name} Events</h3>
+        <p>Most recent events appear first.</p>
+      `;
+
+      const archivedList = document.createElement("div");
+      archivedList.className = "event-list";
+
+      history.forEach(function(e) {
+        archivedList.appendChild(card(e));
+      });
+
+      archive.appendChild(archivedList);
+
+      // SHOW OR HIDE ARCHIVE
+
+      function toggle(open) {
+
+        archive.hidden = !open;
+
+        button.setAttribute(
+          "aria-expanded",
+          String(open)
+        );
+
+        button.textContent =
+          (open ? "▲ Hide" : "▼ Show") +
+          " Past Events (" + history.length + ")";
+
+      }
+
+      toggle(false);
+
+      button.addEventListener("click", function() {
+        toggle(archive.hidden);
+      });
+
+      controls.append(button, archive);
+
+      list.insertAdjacentElement(
+        "afterend",
+        controls
+      );
+
+    }
+
+    // BACK TO TOP LINK
+
+    const top = document.createElement("a");
+
+    top.href = "#calendar-top";
+    top.className = "calendar-back-to-top";
+    top.textContent = "Back to calendar navigation";
+
+    section.appendChild(top);
 
   }
 
-  const event = past.find(function(item) {
-    return item.id === eventId;
-  });
+  // INITIALIZE ALL PROGRAMS
 
-  if (!event) return;
-
-  const panel = document.getElementById(
-    event.g + "-past-archive"
+  renderProgram(
+    "wbhs",
+    "wbhsList",
+    "wbhs-details",
+    "WBHS"
   );
 
-  const button = document.getElementById(
-    event.g + "-past-toggle"
+  renderProgram(
+    "jms",
+    "jmsList",
+    "jms-details",
+    "JMS"
   );
 
-  if (!panel || !button) return;
+  renderProgram(
+    "vso",
+    "vsoList",
+    "beyond-school",
+    "Community"
+  );
 
-  if (panel.hidden) {
-    button.click();
-  }
+  renderProgram(
+    "wbopa",
+    "wbopaList",
+    "wbopa-events",
+    "WBOPA"
+  );
 
-  const card = document.getElementById(eventId);
+  // UPCOMING AT A GLANCE
 
-  if (card) {
+  const glance = document.getElementById("glanceGrid");
 
-    window.requestAnimationFrame(function() {
-      card.scrollIntoView({block: "start"});
+  if (glance) {
+
+    if (!upcoming.length) {
+      glance.textContent =
+        "No upcoming events are currently listed.";
+    }
+
+    upcoming.slice(0, 6).forEach(function(e) {
+
+      const item = document.createElement("article");
+      item.className = "glance-card";
+
+      const groupName =
+        e.g === "wbhs" ? "WBHS" :
+        e.g === "jms" ? "JMS" :
+        program(e) === "vso" ? "Community" :
+        "WBOPA";
+
+      item.innerHTML = `
+        <div class="glance-card-date">${e.label}</div>
+
+        <span class="glance-card-tag">
+          ${groupName}
+        </span>
+
+        <h3>${e.t}</h3>
+
+        <p>${e.short}</p>
+
+        <a href="#${e.id}">View Details</a>
+      `;
+
+      glance.appendChild(item);
+
     });
 
   }
 
-}
+  // PROGRAM QUICK REFERENCE COLUMNS
 
+  function column(id, group) {
 
-/* =========================================
-   INITIALIZE CALENDAR
-========================================= */
+    const target = document.getElementById(id);
 
-buildUpcomingLists();
+    if (!target) return;
 
-createArchive(
-  "wbhs",
-  "wbhs-details",
-  "WBHS"
-);
+    const items = upcoming.filter(function(e) {
+      return e.g === group;
+    }).slice(0, 5);
 
-createArchive(
-  "jms",
-  "jms-details",
-  "JMS"
-);
+    if (!items.length) {
+      target.textContent =
+        "No upcoming events are currently listed.";
+    }
 
-createArchive(
-  "community",
-  "community-details",
-  "WBOPA & Community"
-);
+    items.forEach(function(e) {
 
-addEmptyMessage(
-  "wbhsList",
-  "No upcoming high school events are currently listed."
-);
+      const item = document.createElement("div");
+      item.className = "compact-event";
 
-addEmptyMessage(
-  "jmsList",
-  "No upcoming middle school events are currently listed."
-);
+      item.innerHTML = `
+        <span class="compact-event-date">
+          ${e.label}
+        </span>
 
-addEmptyMessage(
-  "vsoList",
-  "No upcoming community performances are currently listed."
-);
+        <span class="compact-event-type">
+          ${e.k}
+        </span>
 
-addEmptyMessage(
-  "wbopaList",
-  "No upcoming WBOPA meetings or fundraisers are currently listed."
-);
+        <h3>${e.t}</h3>
 
-buildGlance();
+        <p>${e.short}</p>
 
-buildColumn("wbhsUpcoming", "wbhs", 5);
-buildColumn("jmsUpcoming", "jms", 5);
-buildColumn("communityUpcoming", "community", 5);
+        <a href="#${e.id}">Details</a>
+      `;
 
-window.addEventListener(
-  "hashchange",
-  revealLinkedPastEvent
-);
+      target.appendChild(item);
 
-revealLinkedPastEvent();
+    });
 
+  }
 
-/* =========================================
-   STICKY NAVIGATION HEIGHT ADJUSTMENT
-========================================= */
+  column("wbhsUpcoming", "wbhs");
+  column("jmsUpcoming", "jms");
+  column("communityUpcoming", "community");
 
-(function() {
+  // OPEN ARCHIVE WHEN LINKING TO AN OLD EVENT
+
+  function openPastLink() {
+
+    let id;
+
+    try {
+      id = decodeURIComponent(location.hash.slice(1));
+    } catch (e) {
+      return;
+    }
+
+    const found = past.find(function(e) {
+      return e.id === id;
+    });
+
+    if (!found) return;
+
+    const key = program(found);
+
+    const panel = document.getElementById(
+      key + "-past-archive"
+    );
+
+    const button = document.getElementById(
+      key + "-past-toggle"
+    );
+
+    if (panel && button && panel.hidden) {
+      button.click();
+    }
+
+    requestAnimationFrame(function() {
+
+      const element = document.getElementById(id);
+
+      if (element) {
+        element.scrollIntoView({
+          block: "start"
+        });
+      }
+
+    });
+
+  }
+
+  window.addEventListener(
+    "hashchange",
+    openPastLink
+  );
+
+  openPastLink();
+
+  // ADJUST JUMP BAR HEIGHT FOR MOBILE
 
   const bar = document.querySelector(".calendar-jump-bar");
 
-  if (!bar) return;
+  if (bar) {
 
-  function updateJumpHeight() {
+    function sizeBar() {
 
-    document.documentElement.style.setProperty(
-      "--calendar-jump-height",
-      bar.getBoundingClientRect().height + "px"
-    );
+      document.documentElement.style.setProperty(
+        "--calendar-jump-height",
+        bar.getBoundingClientRect().height + "px"
+      );
 
-  }
+    }
 
-  updateJumpHeight();
+    sizeBar();
 
-  window.addEventListener("resize", updateJumpHeight);
-  window.addEventListener("load", updateJumpHeight);
+    window.addEventListener("resize", sizeBar);
 
-  if ("ResizeObserver" in window) {
-
-    new ResizeObserver(updateJumpHeight).observe(bar);
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(sizeBar).observe(bar);
+    }
 
   }
 
