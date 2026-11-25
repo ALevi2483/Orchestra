@@ -110,7 +110,7 @@ body > .calendar-jump-bar a:focus-visible,
   outline-offset: 2px;
 }
 
-/* PREVENT JUMP BAR FROM COVERING HEADINGS */
+/* PREVENT STICKY NAV FROM COVERING HEADINGS */
 
 #wbhs-details,
 #jms-details,
@@ -333,6 +333,73 @@ body > .calendar-jump-bar a:focus-visible,
   display: inline-block;
   margin-top: 20px;
   font-weight: 700;
+}
+
+/* EXPANDABLE CONCERT INSTRUCTIONS */
+
+.winter-concert-notice {
+  margin: 16px 0;
+  padding: 13px 16px;
+  background: #f4f6f9;
+  border-left: 4px solid #f5b942;
+  border-radius: 6px;
+}
+
+.winter-concert-notice p:last-child {
+  margin-bottom: 0;
+}
+
+.concert-report-list {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.concert-report-list li {
+  margin-bottom: 5px;
+}
+
+.event-instructions {
+  margin: 18px 0 8px;
+  border: 1px solid #aab8c5;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.event-instructions summary {
+  padding: 13px 16px;
+  background: #16324f;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+  list-style-position: inside;
+}
+
+.event-instructions summary:hover,
+.event-instructions summary:focus-visible {
+  background: #234966;
+}
+
+.event-instructions summary:focus-visible {
+  outline: 3px solid #f5b942;
+  outline-offset: -3px;
+}
+
+.event-instructions-body {
+  padding: 16px 18px;
+}
+
+.event-instructions-body h4 {
+  margin: 16px 0 6px;
+  color: #16324f;
+}
+
+.event-instructions-body h4:first-child {
+  margin-top: 0;
+}
+
+.event-instructions-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* TABLET */
@@ -1047,6 +1114,8 @@ const EVENTS = [
     `
   },
 
+  /* UPDATED DECEMBER 10 WINTER CONCERT */
+
   {
     id: "event-jms-winter",
     g: "jms",
@@ -1055,19 +1124,159 @@ const EVENTS = [
     label: "Dec 10",
     k: "Concert",
     t: "Winter Concert",
-    short: "6th*, 7th* & 8th* Grade • 7:30 PM",
+    short: "6th*, 7th* & 8th* • 7:30 PM • Jolliff Auditorium",
     details: `
-      <p><strong>Thursday, December 10, 2026</strong></p>
-      <p>6th*, 7th* and 8th* Grade</p>
-      <p><strong>Location:</strong> Jolliff Middle School</p>
+
       <p>
-        <strong>Report Times:</strong><br>
-        6th Grade: by 7:10 PM<br>
-        7th Grade: by 6:40 PM<br>
-        8th Grade: by 6:50 PM
+        <strong>Thursday, December 10, 2026</strong>
       </p>
-      <p><strong>Performance:</strong> 7:30 PM</p>
-      <p><strong>Attire:</strong> ${FORMAL}</p>
+
+      <p>
+        <strong>Grades:</strong>
+        6th*, 7th* and 8th* (required performance)
+      </p>
+
+      <p>
+        <strong>Location:</strong>
+        Jolliff Middle School Auditorium
+      </p>
+
+      <p>
+        <strong>Performance:</strong> 7:30 PM
+      </p>
+
+      <div class="winter-concert-notice">
+
+        <strong>Student Report Times and Rooms:</strong>
+
+        <ul class="concert-report-list">
+
+          <li>
+            <strong>6th Grade:</strong>
+            By 7:10 PM, Orchestra Room
+          </li>
+
+          <li>
+            <strong>7th Grade:</strong>
+            By 6:40 PM, Chorus Room
+          </li>
+
+          <li>
+            <strong>8th Grade:</strong>
+            By 6:50 PM, Band Room
+          </li>
+
+        </ul>
+
+        <p>
+          <strong>Arrival:</strong>
+          Please do not arrive before 6:30 PM
+          unless accompanying a parent
+          volunteering for Mrs. Rose.
+        </p>
+
+      </div>
+
+      <p>
+        <strong>Attire:</strong> ${FORMAL}
+      </p>
+
+      <details class="event-instructions">
+
+        <summary>
+          Student &amp; Parent Instructions
+        </summary>
+
+        <div class="event-instructions-body">
+
+          <h4>Attendance</h4>
+
+          <p>
+            Participation is expected under the
+            <a
+              href="https://docs.google.com/document/d/1X-eu34mQdecRtrc6mlpTvvafs2Cte9ODCtU2_crjRuU/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer">
+              CPS Music Performance Attendance Policy
+            </a>.
+            Students are expected to remain for
+            the entire concert and show appropriate
+            concert etiquette as audience members.
+          </p>
+
+          <p>
+            Parents or guardians should contact
+            Mrs. Rose immediately about any
+            attendance concerns.
+          </p>
+
+          <h4>Instrument Instructions</h4>
+
+          <p>
+            Students may leave violins, violas,
+            home cellos, and home basses in the
+            orchestra room between the end of
+            the school day and the concert.
+          </p>
+
+          <p>
+            Personal instruments must be taken
+            home after the concert and do not
+            need to be brought back the
+            following school day.
+          </p>
+
+          <p>
+            Cello and bass students may use their
+            preferred school or home instrument
+            for the concert.
+          </p>
+
+          <p>
+            Students may bring their home instrument
+            for tuning and inspection before the
+            concert even if they plan to use
+            a school instrument onstage.
+          </p>
+
+          <h4>Grading and Concert Etiquette</h4>
+
+          <p>
+            The concert counts as a lab grade.
+            To receive full credit, students
+            must arrive on time, wear the required
+            performance attire, have all materials,
+            and follow appropriate concert etiquette.
+          </p>
+
+          <p>
+            Students must not use electronic devices
+            during any part of the concert.
+          </p>
+
+          <p>
+            Refer to Mrs. Rosenberg's concert
+            notice for the complete grading
+            and etiquette guidance.
+          </p>
+
+          <h4>Valuables</h4>
+
+          <p>
+            Do not leave valuables in changing
+            areas. These rooms will not be
+            locked during the concert.
+          </p>
+
+          <p>
+            The school district is not responsible
+            for lost or stolen items.
+          </p>
+
+        </div>
+
+      </details>
+
     `
   },
 
