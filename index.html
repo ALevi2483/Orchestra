@@ -33,6 +33,7 @@
 <link rel="stylesheet" href="css/style.css">
 
 <style>
+
 /* HOMEPAGE UPCOMING EVENTS */
 
 .home-upcoming-grid {
@@ -212,6 +213,93 @@
     box-sizing: border-box;
   }
 }
+
+/* FEATURED JOLLIFF WINTER CONCERT */
+
+.home-concert-feature {
+  background: #f4f6f9;
+  border-top: 1px solid #dfe5ea;
+  border-bottom: 1px solid #dfe5ea;
+  padding: 32px 0;
+}
+
+.home-concert-feature[hidden] {
+  display: none !important;
+}
+
+.home-concert-panel {
+  background: #fff;
+  border-left: 5px solid #d6aa4b;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0,0,0,.08);
+  padding: 24px;
+}
+
+.home-concert-panel h2 {
+  margin: 6px 0 10px;
+  color: #16324f;
+}
+
+.home-concert-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 16px 0;
+}
+
+.home-concert-facts p {
+  margin: 0;
+}
+
+.home-concert-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.home-concert-actions a {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 7px;
+  padding: 11px 16px;
+  font-weight: 700;
+}
+
+.home-concert-actions .home-primary {
+  background: #16324f;
+  color: #fff;
+}
+
+.home-concert-actions .home-secondary {
+  border: 1px solid #16324f;
+  color: #16324f;
+  background: #fff;
+}
+
+.home-concert-actions a:focus-visible {
+  outline: 3px solid #d6aa4b;
+  outline-offset: 3px;
+}
+
+@media(max-width:650px) {
+  .home-concert-feature {
+    padding: 20px 0;
+  }
+
+  .home-concert-panel {
+    padding: 18px;
+  }
+
+  .home-concert-actions {
+    flex-direction: column;
+  }
+
+  .home-concert-actions a {
+    text-align: center;
+  }
+}
+
 </style>
 </head>
 
@@ -282,6 +370,75 @@
         src="images/cover-orchestra.jpg"
         alt="Western Branch orchestra students performing together"
         loading="eager">
+    </div>
+
+  </div>
+</section>
+
+<!-- JOLLIFF WINTER CONCERT SPOTLIGHT -->
+
+<section
+  id="jms-winter-spotlight"
+  class="home-concert-feature"
+  hidden
+  aria-labelledby="home-winter-title">
+
+  <div class="container">
+
+    <div class="home-concert-panel">
+
+      <p class="card-label">
+        Upcoming Required Performance | Jolliff Middle School
+      </p>
+
+      <h2 id="home-winter-title">
+        Jolliff Orchestra Winter Concert
+      </h2>
+
+      <div class="home-concert-facts">
+
+        <p>
+          <strong>Thursday, December 10, 2026</strong>
+        </p>
+
+        <p>
+          <strong>7:30 PM</strong>
+        </p>
+
+        <p>Jolliff Middle School Auditorium</p>
+
+      </div>
+
+      <p>
+        <strong>Student report times:</strong>
+        6th grade by 7:10 PM (Orchestra Room);
+        7th grade by 6:40 PM (Chorus Room);
+        8th grade by 6:50 PM (Band Room).
+      </p>
+
+      <p class="small-text">
+        Students should not arrive before 6:30 PM unless
+        accompanying a parent volunteering for Mrs. Rose.
+        Formal performance attire and attendance
+        requirements apply.
+      </p>
+
+      <div class="home-concert-actions">
+
+        <a
+          class="home-primary"
+          href="calendar.html#event-jms-winter">
+          Concert Details &amp; Parent Instructions
+        </a>
+
+        <a
+          class="home-secondary"
+          href="students.html#jms-winter-title">
+          Student Resources
+        </a>
+
+      </div>
+
     </div>
 
   </div>
@@ -418,6 +575,7 @@
     <div class="section-heading">
       <p class="card-label">Next on the Calendar</p>
       <h2>What's Coming Up</h2>
+
       <p>
         The next four upcoming events are automatically pulled from the orchestra calendar.
       </p>
@@ -458,6 +616,7 @@
     <div class="section-heading">
       <p class="card-label">Our Programs</p>
       <h2>Our Orchestras</h2>
+
       <p>
         Supporting orchestra education throughout the Western Branch community.
       </p>
@@ -468,10 +627,12 @@
       <article class="card">
         <p class="card-label">High School</p>
         <h3>Western Branch High School</h3>
+
         <p>
           Learn about the WBHS orchestra program, ensembles,
           performances, and opportunities for student musicians.
         </p>
+
         <a href="about.html#wbhs">
           Explore WBHS Orchestra
         </a>
@@ -480,10 +641,12 @@
       <article class="card">
         <p class="card-label">Middle School</p>
         <h3>Jolliff Middle School</h3>
+
         <p>
           Learn about the Jolliff orchestra program, performances,
           and opportunities for developing student musicians.
         </p>
+
         <a href="about.html#jolliff">
           Explore Jolliff Orchestra
         </a>
@@ -566,51 +729,182 @@
 <script src="js/script.js"></script>
 
 <script>
-/* AUTOMATIC HOMEPAGE UPCOMING EVENTS */
+
+/* AUTOMATIC HOMEPAGE UPCOMING EVENTS
+   Read public calendar metadata without
+   executing JavaScript from the fetched page. */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const upcomingContainer =
-    document.getElementById("homeUpcoming");
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
-  if (!upcomingContainer) {
-    return;
-  }
-
-  function parseCalendarDate(value) {
-
-    if (!value) {
-      return new Date(NaN);
-    }
-
+  function localDate(value) {
     const parts = value.split("-").map(Number);
+    return new Date(parts[0], parts[1] - 1, parts[2]);
+  }
 
-    if (parts.length !== 3) {
-      return new Date(NaN);
+  // HIDE THE WINTER CONCERT SPOTLIGHT AFTER DECEMBER 10
+
+  const spotlight = document.getElementById(
+    "jms-winter-spotlight"
+  );
+
+  if (spotlight && today <= localDate("2026-12-10")) {
+    spotlight.hidden = false;
+  }
+
+  const container = document.getElementById(
+    "homeUpcoming"
+  );
+
+  if (!container) return;
+
+  // FALLBACK MESSAGE
+
+  function showMessage(title, message) {
+
+    container.replaceChildren();
+
+    const card = document.createElement("article");
+    card.className = "card home-upcoming-card";
+
+    const heading = document.createElement("h3");
+    heading.textContent = title;
+
+    const paragraph = document.createElement("p");
+    paragraph.textContent = message;
+
+    const link = document.createElement("a");
+    link.href = "calendar.html";
+    link.textContent = "View Full Calendar";
+
+    card.append(heading, paragraph, link);
+    container.appendChild(card);
+  }
+
+  // READ EVENTS FROM CALENDAR.HTML
+
+  function readCalendarEvents(html) {
+
+    const calendarDocument = new DOMParser()
+      .parseFromString(html, "text/html");
+
+    // SUPPORT CALENDARS WITH HTML DATA ATTRIBUTES
+
+    const htmlEvents = Array.from(
+      calendarDocument.querySelectorAll(
+        "[data-calendar-event]"
+      )
+    );
+
+    if (htmlEvents.length) {
+
+      return htmlEvents.map(function (node) {
+
+        const heading = node.querySelector("h3");
+
+        return {
+          id: node.id,
+          group: node.dataset.group || "",
+          start: node.dataset.date || "",
+          finish: node.dataset.end || node.dataset.date || "",
+          label: node.dataset.dateDisplay || node.dataset.label || "",
+          type: node.dataset.type || "",
+          title: heading
+            ? heading.textContent.trim()
+            : "Calendar Event",
+          short: node.dataset.short || ""
+        };
+
+      });
+
     }
 
-    return new Date(
-      parts[0],
-      parts[1] - 1,
-      parts[2]
-    );
+    // READ THE EVENTS ARRAY IN THE CURRENT CALENDAR
+
+    const script = Array.from(
+      calendarDocument.querySelectorAll(
+        "script:not([src])"
+      )
+    )
+    .map(function (element) {
+      return element.textContent;
+    })
+    .find(function (contents) {
+      return /const\s+EVENTS\s*=\s*\[/.test(contents);
+    });
+
+    if (!script) return [];
+
+    // EXTRACT EVENT FIELDS WITHOUT EVAL()
+
+    const eventPattern = /\{\s*id:\s*"([^"]+)",\s*g:\s*"([^"]+)",\s*d:\s*"(\d{4}-\d{2}-\d{2})",\s*(?:to|end):\s*"(\d{4}-\d{2}-\d{2})",\s*label:\s*"([^"]*)",\s*k:\s*"([^"]*)",\s*t:\s*"([^"]*)",\s*short:\s*"([^"]*)"/g;
+
+    const results = [];
+    let match;
+
+    while ((match = eventPattern.exec(script)) !== null) {
+
+      results.push({
+        id: match[1],
+        group: match[2],
+        start: match[3],
+        finish: match[4],
+        label: match[5],
+        type: match[6],
+        title: match[7],
+        short: match[8]
+      });
+
+    }
+
+    return results;
   }
 
-  function showCalendarFallback() {
+  // CREATE UPCOMING EVENT CARD
 
-    upcomingContainer.innerHTML = `
-      <article class="card home-upcoming-card">
-        <p class="card-label">Orchestra Calendar</p>
-        <h3>See What's Coming Up</h3>
-        <p>
-          Visit the calendar for upcoming concerts,
-          performances, meetings, fundraisers,
-          deadlines, and community opportunities.
-        </p>
-        <a href="calendar.html">View Full Calendar</a>
-      </article>
-    `;
+  function renderEvent(event) {
+
+    const card = document.createElement("article");
+    card.className = "card home-upcoming-card";
+
+    const groupName =
+      event.group === "wbhs" ? "WBHS" :
+      event.group === "jms" ? "JMS" :
+      event.id === "event-community-vso" ?
+      "Community" : "WBOPA";
+
+    const label = document.createElement("p");
+    label.className = "card-label";
+    label.textContent = groupName + " | " + event.type;
+
+    const date = document.createElement("span");
+    date.className = "home-upcoming-date";
+
+    date.textContent =
+      event.label + ", " +
+      localDate(event.start).getFullYear();
+
+    const heading = document.createElement("h3");
+    heading.textContent = event.title;
+
+    const details = document.createElement("p");
+    details.textContent = event.short;
+
+    const link = document.createElement("a");
+
+    link.href =
+      "calendar.html#" + encodeURIComponent(event.id);
+
+    link.textContent = "View Details";
+
+    card.append(label, date, heading, details, link);
+
+    return card;
   }
+
+  // FETCH CURRENT CALENDAR
 
   fetch("calendar.html", {
     cache: "no-store"
@@ -619,126 +913,70 @@ document.addEventListener("DOMContentLoaded", function () {
   .then(function (response) {
 
     if (!response.ok) {
-      throw new Error("Calendar could not be loaded.");
+      throw new Error("Calendar unavailable");
     }
 
     return response.text();
+
   })
 
-  .then(function (calendarHtml) {
+  .then(function (html) {
 
-    const parser = new DOMParser();
+    const events = readCalendarEvents(html);
 
-    const calendarDocument =
-      parser.parseFromString(
-        calendarHtml,
-        "text/html"
+    if (!events.length) {
+
+      showMessage(
+        "Visit Our Calendar",
+        "Upcoming event details are available on the full orchestra calendar."
       );
-
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-
-    const eventCards = Array.from(
-      calendarDocument.querySelectorAll(
-        "[data-calendar-event]"
-      )
-    );
-
-    const upcomingEvents = eventCards
-
-      .map(function (card) {
-
-        const startDate =
-          parseCalendarDate(card.dataset.date);
-
-        const endDate =
-          parseCalendarDate(
-            card.dataset.end || card.dataset.date
-          );
-
-        const heading = card.querySelector("h3");
-
-        return {
-          id: card.id,
-          title: heading
-            ? heading.textContent.trim()
-            : "Calendar Event",
-          start: startDate,
-          end: endDate,
-          label: card.dataset.label || "",
-          type: card.dataset.type || "",
-          dateDisplay: card.dataset.dateDisplay || "",
-          short: card.dataset.short || ""
-        };
-      })
-
-      .filter(function (event) {
-        return !isNaN(event.end.getTime()) &&
-               event.end >= today;
-      })
-
-      .sort(function (a, b) {
-        return a.start - b.start;
-      })
-
-      .slice(0, 4);
-
-    upcomingContainer.innerHTML = "";
-
-    if (upcomingEvents.length === 0) {
-
-      upcomingContainer.innerHTML = `
-        <article class="card home-upcoming-card">
-          <p class="card-label">Calendar</p>
-          <h3>No Upcoming Events Listed</h3>
-          <p>
-            Additional events will be posted
-            as information becomes available.
-          </p>
-          <a href="calendar.html">View Full Calendar</a>
-        </article>
-      `;
 
       return;
     }
 
-    upcomingEvents.forEach(function (event) {
+    // REMOVE PAST EVENTS AND SORT UPCOMING EVENTS
 
-      const article = document.createElement("article");
+    const upcoming = events
 
-      article.className = "card home-upcoming-card";
+      .filter(function (event) {
+        return localDate(event.finish) >= today;
+      })
 
-      article.innerHTML = `
-        <p class="card-label">
-          ${event.label}${event.type ? " • " + event.type : ""}
-        </p>
+      .sort(function (a, b) {
+        return localDate(a.start) - localDate(b.start);
+      })
 
-        <span class="home-upcoming-date">
-          ${event.dateDisplay}
-        </span>
+      .slice(0, 4);
 
-        <h3>${event.title}</h3>
+    if (!upcoming.length) {
 
-        ${
-          event.short
-            ? `<p>${event.short}</p>`
-            : ""
-        }
+      showMessage(
+        "No Upcoming Events Listed",
+        "Additional events will be posted as information becomes available."
+      );
 
-        <a href="calendar.html#${event.id}">
-          View Details
-        </a>
-      `;
+      return;
+    }
 
-      upcomingContainer.appendChild(article);
+    container.replaceChildren();
+
+    upcoming.forEach(function (event) {
+      container.appendChild(renderEvent(event));
     });
+
   })
 
   .catch(function () {
-    showCalendarFallback();
+
+    showMessage(
+      "See What's Coming Up",
+      "Visit the orchestra calendar for current concerts, meetings, and activities."
+    );
+
   });
 
 });
+
 </script>
 
 </body>
