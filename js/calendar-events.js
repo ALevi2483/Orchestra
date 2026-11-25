@@ -36,16 +36,16 @@
     {
       id: "event-wbhs-winter",
       g: "wbhs",
-      d: "2026-12-15",
-      to: "2026-12-15",
-      label: "Dec 15",
+      d: "2027-01-15",
+      to: "2027-01-15",
+      label: "Jan 15",
       k: "Concert",
       t: "Winter Concert",
-      short: "7:00 PM",
+      short: "7:00 PM • Western Branch High School",
       details: `
-        <p><strong>Tuesday, December 15, 2026</strong></p>
+        <p><strong>Friday, January 15, 2027</strong></p>
         <p><strong>7:00 PM</strong></p>
-        <p>Location will be posted when available.</p>
+        <p><strong>Location:</strong> Western Branch High School</p>
       `
     },
 
