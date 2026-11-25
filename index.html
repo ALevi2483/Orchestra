@@ -727,22 +727,16 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/calendar-events.js"></script>
 
 <script>
 
-/* AUTOMATIC HOMEPAGE UPCOMING EVENTS
-   Read public calendar metadata without
-   executing JavaScript from the fetched page. */
+/* AUTOMATIC HOMEPAGE UPCOMING EVENTS */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  function localDate(value) {
-    const parts = value.split("-").map(Number);
-    return new Date(parts[0], parts[1] - 1, parts[2]);
-  }
+  const now = new Date();
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
   // HIDE THE WINTER CONCERT SPOTLIGHT AFTER DECEMBER 10
 
@@ -750,7 +744,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "jms-winter-spotlight"
   );
 
-  if (spotlight && today <= localDate("2026-12-10")) {
+  if (spotlight && today <= new Date(2026, 11, 10)) {
     spotlight.hidden = false;
   }
 
@@ -783,83 +777,14 @@ document.addEventListener("DOMContentLoaded", function () {
     container.appendChild(card);
   }
 
-  // READ EVENTS FROM CALENDAR.HTML
+  const calendar = window.orchestraCalendar;
 
-  function readCalendarEvents(html) {
-
-    const calendarDocument = new DOMParser()
-      .parseFromString(html, "text/html");
-
-    // SUPPORT CALENDARS WITH HTML DATA ATTRIBUTES
-
-    const htmlEvents = Array.from(
-      calendarDocument.querySelectorAll(
-        "[data-calendar-event]"
-      )
+  if (!calendar) {
+    showMessage(
+      "Visit Our Calendar",
+      "Upcoming events could not be loaded. Visit the full orchestra calendar for event details."
     );
-
-    if (htmlEvents.length) {
-
-      return htmlEvents.map(function (node) {
-
-        const heading = node.querySelector("h3");
-
-        return {
-          id: node.id,
-          group: node.dataset.group || "",
-          start: node.dataset.date || "",
-          finish: node.dataset.end || node.dataset.date || "",
-          label: node.dataset.dateDisplay || node.dataset.label || "",
-          type: node.dataset.type || "",
-          title: heading
-            ? heading.textContent.trim()
-            : "Calendar Event",
-          short: node.dataset.short || ""
-        };
-
-      });
-
-    }
-
-    // READ THE EVENTS ARRAY IN THE CURRENT CALENDAR
-
-    const script = Array.from(
-      calendarDocument.querySelectorAll(
-        "script:not([src])"
-      )
-    )
-    .map(function (element) {
-      return element.textContent;
-    })
-    .find(function (contents) {
-      return /const\s+EVENTS\s*=\s*\[/.test(contents);
-    });
-
-    if (!script) return [];
-
-    // EXTRACT EVENT FIELDS WITHOUT EVAL()
-
-    const eventPattern = /\{\s*id:\s*"([^"]+)",\s*g:\s*"([^"]+)",\s*d:\s*"(\d{4}-\d{2}-\d{2})",\s*(?:to|end):\s*"(\d{4}-\d{2}-\d{2})",\s*label:\s*"([^"]*)",\s*k:\s*"([^"]*)",\s*t:\s*"([^"]*)",\s*short:\s*"([^"]*)"/g;
-
-    const results = [];
-    let match;
-
-    while ((match = eventPattern.exec(script)) !== null) {
-
-      results.push({
-        id: match[1],
-        group: match[2],
-        start: match[3],
-        finish: match[4],
-        label: match[5],
-        type: match[6],
-        title: match[7],
-        short: match[8]
-      });
-
-    }
-
-    return results;
+    return;
   }
 
   // CREATE UPCOMING EVENT CARD
@@ -869,25 +794,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const card = document.createElement("article");
     card.className = "card home-upcoming-card";
 
-    const groupName =
-      event.group === "wbhs" ? "WBHS" :
-      event.group === "jms" ? "JMS" :
-      event.id === "event-community-vso" ?
-      "Community" : "WBOPA";
-
     const label = document.createElement("p");
     label.className = "card-label";
-    label.textContent = groupName + " | " + event.type;
+    label.textContent = calendar.groupName(event) + " | " + event.k;
 
     const date = document.createElement("span");
     date.className = "home-upcoming-date";
 
     date.textContent =
       event.label + ", " +
-      localDate(event.start).getFullYear();
+      event.start.getFullYear();
 
     const heading = document.createElement("h3");
-    heading.textContent = event.title;
+    heading.textContent = event.t;
 
     const details = document.createElement("p");
     details.textContent = event.short;
@@ -904,76 +823,17 @@ document.addEventListener("DOMContentLoaded", function () {
     return card;
   }
 
-  // FETCH CURRENT CALENDAR
+  const { upcoming } = calendar.eventsByDate(now);
 
-  fetch("calendar.html", {
-    cache: "no-store"
-  })
-
-  .then(function (response) {
-
-    if (!response.ok) {
-      throw new Error("Calendar unavailable");
-    }
-
-    return response.text();
-
-  })
-
-  .then(function (html) {
-
-    const events = readCalendarEvents(html);
-
-    if (!events.length) {
-
-      showMessage(
-        "Visit Our Calendar",
-        "Upcoming event details are available on the full orchestra calendar."
-      );
-
-      return;
-    }
-
-    // REMOVE PAST EVENTS AND SORT UPCOMING EVENTS
-
-    const upcoming = events
-
-      .filter(function (event) {
-        return localDate(event.finish) >= today;
-      })
-
-      .sort(function (a, b) {
-        return localDate(a.start) - localDate(b.start);
-      })
-
-      .slice(0, 4);
-
-    if (!upcoming.length) {
-
-      showMessage(
-        "No Upcoming Events Listed",
-        "Additional events will be posted as information becomes available."
-      );
-
-      return;
-    }
-
-    container.replaceChildren();
-
-    upcoming.forEach(function (event) {
-      container.appendChild(renderEvent(event));
-    });
-
-  })
-
-  .catch(function () {
-
+  if (!upcoming.length) {
     showMessage(
-      "See What's Coming Up",
-      "Visit the orchestra calendar for current concerts, meetings, and activities."
+      "No Upcoming Events Listed",
+      "Additional events will be posted as information becomes available."
     );
+    return;
+  }
 
-  });
+  container.replaceChildren(...upcoming.slice(0, 4).map(renderEvent));
 
 });
 
