@@ -1,885 +1,925 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Western Branch Orchestra Student Resources | WBHS & Jolliff</title>
 
-<meta
-name="description"
-content="Student resources for Western Branch High School and Jolliff Middle School orchestra students including documents, concerts, spirit wear, Virginia Symphony opportunities, rising 6th grade information, auditions, trips, and student opportunities."
->
+<meta name="description" content="Student resources for Western Branch High School and Jolliff Middle School orchestra students including documents, concerts, spirit wear, Virginia Symphony opportunities, auditions, trips, and student opportunities.">
 
 <link rel="icon" type="image/png" href="images/favicon.png">
-
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* FEATURED WINTER CONCERT */
+
+.student-concert-feature {
+  background: #f4f6f9;
+  border-left: 5px solid #f5b942;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 0 0 30px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.06);
+}
+
+.student-concert-feature h3 {
+  color: #16324f;
+  margin: 0 0 10px;
+}
+
+.student-concert-feature p {
+  margin-bottom: 12px;
+}
+
+.student-concert-feature ul {
+  padding-left: 22px;
+  margin-bottom: 14px;
+}
+
+.student-concert-feature li {
+  margin-bottom: 5px;
+}
+
+.student-concert-feature .concert-primary-link {
+  display: inline-block;
+  background: #16324f;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 7px;
+  padding: 11px 16px;
+  font-weight: 700;
+  margin: 4px 0 8px;
+}
+
+.student-concert-feature .concert-primary-link:hover,
+.student-concert-feature .concert-primary-link:focus-visible {
+  background: #234966;
+}
+
+@media (max-width: 650px) {
+
+  .student-concert-feature {
+    padding: 18px;
+  }
+
+  .student-concert-feature .concert-primary-link {
+    display: block;
+    text-align: center;
+  }
+
+}
+
+</style>
 
 </head>
 
-
 <body>
 
+<!-- WEBSITE HEADER -->
 
 <header>
+  <div class="container header-container">
 
-<div class="container header-container">
+    <a class="site-title" href="index.html">
+      Western Branch Orchestras
+    </a>
 
-<a class="site-title" href="index.html">
-Western Branch Orchestras
-</a>
+    <button
+      class="menu-toggle"
+      onclick="toggleMenu()"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="mainNav">
+      ☰ Menu
+    </button>
 
+    <nav id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Orchestras</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        <li>
+          <a class="active"
+             aria-current="page"
+             href="students.html">
+            Student Resources
+          </a>
+        </li>
+        <li><a href="parents.html">Families &amp; WBOPA</a></li>
+        <li><a href="fundraising.html">Fundraising</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-<button
-class="menu-toggle"
-onclick="toggleMenu()"
-aria-label="Toggle navigation menu"
-aria-expanded="false"
-aria-controls="mainNav">
-
-☰ Menu
-
-</button>
-
-
-<nav id="mainNav">
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">Orchestras</a></li>
-<li><a href="calendar.html">Calendar</a></li>
-<li><a class="active" aria-current="page" href="students.html">Student Resources</a></li>
-<li><a href="parents.html">Families &amp; WBOPA</a></li>
-<li><a href="fundraising.html">Fundraising</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</div>
-
+  </div>
 </header>
 
-
-
+<!-- PAGE BANNER -->
 
 <section class="page-banner">
+  <div class="container">
 
-<div class="container">
+    <p class="eyebrow">Student Resources</p>
 
-<p class="eyebrow">
-Student Resources
-</p>
+    <h1>Student Resources</h1>
 
-<h1>
-Student Resources
-</h1>
+    <p>
+      Documents, performances, opportunities, and information
+      for Western Branch orchestra students and families.
+    </p>
 
-<p>
-Documents, performances, opportunities, and information for Western Branch orchestra students and families.
-</p>
-
-</div>
-
+  </div>
 </section>
 
-
-
-
 <main>
-
-
-
 
 <!-- START HERE -->
 
 <section class="content">
+  <div class="container">
 
-<div class="container">
+    <div class="section-heading">
 
+      <p class="card-label">Start Here</p>
 
-<div class="section-heading">
+      <h2>Find What You Need</h2>
 
-<p class="card-label">
-Start Here
-</p>
+      <p>
+        Choose your school below to find orchestra
+        information, documents, and student resources.
+      </p>
 
-<h2>
-Find What You Need
-</h2>
+    </div>
 
-<p>
-Choose your school below to find orchestra information, documents, and student resources.
-</p>
+    <div class="quick-links">
 
-</div>
+      <a href="#wbhs" class="quick-box">
+        <span>Western Branch High School</span>
+        <small>
+          High school orchestra resources and opportunities
+        </small>
+      </a>
 
+      <a href="#jolliff" class="quick-box">
+        <span>Jolliff Middle School</span>
+        <small>
+          Middle school orchestra resources and information
+        </small>
+      </a>
 
+      <a href="calendar.html" class="quick-box">
+        <span>Calendar</span>
+        <small>
+          Concerts, trips, meetings, and events
+        </small>
+      </a>
 
-<div class="quick-links">
+      <a href="contact.html" class="quick-box">
+        <span>Need Help?</span>
+        <small>
+          Contact orchestra leadership
+        </small>
+      </a>
 
+    </div>
 
-<a href="#wbhs" class="quick-box">
-
-<span>
-Western Branch High School
-</span>
-
-<small>
-High school orchestra resources and opportunities
-</small>
-
-</a>
-
-
-
-<a href="#jolliff" class="quick-box">
-
-<span>
-Jolliff Middle School
-</span>
-
-<small>
-Middle school orchestra resources and information
-</small>
-
-</a>
-
-
-
-<a href="calendar.html" class="quick-box">
-
-<span>
-Calendar
-</span>
-
-<small>
-Concerts, trips, meetings, and events
-</small>
-
-</a>
-
-
-
-<a href="contact.html" class="quick-box">
-
-<span>
-Need Help?
-</span>
-
-<small>
-Contact orchestra leadership
-</small>
-
-</a>
-
-
-</div>
-
-
-</div>
-
+  </div>
 </section>
-
-
-
 
 <!-- WESTERN BRANCH HIGH SCHOOL -->
 
 <section id="wbhs" class="content alt-bg">
+  <div class="container">
 
-<div class="container">
+    <div class="section-heading">
 
+      <p class="card-label">High School</p>
 
-<div class="section-heading">
+      <h2>Western Branch High School</h2>
 
-<p class="card-label">
-High School
-</p>
+      <p>
+        Student information and resources for the
+        Western Branch High School orchestra program.
+      </p>
 
-<h2>
-Western Branch High School
-</h2>
+      <p>
+        <strong>Orchestra Coordinator:</strong>
+        Bradley Blair
+      </p>
 
-<p>
-Student information and resources for the Western Branch High School orchestra program.
-</p>
+    </div>
 
-<p>
-<strong>
-Orchestra Coordinator:
-</strong>
-Bradley Blair
-</p>
+    <div class="cards">
 
-</div>
+      <!-- STUDENT DOCUMENTS -->
 
+      <article class="card">
 
+        <p class="card-label">Documents</p>
 
+        <h3>Student Documents</h3>
 
-<div class="cards">
+        <p>
+          Find current syllabi, forms, handbooks,
+          trip information, and other orchestra documents.
+        </p>
 
+        <p class="small-text">
+          Documents will be added as they become available.
+        </p>
 
+      </article>
 
-<article class="card">
+      <!-- HIGH SCHOOL CONCERTS -->
 
-<p class="card-label">
-Documents
-</p>
+      <article class="card">
 
-<h3>
-Student Documents
-</h3>
+        <p class="card-label">Performances</p>
 
-<p>
-Find current syllabi, forms, handbooks, trip information, and other orchestra documents.
-</p>
+        <h3>Concert Information</h3>
 
-<p class="small-text">
-Documents will be added as they become available.
-</p>
+        <p>
+          Review upcoming concerts, report times,
+          rehearsal information, attire requirements,
+          and performance details.
+        </p>
 
-</article>
+        <a href="calendar.html#wbhs-details">
+          View Orchestra Calendar
+        </a>
 
+      </article>
 
+      <!-- HIGH SCHOOL OPPORTUNITIES -->
 
+      <article class="card">
 
-<article class="card">
+        <p class="card-label">Opportunities</p>
 
-<p class="card-label">
-Performances
-</p>
+        <h3>Auditions &amp; Activities</h3>
 
-<h3>
-Concert Information
-</h3>
+        <p>
+          Information about auditions, honor ensembles,
+          festivals, special performances, and other
+          student opportunities.
+        </p>
 
-<p>
-Review upcoming concerts, report times, rehearsal information, attire requirements, and performance details.
-</p>
+        <p class="small-text">
+          Students should check with Mr. Blair
+          for current opportunities.
+        </p>
 
-<a href="calendar.html">
-View Orchestra Calendar
-</a>
+      </article>
 
-</article>
+      <!-- PRACTICE -->
 
+      <article class="card">
 
+        <p class="card-label">Student Success</p>
 
+        <h3>Practice &amp; Preparation</h3>
 
-<article class="card">
+        <p>
+          Students should continue building technique,
+          musical skills, and rehearsal habits
+          throughout the year.
+        </p>
 
-<p class="card-label">
-Opportunities
-</p>
+      </article>
 
-<h3>
-Auditions &amp; Activities
-</h3>
+    </div>
 
-<p>
-Information about auditions, honor ensembles, festivals, special performances, and other student opportunities.
-</p>
-
-<p class="small-text">
-Students should check with Mr. Blair for current opportunities.
-</p>
-
-</article>
-
-
-
-
-<article class="card">
-
-<p class="card-label">
-Student Success
-</p>
-
-<h3>
-Practice &amp; Preparation
-</h3>
-
-<p>
-Students should continue building technique, musical skills, and rehearsal habits throughout the year.
-</p>
-
-</article>
-
-
-</div>
-
-
-</div>
-
+  </div>
 </section>
-
-
-
 
 <!-- JOLLIFF MIDDLE SCHOOL -->
 
 <section id="jolliff" class="content">
+  <div class="container">
 
-<div class="container">
+    <div class="section-heading">
 
+      <p class="card-label">Middle School</p>
 
-<div class="section-heading">
+      <h2>Jolliff Middle School</h2>
 
-<p class="card-label">
-Middle School
-</p>
+      <p>
+        Student information and resources for the
+        Jolliff Middle School orchestra program.
+      </p>
 
-<h2>
-Jolliff Middle School
-</h2>
+      <p>
+        <strong>Orchestra Director:</strong>
+        Leah Rosenberg
+      </p>
 
-<p>
-Student information and resources for the Jolliff Middle School orchestra program.
-</p>
+    </div>
 
-<p>
-<strong>
-Orchestra Director:
-</strong>
-Leah Rosenberg
-</p>
+    <!-- NEW WINTER CONCERT INFORMATION -->
 
-</div>
+    <div
+      class="student-concert-feature"
+      aria-labelledby="jms-winter-title">
 
+      <p class="card-label">
+        Upcoming Required Performance
+      </p>
 
+      <h3 id="jms-winter-title">
+        Jolliff Orchestra Winter Concert
+      </h3>
 
+      <p>
+        <strong>
+          Thursday, December 10, 2026 at 7:30 PM
+        </strong>
+        <br>
+        Jolliff Middle School Auditorium
+      </p>
 
-<div class="cards">
+      <p>
+        All 6th, 7th, and 8th grade orchestra
+        students are scheduled to perform.
+      </p>
 
+      <p>
+        <strong>Student Report Times and Locations:</strong>
+      </p>
 
+      <ul>
 
-<!-- RISING 6TH GRADE -->
+        <li>
+          <strong>6th Grade:</strong>
+          By 7:10 PM in the Orchestra Room
+        </li>
 
-<article class="card">
+        <li>
+          <strong>7th Grade:</strong>
+          By 6:40 PM in the Chorus Room
+        </li>
 
-<p class="card-label">
-Rising 6th Grade
-</p>
+        <li>
+          <strong>8th Grade:</strong>
+          By 6:50 PM in the Band Room
+        </li>
 
-<h3>
-Getting Started at Jolliff
-</h3>
+      </ul>
 
-<p>
-Sixth grade orchestra continues the skills students learned in 5th grade strings.
-Students should locate and keep their <em>Essential Elements</em> book for use in 6th grade orchestra.
-</p>
+      <p>
+        <strong>Arrival:</strong>
+        Please do not arrive before 6:30 PM unless
+        accompanying a parent volunteering for Mrs. Rose.
+      </p>
 
-<ul>
+      <p>
+        The concert is a required performance and
+        counts as a lab grade. Students should review
+        the formal performance attire, attendance,
+        instrument, and concert etiquette instructions
+        before the event.
+      </p>
 
-<li>
-Violin, viola, and cello continue to be offered.
-</li>
+      <a
+        class="concert-primary-link"
+        href="calendar.html#event-jms-winter">
 
-<li>
-Bass is also available beginning in middle school.
-</li>
+        View Winter Concert Details &amp; Student Instructions
 
-<li>
-Students interested in changing instruments will have an opportunity to audition.
-</li>
+      </a>
 
-<li>
-Auditions to change instruments will be completed on the instrument the student played in 5th grade.
-</li>
+      <p class="small-text">
+        The calendar includes the complete concert information
+        and expandable Student &amp; Parent Instructions.
+      </p>
 
-<li>
-Students who need an instrument for an audition can speak with Mrs. Rosenberg.
-</li>
+    </div>
 
-</ul>
+    <!-- JOLLIFF RESOURCE CARDS -->
 
-<p>
-Mrs. Rosenberg will let students know when instruments are needed for class and will provide sizing guidance when necessary.
-</p>
-
-</article>
-
-
-
-
-<!-- INSTRUMENT SIZING -->
-
-<article class="card">
-
-<p class="card-label">
-Instruments
-</p>
-
-<h3>
-Instrument Sizing &amp; Guidelines
-</h3>
-
-<p>
-Mrs. Rosenberg measures students who do not currently have an instrument or who are using a fractional-size instrument to determine whether they are ready for a different size.
-</p>
-
-<p>
-Students should not automatically move to the next instrument size simply because they have grown.
-</p>
-
-<p>
-<strong>
-When a student is between instrument sizes, it is better to continue using the smaller size until they can be properly measured.
-</strong>
-</p>
-
-<p>
-Before renting or purchasing an instrument, families should review the Jolliff Orchestra instrument guidelines and recommended music store information.
-</p>
-
-<p>
-<a
-href="https://docs.google.com/presentation/d/1U08seKz-dhPbbfFIu7JhPrGMgKFdrsB4W-WK-YZBGEM/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Instrument Guidelines &amp; Music Store List
-</a>
-</p>
-
-<p>
-<a
-href="https://drive.google.com/file/d/11dsaZ7JandNskjJceN2uK59nlG9DXZoD/view?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Why Instrument Quality Matters: "Violin Shaped Objects"
-</a>
-</p>
-
-<p class="small-text">
-If you are unsure about instrument size or quality, wait until your student can be measured or consult Mrs. Rosenberg before renting or purchasing an instrument.
-</p>
-
-</article>
-
-
-
-
-<!-- JOLLIFF RESOURCES -->
-
-<article class="card">
-
-<p class="card-label">
-Resources
-</p>
-
-<h3>
-2026-2027 Jolliff Orchestra Resources
-</h3>
-
-<p>
-Use these official Jolliff Orchestra resources for calendars, policies, concert attire, and other school-year information.
-</p>
-
-<p>
-<a
-href="https://docs.google.com/spreadsheets/d/1LhwOk10iXg6YnTyOks83w6tsvvb5adyk2Jg0632OqzY/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-2026-2027 JMS Orchestra Events Calendar
-</a>
-</p>
-
-<p>
-<a
-href="https://docs.google.com/document/d/1pixP-YtWfMj7c6oVN2H8do-vjiBoeCgjkE_xkkQyWxg/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Jolliff Orchestra Handbook
-</a>
-</p>
-
-<p>
-<a
-href="https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Performance Attire
-</a>
-</p>
-
-<p>
-<a
-href="https://docs.google.com/document/d/1X-eu34mQdecRtrc6mlpTvvafs2Cte9ODCtU2_crjRuU/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-CPS Music Performance Attendance Policy
-</a>
-</p>
-
-</article>
-
-
-
-
-<!-- JOLLIFF SPIRIT WEAR -->
-
-<article class="card">
-
-<p class="card-label">
-Orders Closed
-</p>
-
-<h3>
-Jolliff Orchestra Spirit Wear
-</h3>
-
-<p>
-The Fall 2026 Jolliff Orchestra spirit wear ordering period has closed.
-</p>
-
-<p>
-<strong>
-The order deadline was Thursday, October 1, 2026.
-</strong>
-</p>
-
-<p>
-Families can still view the current spirit wear designs using the link below.
-</p>
-
-<p>
-<a
-href="https://drive.google.com/drive/folders/1Ra3l3vuBRUVGIkhMBEkK8v3Rq_TUlDTA?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-View Spirit Wear Designs
-</a>
-</p>
-
-<p class="small-text">
-Future spirit wear ordering information will be posted when another ordering period becomes available.
-</p>
-
-</article>
-
-
-
-
-<!-- CONCERT INFORMATION -->
-
-<article class="card">
-
-<p class="card-label">
-Performances
-</p>
-
-<h3>
-Concert &amp; Event Information
-</h3>
-
-<p>
-Review Jolliff concert dates, auditions, assessments, report times, performance times, locations, and other important event information.
-</p>
-
-<p>
-<a href="calendar.html#jms">
-View Jolliff Calendar
-</a>
-</p>
-
-<p>
-<a
-href="https://docs.google.com/spreadsheets/d/1LhwOk10iXg6YnTyOks83w6tsvvb5adyk2Jg0632OqzY/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-View Official JMS Events Calendar
-</a>
-</p>
-
-</article>
-
-
-
-
-<!-- AUDITIONS -->
-
-<article class="card">
-
-<p class="card-label">
-Opportunities
-</p>
-
-<h3>
-Auditions &amp; Activities
-</h3>
-
-<p>
-Information about auditions, honor ensembles, festivals, special performances, and other student opportunities.
-</p>
-
-<p>
-<strong>
-Current Opportunity:
-</strong>
-JR. District IV Orchestra Auditions
-</p>
-
-<p>
-<a
-href="https://docs.google.com/document/d/11wh4EB0e89oJCd7IEqlaK8pt_Dfl8Y_pMw-Y-CuAu_Q/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-JR. District IV Orchestra Audition Registration
-</a>
-</p>
-
-<p>
-<a href="calendar.html#jms">
-View Jr. District Audition Date &amp; Details
-</a>
-</p>
-
-<p class="small-text">
-Students should check with Mrs. Rosenberg for current audition requirements, registration information, and other opportunities.
-</p>
-
-</article>
-
-
-
-
-<!-- VIRGINIA SYMPHONY OPPORTUNITIES -->
-
-<article class="card">
-
-<p class="card-label">
-Beyond School Opportunities
-</p>
-
-<h3>
-Virginia Symphony Orchestra Opportunities
-</h3>
-
-<p>
-The Virginia Symphony Orchestra has shared several opportunities for Jolliff Orchestra students and families to attend upcoming performances.
-</p>
-
-<p>
-Some performances offer <strong>discounted student tickets</strong> for students and families.
-</p>
-
-<p>
-Use the official flyer packet below for current performance dates, locations, ticket information, and participation details.
-</p>
-
-<p>
-<a
-href="https://drive.google.com/file/d/1wK6Qj-vyXkRnGMRbOAqe0z4YE-eYya92/view?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-View Virginia Symphony Orchestra Opportunities &amp; Flyers
-</a>
-</p>
-
-<p class="small-text">
-These opportunities are optional and are separate from required Jolliff Orchestra school events. The flyers are also available in the Canvas "Beyond School Opportunities" module.
-</p>
-
-</article>
-
-
-
-
-<!-- HIGH SCHOOL PREPARATION -->
-
-<article class="card">
-
-<p class="card-label">
-Growing Musicians
-</p>
-
-<h3>
-Preparing for High School Orchestra
-</h3>
-
-<p>
-Students develop the technique, confidence, musicianship, and ensemble skills needed to continue their orchestra experience at Western Branch High School.
-</p>
-
-</article>
-
-
-</div>
-
-
-</div>
-
+    <div class="cards">
+
+      <!-- RISING SIXTH GRADE -->
+
+      <article class="card">
+
+        <p class="card-label">Rising 6th Grade</p>
+
+        <h3>Getting Started at Jolliff</h3>
+
+        <p>
+          Sixth grade orchestra continues the skills
+          students learned in 5th grade strings.
+          Students should locate and keep their
+          <em>Essential Elements</em> book for use
+          in 6th grade orchestra.
+        </p>
+
+        <ul>
+
+          <li>
+            Violin, viola, and cello continue
+            to be offered.
+          </li>
+
+          <li>
+            Bass is also available beginning
+            in middle school.
+          </li>
+
+          <li>
+            Students interested in changing instruments
+            will have an opportunity to audition.
+          </li>
+
+          <li>
+            Auditions to change instruments will be
+            completed on the instrument the student
+            played in 5th grade.
+          </li>
+
+          <li>
+            Students who need an instrument for an
+            audition can speak with Mrs. Rosenberg.
+          </li>
+
+        </ul>
+
+        <p>
+          Mrs. Rosenberg will let students know
+          when instruments are needed for class
+          and will provide sizing guidance
+          when necessary.
+        </p>
+
+      </article>
+
+      <!-- INSTRUMENT SIZING -->
+
+      <article class="card">
+
+        <p class="card-label">Instruments</p>
+
+        <h3>Instrument Sizing &amp; Guidelines</h3>
+
+        <p>
+          Mrs. Rosenberg measures students who do not
+          currently have an instrument or who are using
+          a fractional-size instrument to determine
+          whether they are ready for a different size.
+        </p>
+
+        <p>
+          Students should not automatically move
+          to the next instrument size simply because
+          they have grown.
+        </p>
+
+        <p>
+          <strong>
+            When a student is between instrument sizes,
+            it is better to continue using the smaller
+            size until they can be properly measured.
+          </strong>
+        </p>
+
+        <p>
+          Before renting or purchasing an instrument,
+          families should review the Jolliff Orchestra
+          instrument guidelines and recommended
+          music store information.
+        </p>
+
+        <p>
+          <a
+            href="https://docs.google.com/presentation/d/1U08seKz-dhPbbfFIu7JhPrGMgKFdrsB4W-WK-YZBGEM/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            Instrument Guidelines &amp; Music Store List
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="https://drive.google.com/file/d/11dsaZ7JandNskjJceN2uK59nlG9DXZoD/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            Why Instrument Quality Matters:
+            "Violin Shaped Objects"
+          </a>
+        </p>
+
+        <p class="small-text">
+          If you are unsure about instrument size
+          or quality, wait until your student can
+          be measured or consult Mrs. Rosenberg
+          before renting or purchasing.
+        </p>
+
+      </article>
+
+      <!-- OFFICIAL JOLLIFF RESOURCES -->
+
+      <article class="card">
+
+        <p class="card-label">Resources</p>
+
+        <h3>2026-2027 Jolliff Orchestra Resources</h3>
+
+        <p>
+          Use these official Jolliff Orchestra resources
+          for calendars, policies, concert attire,
+          and other school-year information.
+        </p>
+
+        <p>
+          <a
+            href="https://docs.google.com/spreadsheets/d/1LhwOk10iXg6YnTyOks83w6tsvvb5adyk2Jg0632OqzY/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            2026-2027 JMS Orchestra Events Calendar
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="https://docs.google.com/document/d/1pixP-YtWfMj7c6oVN2H8do-vjiBoeCgjkE_xkkQyWxg/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            Jolliff Orchestra Handbook
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="https://docs.google.com/document/d/17nsXd-sKs7ltVdPCApq-pkBPNkoQ4nAJPrSfrANaobE/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            Performance Attire
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="https://docs.google.com/document/d/1X-eu34mQdecRtrc6mlpTvvafs2Cte9ODCtU2_crjRuU/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            CPS Music Performance Attendance Policy
+          </a>
+        </p>
+
+      </article>
+
+      <!-- SPIRIT WEAR -->
+
+      <article class="card">
+
+        <p class="card-label">Orders Closed</p>
+
+        <h3>Jolliff Orchestra Spirit Wear</h3>
+
+        <p>
+          The Fall 2026 Jolliff Orchestra spirit
+          wear ordering period has closed.
+        </p>
+
+        <p>
+          <strong>
+            The order deadline was
+            Thursday, October 1, 2026.
+          </strong>
+        </p>
+
+        <p>
+          Families can still view the current
+          spirit wear designs using the link below.
+        </p>
+
+        <p>
+          <a
+            href="https://drive.google.com/drive/folders/1Ra3l3vuBRUVGIkhMBEkK8v3Rq_TUlDTA?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            View Spirit Wear Designs
+          </a>
+        </p>
+
+        <p class="small-text">
+          Future spirit wear ordering information
+          will be posted when another ordering
+          period becomes available.
+        </p>
+
+      </article>
+
+      <!-- CONCERT INFORMATION -->
+
+      <article class="card">
+
+        <p class="card-label">Performances</p>
+
+        <h3>Concert &amp; Event Information</h3>
+
+        <p>
+          Review Jolliff concert dates, auditions,
+          assessments, report times, performance times,
+          locations, and other important event information.
+        </p>
+
+        <p>
+          <a href="calendar.html#jms-details">
+            View Jolliff Calendar
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="https://docs.google.com/spreadsheets/d/1LhwOk10iXg6YnTyOks83w6tsvvb5adyk2Jg0632OqzY/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            View Official JMS Events Calendar
+          </a>
+        </p>
+
+      </article>
+
+      <!-- UPDATED AUDITIONS AND ACTIVITIES -->
+
+      <article class="card">
+
+        <p class="card-label">Opportunities</p>
+
+        <h3>Auditions &amp; Activities</h3>
+
+        <p>
+          Information about auditions, honor ensembles,
+          festivals, special performances,
+          and student opportunities.
+        </p>
+
+        <p>
+          <strong>Jr. District Event:</strong>
+          Friday, January 15, 2027, for selected
+          7th and 8th grade students at
+          Western Branch High School.
+        </p>
+
+        <p>
+          <strong>Departure:</strong> 9:00 AM,
+          released from class.
+        </p>
+
+        <p>
+          <strong>Performance:</strong> 6:30 PM
+        </p>
+
+        <p>
+          The October 24, 2026 Jr. District
+          auditions have already taken place.
+          Their registration link is no longer
+          an active opportunity.
+        </p>
+
+        <p>
+          <a href="calendar.html#event-jms-jr-district-event">
+            View Jr. District Event Details
+          </a>
+        </p>
+
+        <p class="small-text">
+          Students should check with Mrs. Rosenberg
+          for current audition requirements,
+          registration information, and opportunities.
+        </p>
+
+      </article>
+
+      <!-- VIRGINIA SYMPHONY -->
+
+      <article class="card">
+
+        <p class="card-label">
+          Beyond School Opportunities
+        </p>
+
+        <h3>
+          Virginia Symphony Orchestra Opportunities
+        </h3>
+
+        <p>
+          The Virginia Symphony Orchestra has
+          shared several opportunities for
+          Jolliff Orchestra students and families
+          to attend performances.
+        </p>
+
+        <p>
+          Some performances offer
+          <strong>discounted student tickets</strong>
+          for students and families.
+        </p>
+
+        <p>
+          Use the official flyer packet below
+          for performance dates, locations,
+          ticket information, and participation details.
+        </p>
+
+        <p>
+          <a
+            href="https://drive.google.com/file/d/1wK6Qj-vyXkRnGMRbOAqe0z4YE-eYya92/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            View Virginia Symphony Orchestra
+            Opportunities &amp; Flyers
+          </a>
+        </p>
+
+        <p class="small-text">
+          These opportunities are optional and
+          separate from required Jolliff Orchestra
+          school events. Flyers are also available
+          in the Canvas "Beyond School Opportunities" module.
+        </p>
+
+      </article>
+
+      <!-- HIGH SCHOOL PREPARATION -->
+
+      <article class="card">
+
+        <p class="card-label">Growing Musicians</p>
+
+        <h3>Preparing for High School Orchestra</h3>
+
+        <p>
+          Students develop the technique, confidence,
+          musicianship, and ensemble skills needed to
+          continue their orchestra experience at
+          Western Branch High School.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
 </section>
-
-
-
 
 <!-- JOLLIFF INSTRUMENT GUIDANCE -->
 
 <section class="content alt-bg">
 
-<div class="container split-section">
+  <div class="container split-section">
 
+    <div>
 
-<div>
+      <p class="card-label">Jolliff Orchestra</p>
 
-<p class="card-label">
-Jolliff Orchestra
-</p>
+      <h2>Instrument Quality Matters</h2>
 
-<h2>
-Instrument Quality Matters
-</h2>
+      <p>
+        A properly sized, playable instrument is
+        important to a student's success in orchestra.
+        Families should use the Jolliff Orchestra
+        instrument guidelines and recommended music
+        store information before renting or
+        purchasing an instrument.
+      </p>
 
-<p>
-A properly sized, playable instrument is important to a student's success in orchestra. Families should use the Jolliff Orchestra instrument guidelines and recommended music store information before renting or purchasing an instrument.
-</p>
+      <p>
+        Some inexpensive instruments sold online
+        may be difficult to tune, may not stay in tune,
+        or may have poor sound quality. If you are
+        unsure whether an instrument is appropriate,
+        check with Mrs. Rosenberg before purchasing
+        or renting.
+      </p>
 
-<p>
-Some inexpensive instruments sold online may be difficult to tune, may not stay in tune, or may have poor sound quality. If you are unsure whether an instrument is appropriate, check with Mrs. Rosenberg before purchasing or renting.
-</p>
+      <p>
+        <a
+          href="https://docs.google.com/presentation/d/1U08seKz-dhPbbfFIu7JhPrGMgKFdrsB4W-WK-YZBGEM/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer">
+          View Instrument Guidelines &amp; Music Store List
+        </a>
+      </p>
 
-<p>
-<a
-href="https://docs.google.com/presentation/d/1U08seKz-dhPbbfFIu7JhPrGMgKFdrsB4W-WK-YZBGEM/edit?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-View Instrument Guidelines &amp; Music Store List
-</a>
-</p>
+    </div>
 
-</div>
+    <div class="info-box">
 
+      <h3>Need an Instrument or a Different Size?</h3>
 
+      <p>
+        Mrs. Rosenberg can help determine the
+        appropriate instrument and size for students
+        who need an instrument or are ready to move
+        from a fractional-size instrument.
+      </p>
 
+      <p>
+        Students should continue using their
+        current instrument until they have been
+        properly measured if there is any
+        question about sizing.
+      </p>
 
-<div class="info-box">
+      <p>
+        <a
+          href="https://drive.google.com/file/d/11dsaZ7JandNskjJceN2uK59nlG9DXZoD/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer">
+          Learn About "Violin Shaped Objects"
+        </a>
+      </p>
 
-<h3>
-Need an Instrument or a Different Size?
-</h3>
+    </div>
 
-<p>
-Mrs. Rosenberg can help determine the appropriate instrument and size for students who need an instrument or are ready to move from a fractional-size instrument.
-</p>
-
-<p>
-Students should continue using their current instrument until they have been properly measured if there is any question about sizing.
-</p>
-
-<p>
-<a
-href="https://drive.google.com/file/d/11dsaZ7JandNskjJceN2uK59nlG9DXZoD/view?usp=sharing"
-target="_blank"
-rel="noopener noreferrer">
-Learn About "Violin Shaped Objects"
-</a>
-</p>
-
-</div>
-
-
-</div>
+  </div>
 
 </section>
-
-
-
 
 <!-- GENERAL INFORMATION -->
 
 <section class="content">
 
-<div class="container split-section">
+  <div class="container split-section">
 
+    <div>
 
-<div>
+      <p class="card-label">
+        Student &amp; Family Information
+      </p>
 
-<p class="card-label">
-Student &amp; Family Information
-</p>
+      <h2>Stay Connected</h2>
 
-<h2>
-Stay Connected
-</h2>
+      <p>
+        Students and families can use this page
+        as a central location for orchestra
+        resources and information.
+      </p>
 
-<p>
-Students and families can use this page as a central location for orchestra resources and information.
-</p>
+      <p>
+        The most current information regarding
+        class requirements, rehearsals, performances,
+        trips, auditions, and other activities
+        will come directly from orchestra directors.
+      </p>
 
-<p>
-The most current information regarding class requirements, rehearsals, performances, trips, auditions, and other activities will come directly from the orchestra directors.
-</p>
+    </div>
 
-</div>
+    <div class="info-box">
 
+      <h3>Looking for Something?</h3>
 
+      <p>
+        If you cannot find the information
+        you need, contact the appropriate
+        orchestra director or use the
+        website contact page.
+      </p>
 
+      <a class="button" href="contact.html">
+        Contact Us
+      </a>
 
-<div class="info-box">
+    </div>
 
-<h3>
-Looking for Something?
-</h3>
-
-<p>
-If you cannot find the information you need, contact the appropriate orchestra director or use the website contact page.
-</p>
-
-<a class="button" href="contact.html">
-Contact Us
-</a>
-
-</div>
-
-
-</div>
+  </div>
 
 </section>
 
-
-
-
 </main>
 
-
-
+<!-- WEBSITE FOOTER -->
 
 <footer>
 
-<div class="container footer-container">
+  <div class="container footer-container">
 
-<p>
-© 2026 Western Branch Orchestras Parents Association
-</p>
+    <p>
+      © 2026 Western Branch Orchestras Parents Association
+    </p>
 
-<p>
-Supporting Western Branch High School and Jolliff Middle School Orchestras
-</p>
+    <p>
+      Supporting Western Branch High School
+      and Jolliff Middle School Orchestras
+    </p>
 
-<p>
-<a href="contact.html">
-Contact Us
-</a>
-</p>
+    <p>
+      <a href="contact.html">Contact Us</a>
+    </p>
 
-</div>
+  </div>
 
 </footer>
 
-
-
-
 <script src="js/script.js"></script>
 
-
 </body>
-
 </html>
